@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Flipbook Interaktif Keberagaman Budaya Indonesia - Cerita & Nilai Literasi Sosial untuk Siswa SD (Format A5)" />
+  <title>Flipbook Interaktif - Keberagaman Budaya Indonesia (A5)</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Slim Companion Toolbar at Top -->
+    <header class="companion-bar">
+      <div class="companion-left">
+        <span class="kemdikbud-tag">KEMDIKBUD / KELAS IV SD</span>
+        <span>Buku Digital Literasi Nusantara</span>
+      </div>
+      <div class="companion-right">
+        <button id="btn-toggle-sfx" class="top-action-btn" title="Aktifkan / Nonaktifkan Efek Suara Halaman">
+          <span class="btn-icon">🔔</span>
+          <span id="label-sfx">Suara: Aktif</span>
+        </button>
+        <button id="btn-fullscreen" class="top-action-btn" title="Mode Layar Penuh (F)">
+          <span class="btn-icon">⛶</span>
+          <span>Layar Penuh</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Flipbook Viewport Stage in A5 Landscape -->
+    <main class="book-stage">
+      <div class="book-wrapper">
+        <div id="flipbook-container" class="flip-book">
+          <!-- 3 Halaman A5 akan di-generate secara dinamis oleh pageRenderer.js -->
+        </div>
+      </div>
+    </main>
+
+    <!-- House Detail Modal Popup -->
+    <div id="modal-house-detail" class="modal-backdrop">
+      <div class="modal-card">
+        <div class="modal-top-row">
+          <div class="modal-house-title">
+            <img id="modal-house-icon" src="" alt="Rumah Adat" style="width: 28px; height: 28px; object-fit: contain;" />
+            <span id="modal-house-name">Rumah Adat</span>
+          </div>
+          <button id="btn-close-house-modal" class="modal-close-btn">&times;</button>
+        </div>
+        <div id="modal-house-prov" class="modal-house-prov">Asal Provinsi</div>
+        <p id="modal-house-fact" class="modal-house-fact">Keterangan rumah adat.</p>
+        <button id="btn-modal-got-it" class="footer-nav-btn btn-highlight" style="align-self: flex-end;">
+          Wah, Keren! ✨
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div id="app-toast" class="toast-msg">Pesan Notifikasi</div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
