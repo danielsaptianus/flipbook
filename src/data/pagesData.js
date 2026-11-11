@@ -1,73 +1,44 @@
 export const pagesData = [
-  // Halaman 0: Cover Depan
-  {
-    id: 0,
-    type: 'cover',
-    badge: 'BUKU CERITA DIGITAL INTERAKTIF ANAK SD',
-    title: 'KEBERAGAMAN BUDAYA INDONESIA',
-    subtitle: 'Cerita dan Nilai untuk Literasi Sosial',
-    coverArt: '/images/cover_art.png',
-    artPill: 'Belajar Toleransi, Gotong Royong, & Kasih Sayang',
-    characters: [
-      { id: 'naya', name: 'Naya', origin: 'Minang (Sumbar)', borderClass: 'char-pink', icon: '🌸' },
-      { id: 'rafi', name: 'Rafi', origin: 'Sunda (Jabar)', borderClass: 'char-blue', icon: '🌿' },
-      { id: 'sinta', name: 'Sinta', origin: 'Jawa (Jateng)', borderClass: 'char-green', icon: '☀️' },
-      { id: 'danu', name: 'Danu', origin: 'Papua (Honai)', borderClass: 'char-amber', icon: '🪶' }
-    ],
-    houses: [
-      { id: 'gadang', name: 'Rumah Gadang', origin: 'Sumatera Barat', icon: '/images/icon_gadang.png', fact: 'Rumah adat Minangkabau dengan atap gonjong runcing menyerupai tanduk kerbau.' },
-      { id: 'julang', name: 'Julang Ngapak', origin: 'Jawa Barat', icon: '/images/icon_julang.png', fact: 'Rumah adat Sunda tradisional dengan atap menyerupai sayap burung yang sedang mengepak.' },
-      { id: 'joglo', name: 'Rumah Joglo', origin: 'Jawa Tengah', icon: '/images/icon_joglo.png', fact: 'Rumah adat Jawa yang megah dengan empat pilar soko guru dan atap bertingkat.' },
-      { id: 'honai', name: 'Rumah Honai', origin: 'Papua Pegunungan', icon: '/images/icon_honai.png', fact: 'Rumah bundar beratap jerami/ilalang khas suku Dani yang hangat dan sarat nilai kebersamaan.' }
-    ],
-    audioText: 'Selamat datang di Buku Cerita Digital Interaktif Anak SD: Keberagaman Budaya Indonesia. Cerita dan Nilai untuk Literasi Sosial. Mari berkenalan dengan sahabat baru kita: Naya, Rafi, Sinta, dan Danu, serta jelajahi rumah adat nusantara!'
-  },
-
-  // Halaman 1: Halaman Identitas Siswa (Halaman 1 dari 8)
   {
     id: 1,
-    type: 'identity',
-    pageNum: 1,
-    totalPages: 8,
-    badge: '✦ HALAMAN IDENTITAS SISWA ✦',
-    title: 'BUKU INI MILIK 📖',
-    subtitle: 'Tuliskan nama dan asal sekolahmu untuk memulai petualangan budaya nusantara!',
-    characters: [
-      { id: 'naya', name: 'Naya', origin: 'Minang', icon: '🌸' },
-      { id: 'rafi', name: 'Rafi', origin: 'Jawa', icon: '🌿' },
-      { id: 'sinta', name: 'Sinta', origin: 'Sunda', icon: '☀️' },
-      { id: 'danu', name: 'Danu', origin: 'Papua', icon: '🪶' }
-    ],
-    houses: [
-      { id: 'gadang', name: 'Rumah Gadang', origin: 'Sumatera Barat', icon: '/images/icon_gadang.png', fact: 'Rumah adat Minangkabau dengan atap gonjong runcing menyerupai tanduk kerbau.' },
-      { id: 'julang', name: 'Julang Ngapak', origin: 'Jawa Barat', icon: '/images/icon_julang.png', fact: 'Rumah adat Sunda tradisional dengan atap menyerupai sayap burung yang sedang mengepak.' },
-      { id: 'joglo', name: 'Rumah Joglo', origin: 'Jawa Tengah', icon: '/images/icon_joglo.png', fact: 'Rumah adat Jawa yang megah dengan empat pilar soko guru dan atap bertingkat.' },
-      { id: 'honai', name: 'Rumah Honai', origin: 'Papua Pegunungan', icon: '/images/icon_honai.png', fact: 'Rumah bundar beratap jerami/ilalang khas suku Dani yang hangat dan sarat nilai kebersamaan.' }
-    ],
-    audioText: 'Petunjuk Identitas Siswa. Halo Sahabat Cilik! Tuliskan nama lengkapmu, kelas, dan nama sekolahmu agar buku ini menjadi milikmu. Pilih karakter sahabat nusantara favoritmu, lalu tekan Mulai Petualangan!'
-  },
-
-  // Halaman 2: Kata Pengantar (Halaman 2 dari 8)
-  {
-    id: 2,
-    type: 'preface',
-    pageNum: 2,
-    totalPages: 8,
-    badge: '★ KATA PENGANTAR ★',
-    subtitle: 'Selamat Datang di Petualangan Budaya Nusantara!',
-    prefaceArt: '/images/pengantar_art.png',
-    quote: 'Perbedaan bukan pemisah, melainkan pelangi indah yang mempersatukan kita!',
-    paragraphs: [
-      'Indonesia memiliki banyak budaya yang berbeda. Setiap daerah memiliki ciri khasnya sendiri, seperti pakaian adat, rumah adat, bahasa, makanan khas, kesenian, dan tradisi.',
-      'Perbedaan tersebut membuat Indonesia menjadi negara yang kaya akan budaya.',
-      'Melalui buku ini, kita akan mengikuti perjalanan beberapa anak yang belajar mengenal budaya dari daerah yang berbeda. Dari cerita mereka, kita akan belajar bagaimana menghargai perbedaan, bekerja sama, dan peduli terhadap budaya Indonesia.',
-      'Yuk, kita belajar sambil mengikuti petualangan mereka!'
-    ],
-    values: [
-      { icon: '👥', label: 'Menghargai Perbedaan', value: 'Toleransi' },
-      { icon: '🤝', label: 'Bekerja Sama', value: 'Gotong Royong' },
-      { icon: '🤍', label: 'Peduli Budaya', value: 'Warisan Leluhur' }
-    ],
-    audioText: 'Kata Pengantar. Selamat Datang di Petualangan Budaya Nusantara! Indonesia memiliki banyak budaya yang berbeda. Setiap daerah memiliki ciri khasnya sendiri, seperti pakaian adat, rumah adat, bahasa, makanan khas, kesenian, dan tradisi. Perbedaan tersebut membuat Indonesia menjadi negara yang kaya akan budaya. Melalui buku ini, kita akan mengikuti perjalanan beberapa anak yang belajar mengenal budaya dari daerah yang berbeda. Dari cerita mereka, kita akan belajar bagaimana menghargai perbedaan, bekerja sama, dan peduli terhadap budaya Indonesia. Yuk, kita belajar sambil mengikuti petualangan mereka!'
+    pageNumber: 1,
+    type: 'cover-page-01',
+    titleTop: 'BERAGAM BUDAYA',
+    titleBottom: 'INDONESIA',
+    subtitleTop: 'Cerita Nilai untuk',
+    subtitleBottom: 'Literasi Sosial',
+    assets: {
+      background: '/pages/page-01/backgorund.png',
+      light: '/pages/page-01/cahaya.png',
+      cloudDark: '/pages/page-01/awan.png',
+      cloudLight: '/pages/page-01/awan-02.png',
+      bird: '/pages/page-01/burung.png',
+      titleArt: '/pages/page-01/judul.png',
+      titleRibbon: '/pages/page-01/label-judul.png',
+      subtitleArt: '/pages/page-01/sub%20judul.png',
+      mountain: '/pages/page-01/gunung.png',
+      hills: '/pages/page-01/hamparan-gunung.png',
+      tree: '/pages/page-01/pohon.png',
+      flower: '/pages/page-01/bunga.png',
+      foliage: '/pages/page-01/daun-daun.png',
+      houses: [
+        { id: 'joglo', src: '/pages/page-01/rumah-adat-jawa-barat.png', alt: 'Rumah Adat Joglo' },
+        { id: 'honai', src: '/pages/page-01/rumah-adat-papua.png', alt: 'Rumah Adat Honai' },
+        { id: 'julang', src: '/pages/page-01/rumah-adat-jawa-tengah.png', alt: 'Rumah Adat Julang Ngapak' },
+        { id: 'gadang', src: '/pages/page-01/rumah-adat-sumatra.png', alt: 'Rumah Adat Gadang' }
+      ],
+      characters: [
+        { id: 'sinta', src: '/pages/page-01/sinta.png', alt: 'Sinta' },
+        { id: 'naya', src: '/pages/page-01/naya.png', alt: 'Naya' },
+        { id: 'danu', src: '/pages/page-01/danu.png', alt: 'Danu' },
+        { id: 'rafi', src: '/pages/page-01/rafi.png', alt: 'Rafi' }
+      ]
+    },
+    controls: [
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
+      { id: 'btn-kuis', action: 'kuis', icon: '/icons/kuis.svg', label: 'Kuis Interaktif' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' }
+    ]
   }
 ];
