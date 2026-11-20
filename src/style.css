@@ -320,51 +320,29 @@ body {
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.22));
 }
 
-/* 7. Title & Ribbon Group */
-.layer-title-group {
+/* 7. Title & Ribbon */
+.layer-title-art {
   position: absolute;
-  left: 50%;
-  top: 15.6%;
-  transform: translateX(-50%);
-  width: 79.2%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   z-index: 10;
-  pointer-events: none;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.title-art-img {
-  width: 100%;
-  height: auto;
   display: block;
   filter: drop-shadow(0 6px 14px rgba(35, 73, 126, 0.28));
+  pointer-events: none;
+  object-fit: contain;
 }
 
-.subtitle-ribbon-wrap {
-  position: relative;
-  width: 78%;
-  margin-top: -3.8%;
+.layer-ribbon-group {
+  position: absolute;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 .subtitle-ribbon-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   display: block;
   filter: drop-shadow(0 8px 16px rgba(18, 48, 86, 0.26));
 }
@@ -517,11 +495,10 @@ body {
 /* Note Frame & Text (Page 2) */
 .layer-p2-note-wrapper {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 6.6%;
-  width: 67.2%;
-  height: 86.8%;
+  left: 16%;
+  top: 6.35%;
+  width: 68.01%;
+  height: 86.08%;
   z-index: 10;
   pointer-events: auto;
 }
@@ -672,11 +649,10 @@ body {
 /* Note Frame & Table of Contents (Page 3) */
 .layer-p3-note-wrapper {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 6.6%;
-  width: 67.2%;
-  height: 86.8%;
+  left: 16%;
+  top: 6.35%;
+  width: 68.01%;
+  height: 86.08%;
   z-index: 10;
   pointer-events: auto;
 }
@@ -692,14 +668,11 @@ body {
 
 .layer-p3-butterfly {
   position: absolute;
-  right: -4.2%;
-  top: -3.6%;
-  width: 14%;
-  height: auto;
   z-index: 15;
   pointer-events: none;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
   animation: butterflyFlutter 4.8s ease-in-out infinite;
+  object-fit: contain;
 }
 
 @keyframes butterflyFlutter {

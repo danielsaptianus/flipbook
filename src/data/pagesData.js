@@ -105,8 +105,8 @@ export const pagesData = [
     },
     controls: [
       { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
-      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
-      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' }
     ]
   }
 ];

@@ -1,3 +1,5 @@
+import { getCanvaStyle } from '../data/canvaLayout.js';
+
 export function renderPageHTML(pageData) {
   if (pageData.type === 'cover-page-01') {
     return renderPage01(pageData);
@@ -52,52 +54,62 @@ function renderPage01(data) {
       <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-r" draggable="false" />
 
       <!-- Layer 4: Burung Cenderawasih Kiri & Kanan -->
-      <img src="${assets.bird}" alt="Burung Cenderawasih" class="layer layer-bird layer-bird-left" draggable="false" />
-      <img src="${assets.bird}" alt="Burung Cenderawasih" class="layer layer-bird layer-bird-right" draggable="false" />
+      <img src="${assets.bird}" alt="Burung Cenderawasih" class="layer layer-bird layer-bird-left" style="${getCanvaStyle('page01', 'birdLeft')}" draggable="false" />
+      <img src="${assets.bird}" alt="Burung Cenderawasih" class="layer layer-bird layer-bird-right" style="${getCanvaStyle('page01', 'birdRight')}" draggable="false" />
 
       <!-- Layer 5: Gunung di Kanan -->
-      <img src="${assets.mountain}" alt="" class="layer layer-mountain" draggable="false" />
+      <img src="${assets.mountain}" alt="" class="layer layer-mountain" style="${getCanvaStyle('page01', 'mountain')}" draggable="false" />
 
       <!-- Layer 6: Hamparan Bukit & Padang Hijau -->
       <div class="layer layer-meadow-base" aria-hidden="true"></div>
-      <img src="${assets.hills}" alt="" class="layer layer-hills" draggable="false" />
+      <img src="${assets.hills}" alt="" class="layer layer-hills" style="${getCanvaStyle('page01', 'hills')}" draggable="false" />
 
       <!-- Layer 7: Rumah Adat Nusantara (di atas bukit) -->
-      <img src="${assets.houses[0].src}" alt="${assets.houses[0].alt}" class="layer layer-house layer-house-joglo" draggable="false" />
-      <img src="${assets.houses[1].src}" alt="${assets.houses[1].alt}" class="layer layer-house layer-house-honai" draggable="false" />
-      <img src="${assets.houses[2].src}" alt="${assets.houses[2].alt}" class="layer layer-house layer-house-julang" draggable="false" />
-      <img src="${assets.houses[3].src}" alt="${assets.houses[3].alt}" class="layer layer-house layer-house-gadang" draggable="false" />
+      <img src="${assets.houses[0].src}" alt="${assets.houses[0].alt}" class="layer layer-house layer-house-joglo" style="${getCanvaStyle('page01', 'joglo')}" draggable="false" />
+      <img src="${assets.houses[1].src}" alt="${assets.houses[1].alt}" class="layer layer-house layer-house-honai" style="${getCanvaStyle('page01', 'honai')}" draggable="false" />
+      <img src="${assets.houses[2].src}" alt="${assets.houses[2].alt}" class="layer layer-house layer-house-julang" style="${getCanvaStyle('page01', 'julang')}" draggable="false" />
+      <img src="${assets.houses[3].src}" alt="${assets.houses[3].alt}" class="layer layer-house layer-house-gadang" style="${getCanvaStyle('page01', 'gadang')}" draggable="false" />
 
-      <!-- Layer 8: Pohon & Bunga Rafflesia Kiri -->
-      <img src="${assets.tree}" alt="" class="layer layer-tree" draggable="false" />
-      <img src="${assets.flower}" alt="" class="layer layer-flower" draggable="false" />
+      <!-- Layer 8: Pohon Kiri -->
+      <img src="${assets.tree}" alt="" class="layer layer-tree" style="${getCanvaStyle('page01', 'tree')}" draggable="false" />
 
-      <!-- Layer 9: Judul Utama & Pita Subjudul -->
-      <div class="layer layer-title-group">
-        <h1 class="sr-only">${data.titleTop} ${data.titleBottom} - ${data.subtitleTop} ${data.subtitleBottom}</h1>
-        <img src="${assets.titleArt}" alt="${data.titleTop} ${data.titleBottom}" class="title-art-img" draggable="false" />
+      <!-- Layer 9: Judul Utama -->
+      <h1 class="sr-only">${data.titleTop} ${data.titleBottom} - ${data.subtitleTop} ${data.subtitleBottom}</h1>
+      <img
+        src="${assets.titleArt}"
+        alt="${data.titleTop} ${data.titleBottom}"
+        class="layer layer-title-art"
+        style="${getCanvaStyle('page01', 'title')}"
+        draggable="false"
+      />
 
-        <div class="subtitle-ribbon-wrap">
-          <img src="${assets.titleRibbon}" alt="" class="subtitle-ribbon-img" draggable="false" />
-          <img src="${assets.subtitleArt}" alt="${data.subtitleTop} ${data.subtitleBottom}" class="subtitle-art-img" draggable="false" />
-        </div>
+      <!-- Layer 10: Pita Subjudul -->
+      <div
+        class="layer layer-ribbon-group"
+        style="${getCanvaStyle('page01', 'ribbon')}"
+      >
+        <img src="${assets.titleRibbon}" alt="" class="subtitle-ribbon-img" draggable="false" />
+        <img src="${assets.subtitleArt}" alt="${data.subtitleTop} ${data.subtitleBottom}" class="subtitle-art-img" draggable="false" />
       </div>
 
-      <!-- Layer 10: 4 Karakter Anak Nusantara -->
-      <img src="${assets.characters[0].src}" alt="${assets.characters[0].alt}" class="layer layer-char layer-char-sinta" draggable="false" />
-      <img src="${assets.characters[1].src}" alt="${assets.characters[1].alt}" class="layer layer-char layer-char-naya" draggable="false" />
-      <img src="${assets.characters[2].src}" alt="${assets.characters[2].alt}" class="layer layer-char layer-char-danu" draggable="false" />
-      <img src="${assets.characters[3].src}" alt="${assets.characters[3].alt}" class="layer layer-char layer-char-rafi" draggable="false" />
+      <!-- Layer 11: 4 Karakter Anak Nusantara -->
+      <img src="${assets.characters[0].src}" alt="${assets.characters[0].alt}" class="layer layer-char layer-char-sinta" style="${getCanvaStyle('page01', 'charSinta')}" draggable="false" />
+      <img src="${assets.characters[1].src}" alt="${assets.characters[1].alt}" class="layer layer-char layer-char-naya" style="${getCanvaStyle('page01', 'charNaya')}" draggable="false" />
+      <img src="${assets.characters[2].src}" alt="${assets.characters[2].alt}" class="layer layer-char layer-char-danu" style="${getCanvaStyle('page01', 'charDanu')}" draggable="false" />
+      <img src="${assets.characters[3].src}" alt="${assets.characters[3].alt}" class="layer layer-char layer-char-rafi" style="${getCanvaStyle('page01', 'charRafi')}" draggable="false" />
 
-      <!-- Layer 11: Dedaunan & Bunga Depan Bawah -->
-      <img src="${assets.foliage}" alt="" class="layer layer-foliage" draggable="false" />
+      <!-- Layer 12: Dedaunan & Semak Depan Bawah -->
+      <img src="${assets.foliage}" alt="" class="layer layer-foliage" style="${getCanvaStyle('page01', 'foliage')}" draggable="false" />
 
-      <!-- Layer 12: Tombol Navigasi Floating (Audio, Home, Next) -->
+      <!-- Layer 13: Bunga Rafflesia Kiri Bawah (Di depan semak) -->
+      <img src="${assets.flower}" alt="" class="layer layer-flower" style="${getCanvaStyle('page01', 'flower')}" draggable="false" />
+
+      <!-- Layer 14: Tombol Navigasi Floating (Audio, Home, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p1" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
-      <!-- Layer 13: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <!-- Layer 15: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>
@@ -126,26 +138,26 @@ function renderPage02(data) {
       <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-r" draggable="false" />
 
       <!-- Layer 4: Gunung di Kanan -->
-      <img src="${assets.mountain}" alt="" class="layer layer-p2-mountain" draggable="false" />
+      <img src="${assets.mountain}" alt="" class="layer layer-p2-mountain" style="${getCanvaStyle('page02', 'mountain')}" draggable="false" />
 
       <!-- Layer 5: Hamparan Bukit & Padang Hijau -->
       <div class="layer layer-p2-meadow-base" aria-hidden="true"></div>
-      <img src="${assets.hills}" alt="" class="layer layer-p2-hills" draggable="false" />
+      <img src="${assets.hills}" alt="" class="layer layer-p2-hills" style="${getCanvaStyle('page02', 'hills')}" draggable="false" />
 
       <!-- Layer 6: Rumah Adat Jawa Barat (terselip di belakang pohon) -->
-      <img src="${assets.houseLeft}" alt="Rumah Adat Joglo" class="layer layer-p2-house-left" draggable="false" />
+      <img src="${assets.houseLeft}" alt="Rumah Adat Joglo" class="layer layer-p2-house-left" style="${getCanvaStyle('page02', 'houseLeft')}" draggable="false" />
 
       <!-- Layer 7: Pohon Besar Kiri -->
-      <img src="${assets.tree}" alt="" class="layer layer-p2-tree" draggable="false" />
+      <img src="${assets.tree}" alt="" class="layer layer-p2-tree" style="${getCanvaStyle('page02', 'tree')}" draggable="false" />
 
       <!-- Layer 8: Rumah Adat Sumatra (Gadang) Kanan -->
-      <img src="${assets.houseRight}" alt="Rumah Adat Gadang" class="layer layer-p2-house-right" draggable="false" />
+      <img src="${assets.houseRight}" alt="Rumah Adat Gadang" class="layer layer-p2-house-right" style="${getCanvaStyle('page02', 'houseRight')}" draggable="false" />
 
       <!-- Layer 9: Batu & Rumput Berbunga Kanan Bawah -->
-      <img src="${assets.rocks}" alt="" class="layer layer-p2-rocks" draggable="false" />
+      <img src="${assets.rocks}" alt="" class="layer layer-p2-rocks" style="${getCanvaStyle('page02', 'rocks')}" draggable="false" />
 
       <!-- Layer 10: Template Catatan & Teks Isi -->
-      <div class="layer layer-p2-note-wrapper">
+      <div class="layer layer-p2-note-wrapper" style="${getCanvaStyle('page02', 'noteFrame')}">
         <img src="${assets.noteFrame}" alt="" class="p2-note-frame-img" draggable="false" />
         <div class="p2-note-content">
           <h1 class="sr-only">${title}</h1>
@@ -158,7 +170,7 @@ function renderPage02(data) {
       </div>
 
       <!-- Layer 11: Dedaunan & Bunga Depan Bawah -->
-      <img src="${assets.foliage}" alt="" class="layer layer-p2-foliage" draggable="false" />
+      <img src="${assets.foliage}" alt="" class="layer layer-p2-foliage" style="${getCanvaStyle('page02', 'foliage')}" draggable="false" />
 
       <!-- Layer 12: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p2" id="floating-nav-dock" aria-label="Navigasi Halaman">
@@ -205,19 +217,19 @@ function renderPage03(data) {
       <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-l" draggable="false" />
       <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-r" draggable="false" />
 
-      <!-- Layer 3: Gunung Kanan -->
-      <img src="${assets.mountain}" alt="" class="layer layer-p3-mountain" draggable="false" />
+      <!-- Layer 4: Gunung Kanan -->
+      <img src="${assets.mountain}" alt="" class="layer layer-p3-mountain" style="${getCanvaStyle('page03', 'mountain')}" draggable="false" />
 
-      <!-- Layer 4: Hamparan Bukit Hijau -->
+      <!-- Layer 5: Hamparan Bukit Hijau -->
       <div class="layer layer-p3-meadow-base" aria-hidden="true"></div>
-      <img src="${assets.hills}" alt="" class="layer layer-p3-hills" draggable="false" />
+      <img src="${assets.hills}" alt="" class="layer layer-p3-hills" style="${getCanvaStyle('page03', 'hills')}" draggable="false" />
 
-      <!-- Layer 5: Buket Bunga Kiri & Kanan -->
-      <img src="${assets.flower}" alt="" class="layer layer-p3-flower layer-p3-flower-left" draggable="false" />
-      <img src="${assets.flower}" alt="" class="layer layer-p3-flower layer-p3-flower-right" draggable="false" />
+      <!-- Layer 6: Buket Bunga Kiri & Kanan -->
+      <img src="${assets.flower}" alt="" class="layer layer-p3-flower layer-p3-flower-left" style="${getCanvaStyle('page03', 'flowerLeft')}" draggable="false" />
+      <img src="${assets.flower}" alt="" class="layer layer-p3-flower layer-p3-flower-right" style="${getCanvaStyle('page03', 'flowerRight')}" draggable="false" />
 
-      <!-- Layer 6: Template Catatan & Daftar Isi -->
-      <div class="layer layer-p3-note-wrapper">
+      <!-- Layer 7: Template Catatan & Daftar Isi -->
+      <div class="layer layer-p3-note-wrapper" style="${getCanvaStyle('page03', 'noteFrame')}">
         <img src="${assets.noteFrame}" alt="" class="p3-note-frame-img" draggable="false" />
         <div class="p3-note-content">
           <h1 class="p3-note-title">${title}</h1>
@@ -225,19 +237,20 @@ function renderPage03(data) {
             ${itemsHTML}
           </ul>
         </div>
-        <!-- Kupu-kupu Biru di pojok kanan atas bingkai -->
-        <img src="${assets.butterfly}" alt="Kupu-kupu" class="layer-p3-butterfly" draggable="false" />
       </div>
 
-      <!-- Layer 7: Dedaunan & Bunga Depan Bawah -->
-      <img src="${assets.foliage}" alt="" class="layer layer-p3-foliage" draggable="false" />
+      <!-- Layer 8: Kupu-kupu Biru di pojok kanan atas bingkai -->
+      <img src="${assets.butterfly}" alt="Kupu-kupu" class="layer layer-p3-butterfly" style="${getCanvaStyle('page03', 'butterfly')}" draggable="false" />
 
-      <!-- Layer 8: Tombol Navigasi Floating (Home, Next, Back) -->
+      <!-- Layer 9: Dedaunan & Bunga Depan Bawah -->
+      <img src="${assets.foliage}" alt="" class="layer layer-p3-foliage" style="${getCanvaStyle('page03', 'foliage')}" draggable="false" />
+
+      <!-- Layer 10: Tombol Navigasi Floating (Home, Next, Back) -->
       <nav class="floating-nav-dock floating-nav-dock--p3" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
-      <!-- Layer 9: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <!-- Layer 11: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>
