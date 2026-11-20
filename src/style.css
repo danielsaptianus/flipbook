@@ -649,6 +649,223 @@ body {
 }
 
 /* =========================================
+   PAGE 3 SPECIFIC LAYERS & STYLES (DAFTAR ISI)
+   ========================================= */
+.page-03-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layer-p3-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p3-mountain {
+  right: -1%;
+  top: 31%;
+  width: 28%;
+  height: auto;
+  z-index: 4;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p3-meadow-base {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52%;
+  background: linear-gradient(180deg, #b8e054 0%, #8ac739 35%, #5da92c 100%);
+  z-index: 5;
+  clip-path: polygon(
+    0% 28%,
+    15% 24%,
+    30% 28%,
+    45% 36%,
+    60% 32%,
+    75% 22%,
+    90% 12%,
+    100% 8%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.layer-p3-hills {
+  left: -5%;
+  top: 40%;
+  width: 110%;
+  height: auto;
+  z-index: 6;
+  object-fit: fill;
+}
+
+.layer-p3-flower {
+  height: auto;
+  z-index: 8;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.14));
+}
+
+.layer-p3-flower-left {
+  left: -2.5%;
+  top: 52%;
+  width: 22.5%;
+}
+
+.layer-p3-flower-right {
+  right: -2.5%;
+  top: 52%;
+  width: 22.5%;
+  transform: scaleX(-1);
+}
+
+/* Note Frame & Table of Contents (Page 3) */
+.layer-p3-note-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6.6%;
+  width: 67.2%;
+  height: 86.8%;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.p3-note-frame-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 24px rgba(18, 48, 86, 0.22));
+}
+
+.layer-p3-butterfly {
+  position: absolute;
+  right: -4.2%;
+  top: -3.6%;
+  width: 14%;
+  height: auto;
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+  animation: butterflyFlutter 4.8s ease-in-out infinite;
+}
+
+@keyframes butterflyFlutter {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  30% {
+    transform: translate3d(-3px, -5px, 0) rotate(-3deg) scale(1.03);
+  }
+  70% {
+    transform: translate3d(2px, -3px, 0) rotate(2deg) scale(0.98);
+  }
+}
+
+.p3-note-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10.8% 7.8% 9.5% 7.8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.p3-note-title {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 5.2cqi, 3.1rem);
+  color: #84be38;
+  text-align: center;
+  margin-bottom: clamp(8px, 2.2cqi, 18px);
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+  line-height: 1.1;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.p3-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, 0.82cqi, 7px);
+}
+
+.p3-toc-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(0.62rem, 1.76cqi, 0.98rem);
+  line-height: 1.34;
+  color: #436d12;
+  letter-spacing: 0.03em; /* Jarak antar huruf 30 */
+  cursor: pointer;
+  padding: 1px 4px;
+  border-radius: 4px;
+  transition: background-color 0.16s ease, transform 0.16s ease;
+  user-select: none;
+}
+
+.p3-toc-item:hover {
+  background-color: rgba(132, 190, 56, 0.12);
+  transform: translateX(3px);
+}
+
+.p3-toc-title {
+  flex-shrink: 0;
+  max-width: 82%;
+  word-break: break-word;
+}
+
+.p3-toc-leader {
+  flex: 1 1 auto;
+  border-bottom: 2px dotted #436d12;
+  margin: 0 5px 3px 5px;
+  min-width: 12px;
+  opacity: 0.85;
+}
+
+.p3-toc-page {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.05em;
+  color: #436d12;
+  flex-shrink: 0;
+  min-width: 16px;
+  text-align: right;
+}
+
+.layer-p3-foliage {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 22%;
+  object-fit: cover;
+  object-position: bottom;
+  z-index: 12;
+  pointer-events: none;
+}
+
+/* =========================================
    BOTTOM NAVIGATION & FLOATING BUTTONS
    ========================================= */
 .floating-nav-dock {

@@ -7,12 +7,13 @@ let isAudioSpeaking = false;
 let cleanupAnimation = null;
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Check initial hash for page number (#page-2 or #2)
-  const hash = window.location.hash.toLowerCase();
-  if (hash.includes('2')) {
-    currentPageIndex = 1;
-  } else {
-    currentPageIndex = 0;
+  // Check initial hash for page number (#page-1, #page-2, #page-3)
+  const hashMatch = window.location.hash.match(/page-(\d+)/i) || window.location.hash.match(/(\d+)/);
+  if (hashMatch) {
+    const pageNum = parseInt(hashMatch[1], 10);
+    if (pageNum >= 1 && pageNum <= pagesData.length) {
+      currentPageIndex = pageNum - 1;
+    }
   }
 
   renderCurrentPage();
@@ -32,10 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Listen to hash changes (e.g. browser back/forward)
   window.addEventListener('hashchange', () => {
-    const newHash = window.location.hash.toLowerCase();
-    const targetIndex = newHash.includes('2') ? 1 : 0;
-    if (targetIndex !== currentPageIndex) {
-      goToPage(targetIndex + 1, targetIndex > currentPageIndex ? 'forward' : 'backward');
+    const match = window.location.hash.match(/page-(\d+)/i) || window.location.hash.match(/(\d+)/);
+    if (match) {
+      const pageNum = parseInt(match[1], 10);
+      const targetIndex = pageNum - 1;
+      if (targetIndex >= 0 && targetIndex < pagesData.length && targetIndex !== currentPageIndex) {
+        goToPage(pageNum, targetIndex > currentPageIndex ? 'forward' : 'backward');
+      }
     }
   });
 });
@@ -73,11 +77,11 @@ function renderCurrentPage(direction = '') {
     canvas.classList.add(direction === 'forward' ? 'page-transition-forward' : 'page-transition-backward');
   }
 
-  setupButtonActions();
+  setupInteractions();
   cleanupAnimation = initFloatingCursorButtons();
 }
 
-function setupButtonActions() {
+function setupInteractions() {
   const stage = document.getElementById('page-stage');
   if (!stage) return;
 
@@ -122,6 +126,19 @@ function setupButtonActions() {
       showTemporaryNotice('Kuis interaktif segera hadir!');
     });
   }
+
+  // Interactive Table of Contents items on Page 3
+  const tocItems = stage.querySelectorAll('.p3-toc-item');
+  tocItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const targetPage = parseInt(item.dataset.targetPage, 10);
+      if (targetPage <= pagesData.length) {
+        goToPage(targetPage, targetPage > currentPageIndex + 1 ? 'forward' : 'backward');
+      } else {
+        showTemporaryNotice(`Halaman ${targetPage} segera hadir!`);
+      }
+    });
+  });
 }
 
 function toggleAudioNarration(audioBtn) {
@@ -135,10 +152,12 @@ function toggleAudioNarration(audioBtn) {
   const currentPage = pagesData[currentPageIndex];
   let textToRead = '';
 
-  if (currentPage.type === 'content-page-02') {
+  if (currentPage.type === 'cover-page-01') {
+    textToRead = `${currentPage.titleTop} ${currentPage.titleBottom}. ${currentPage.subtitleTop} ${currentPage.subtitleBottom}. Selamat datang di buku interaktif keberagaman budaya Indonesia!`;
+  } else if (currentPage.type === 'content-page-02') {
     textToRead = `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`;
-  } else {
-    textToRead = `${currentPage.titleTop} ${currentPage.titleBottom}. ${currentPage.subtitleTop} ${currentPage.subtitleBottom}`;
+  } else if (currentPage.type === 'content-page-03') {
+    textToRead = `Daftar Isi. Cover halaman 1, Kata Pengantar halaman 2, Daftar Isi halaman 3, Kenali Tombol halaman 4, Yuk Kita Mulai halaman 5, Cerita 1 Tiga Warna di Festival Sekolah halaman 7.`;
   }
 
   isAudioSpeaking = true;

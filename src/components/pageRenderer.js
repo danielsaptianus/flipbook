@@ -5,13 +5,14 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-02') {
     return renderPage02(pageData);
   }
-  return `<div class="page-01-canvas"><p>Halaman tidak ditemukan</p></div>`;
+  if (pageData.type === 'content-page-03') {
+    return renderPage03(pageData);
+  }
+  return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
-function renderPage01(data) {
-  const { assets, controls } = data;
-
-  const controlsHTML = controls
+function renderControlsHTML(controls) {
+  return controls
     .map(
       (btn, index) => `
       <button
@@ -28,6 +29,11 @@ function renderPage01(data) {
     `
     )
     .join('');
+}
+
+function renderPage01(data) {
+  const { assets, controls } = data;
+  const controlsHTML = renderControlsHTML(controls);
 
   return `
     <article class="page-01-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${data.titleTop} ${data.titleBottom}">
@@ -86,8 +92,8 @@ function renderPage01(data) {
       <!-- Layer 11: Dedaunan & Bunga Depan Bawah -->
       <img src="${assets.foliage}" alt="" class="layer layer-foliage" draggable="false" />
 
-      <!-- Layer 12: 4 Tombol Navigasi Floating (mengikuti kursor naik-turun) -->
-      <nav class="floating-nav-dock" id="floating-nav-dock" aria-label="Navigasi Halaman">
+      <!-- Layer 12: Tombol Navigasi Floating (Audio, Home, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p1" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
@@ -101,24 +107,7 @@ function renderPage01(data) {
 
 function renderPage02(data) {
   const { assets, controls, title, bodyParagraphs } = data;
-
-  const controlsHTML = controls
-    .map(
-      (btn, index) => `
-      <button
-        type="button"
-        id="${btn.id}"
-        class="floating-nav-btn floating-nav-btn--${btn.action}"
-        data-action="${btn.action}"
-        data-index="${index}"
-        aria-label="${btn.label}"
-        title="${btn.label}"
-      >
-        <img src="${btn.icon}" alt="" class="floating-nav-icon" draggable="false" />
-      </button>
-    `
-    )
-    .join('');
+  const controlsHTML = renderControlsHTML(controls);
 
   return `
     <article class="page-02-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
@@ -160,7 +149,7 @@ function renderPage02(data) {
         <img src="${assets.noteFrame}" alt="" class="p2-note-frame-img" draggable="false" />
         <div class="p2-note-content">
           <h1 class="sr-only">${title}</h1>
-          <img src="${assets.titleArt}" alt="${title}" class="p2-note-title-img" draggable="false" />
+          <img src="${assets.titleArt || '/pages/page-02/kata-pengantar.svg'}" alt="${title}" class="p2-note-title-img" draggable="false" />
           <div class="p2-note-body">
             <p>${bodyParagraphs[0]}</p>
             <p class="p2-note-closing">${bodyParagraphs[1]}</p>
@@ -171,12 +160,81 @@ function renderPage02(data) {
       <!-- Layer 11: Dedaunan & Bunga Depan Bawah -->
       <img src="${assets.foliage}" alt="" class="layer layer-p2-foliage" draggable="false" />
 
-      <!-- Layer 12: 4 Tombol Navigasi Floating (Audio, Back, Next, Kuis) -->
+      <!-- Layer 12: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p2" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
       <!-- Layer 13: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage03(data) {
+  const { assets, controls, title, items } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  const itemsHTML = items
+    .map(
+      (item) => `
+      <li class="p3-toc-item" data-target-page="${item.page}">
+        <span class="p3-toc-title">${item.title}</span>
+        <span class="p3-toc-leader" aria-hidden="true"></span>
+        <span class="p3-toc-page">${item.page}</span>
+      </li>
+    `
+    )
+    .join('');
+
+  return `
+    <article class="page-03-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit -->
+      <img src="${assets.background}" alt="" class="layer layer-p3-bg" draggable="false" />
+
+      <!-- Layer 2: Awan Mega Mendung -->
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tl" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tr" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-ml" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-mr" draggable="false" />
+      <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-l" draggable="false" />
+      <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-r" draggable="false" />
+
+      <!-- Layer 3: Gunung Kanan -->
+      <img src="${assets.mountain}" alt="" class="layer layer-p3-mountain" draggable="false" />
+
+      <!-- Layer 4: Hamparan Bukit Hijau -->
+      <div class="layer layer-p3-meadow-base" aria-hidden="true"></div>
+      <img src="${assets.hills}" alt="" class="layer layer-p3-hills" draggable="false" />
+
+      <!-- Layer 5: Buket Bunga Kiri & Kanan -->
+      <img src="${assets.flower}" alt="" class="layer layer-p3-flower layer-p3-flower-left" draggable="false" />
+      <img src="${assets.flower}" alt="" class="layer layer-p3-flower layer-p3-flower-right" draggable="false" />
+
+      <!-- Layer 6: Template Catatan & Daftar Isi -->
+      <div class="layer layer-p3-note-wrapper">
+        <img src="${assets.noteFrame}" alt="" class="p3-note-frame-img" draggable="false" />
+        <div class="p3-note-content">
+          <h1 class="p3-note-title">${title}</h1>
+          <ul class="p3-toc-list">
+            ${itemsHTML}
+          </ul>
+        </div>
+        <!-- Kupu-kupu Biru di pojok kanan atas bingkai -->
+        <img src="${assets.butterfly}" alt="Kupu-kupu" class="layer-p3-butterfly" draggable="false" />
+      </div>
+
+      <!-- Layer 7: Dedaunan & Bunga Depan Bawah -->
+      <img src="${assets.foliage}" alt="" class="layer layer-p3-foliage" draggable="false" />
+
+      <!-- Layer 8: Tombol Navigasi Floating (Home, Next, Back) -->
+      <nav class="floating-nav-dock floating-nav-dock--p3" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 9: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

@@ -35,10 +35,9 @@ export const pagesData = [
       ]
     },
     controls: [
-      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
-      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
-      { id: 'btn-kuis', action: 'kuis', icon: '/icons/kuis.svg', label: 'Kuis Interaktif' },
-      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' }
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Dengarkan Musik / Suara' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
   },
   {
@@ -67,9 +66,46 @@ export const pagesData = [
     },
     controls: [
       { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Dengarkan Narasi' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
+  },
+  {
+    id: 3,
+    pageNumber: 3,
+    type: 'content-page-03',
+    title: 'DAFTAR ISI',
+    items: [
+      { title: 'Cover', page: 1 },
+      { title: 'Kata Pengantar', page: 2 },
+      { title: 'Daftar Isi', page: 3 },
+      { title: 'Kenali Tombol', page: 4 },
+      { title: 'Yuk, Kita Mulai!', page: 5 },
+      { title: 'CERITA 1 : Tiga Warna di Festival Sekolah', page: 7 },
+      { title: 'Kuis Cerita 1', page: 12 },
+      { title: 'Saatnya Lanjut! Yuk, lanjut ke cerita berikutnya', page: 16 },
+      { title: 'CERITA 2 : Satu Panggung Banyak Budaya', page: 17 },
+      { title: 'Kuis 2', page: 23 },
+      { title: 'CERITA 3 : Warisan yang Harus Dijaga', page: 28 },
+      { title: 'Kuis 3', page: 34 },
+      { title: 'Refleksi Bersama', page: 44 }
+    ],
+    assets: {
+      background: '/pages/page-03/backgorund.png',
+      cloudDark: '/pages/page-03/awan.png',
+      cloudLight: '/pages/page-03/awan-02.png',
+      mountain: '/pages/page-03/gunung.png',
+      hills: '/pages/page-03/hamparan-gunung.png',
+      flower: '/pages/page-03/bunga.png',
+      butterfly: '/pages/page-03/kupu-kupu.png',
+      noteFrame: '/pages/page-03/template-catatan.png',
+      foliage: '/pages/page-03/daun-daun.png'
+    },
+    controls: [
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
-      { id: 'btn-kuis', action: 'kuis', icon: '/icons/kuis.svg', label: 'Kuis Interaktif' }
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' }
     ]
   }
 ];
