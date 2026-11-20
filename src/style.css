@@ -312,11 +312,12 @@ body {
 }
 
 .layer-flower {
-  left: 1.2%;
-  top: 67%;
-  width: 16.5%;
+  left: 1.5%;
+  top: 68.5%;
+  width: 17.5%;
   height: auto;
-  z-index: 9;
+  z-index: 19;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.22));
 }
 
 /* 7. Title & Ribbon Group */
