@@ -2,27 +2,204 @@ import { pagesData } from './data/pagesData.js';
 import { renderPageHTML } from './components/pageRenderer.js';
 import { audioService } from './services/audioService.js';
 
+let currentPageIndex = 0;
+let isAudioSpeaking = false;
+let cleanupAnimation = null;
+
 document.addEventListener('DOMContentLoaded', () => {
-  renderSinglePage();
-  initFloatingCursorButtons();
+  // Check initial hash for page number (#page-2 or #2)
+  const hash = window.location.hash.toLowerCase();
+  if (hash.includes('2')) {
+    currentPageIndex = 1;
+  } else {
+    currentPageIndex = 0;
+  }
+
+  renderCurrentPage();
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+      if (currentPageIndex < pagesData.length - 1) {
+        goToPage(currentPageIndex + 2, 'forward');
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      if (currentPageIndex > 0) {
+        goToPage(currentPageIndex, 'backward');
+      }
+    }
+  });
+
+  // Listen to hash changes (e.g. browser back/forward)
+  window.addEventListener('hashchange', () => {
+    const newHash = window.location.hash.toLowerCase();
+    const targetIndex = newHash.includes('2') ? 1 : 0;
+    if (targetIndex !== currentPageIndex) {
+      goToPage(targetIndex + 1, targetIndex > currentPageIndex ? 'forward' : 'backward');
+    }
+  });
 });
 
-function renderSinglePage() {
+function goToPage(pageNumber, direction = 'forward') {
+  const targetIndex = pageNumber - 1;
+  if (targetIndex < 0 || targetIndex >= pagesData.length) return;
+
+  // Stop TTS narration if active when changing page
+  if (isAudioSpeaking) {
+    audioService.stop();
+    isAudioSpeaking = false;
+  }
+
+  currentPageIndex = targetIndex;
+  window.location.hash = `#page-${pageNumber}`;
+  renderCurrentPage(direction);
+}
+
+function renderCurrentPage(direction = '') {
   const stage = document.getElementById('page-stage');
   if (!stage) return;
 
-  const pageOne = pagesData[0];
-  stage.innerHTML = renderPageHTML(pageOne);
+  // Cancel prior animation frame loop if any
+  if (cleanupAnimation) {
+    cleanupAnimation();
+    cleanupAnimation = null;
+  }
+
+  const pageData = pagesData[currentPageIndex];
+  stage.innerHTML = renderPageHTML(pageData);
+
+  const canvas = stage.querySelector('.page-canvas');
+  if (canvas && direction) {
+    canvas.classList.add(direction === 'forward' ? 'page-transition-forward' : 'page-transition-backward');
+  }
+
+  setupButtonActions();
+  cleanupAnimation = initFloatingCursorButtons();
+}
+
+function setupButtonActions() {
+  const stage = document.getElementById('page-stage');
+  if (!stage) return;
+
+  const nextBtn = stage.querySelector('.floating-nav-btn--next');
+  const backBtn = stage.querySelector('.floating-nav-btn--back');
+  const homeBtn = stage.querySelector('.floating-nav-btn--home');
+  const audioBtn = stage.querySelector('.floating-nav-btn--audio');
+  const kuisBtn = stage.querySelector('.floating-nav-btn--kuis');
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentPageIndex < pagesData.length - 1) {
+        goToPage(currentPageIndex + 2, 'forward');
+      } else {
+        showTemporaryNotice('Halaman berikutnya segera hadir!');
+      }
+    });
+  }
+
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      if (currentPageIndex > 0) {
+        goToPage(currentPageIndex, 'backward');
+      }
+    });
+  }
+
+  if (homeBtn) {
+    homeBtn.addEventListener('click', () => {
+      goToPage(1, 'backward');
+    });
+  }
+
+  if (audioBtn) {
+    audioBtn.addEventListener('click', () => {
+      toggleAudioNarration(audioBtn);
+    });
+  }
+
+  if (kuisBtn) {
+    kuisBtn.addEventListener('click', () => {
+      showTemporaryNotice('Kuis interaktif segera hadir!');
+    });
+  }
+}
+
+function toggleAudioNarration(audioBtn) {
+  if (isAudioSpeaking) {
+    audioService.stop();
+    isAudioSpeaking = false;
+    audioBtn.classList.remove('is-playing');
+    return;
+  }
+
+  const currentPage = pagesData[currentPageIndex];
+  let textToRead = '';
+
+  if (currentPage.type === 'content-page-02') {
+    textToRead = `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`;
+  } else {
+    textToRead = `${currentPage.titleTop} ${currentPage.titleBottom}. ${currentPage.subtitleTop} ${currentPage.subtitleBottom}`;
+  }
+
+  isAudioSpeaking = true;
+  audioBtn.classList.add('is-playing');
+
+  audioService.speak(textToRead, () => {
+    isAudioSpeaking = false;
+    audioBtn.classList.remove('is-playing');
+  });
+}
+
+function showTemporaryNotice(message) {
+  const existing = document.querySelector('.floating-notice-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = 'floating-notice-toast';
+  toast.textContent = message;
+  toast.style.cssText = `
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(22, 39, 61, 0.92);
+    color: #ffffff;
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  `;
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(4px)';
+  });
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(-4px)';
+    setTimeout(() => toast.remove(), 260);
+  }, 2200);
 }
 
 /**
  * Floating cursor-reactive wave ("naik-turun" mengikuti kursor)
- * for the 4 bottom navigation buttons.
+ * for the bottom navigation buttons.
  */
 function initFloatingCursorButtons() {
   const stage = document.getElementById('page-stage');
   const buttons = Array.from(document.querySelectorAll('.floating-nav-btn'));
-  if (!stage || buttons.length === 0) return;
+  if (!stage || buttons.length === 0) return null;
+
+  let isRunning = true;
+  let rafId = null;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -32,7 +209,6 @@ function initFloatingCursorButtons() {
     y: 0
   };
 
-  // Per-button smoothed animation state
   const states = buttons.map((el, index) => ({
     el,
     index,
@@ -45,27 +221,19 @@ function initFloatingCursorButtons() {
     clickBounce: 0
   }));
 
-  const updatePointer = (clientX, clientY) => {
+  const onPointerMove = (e) => {
     pointer.active = true;
-    pointer.x = clientX;
-    pointer.y = clientY;
+    pointer.x = e.clientX;
+    pointer.y = e.clientY;
   };
 
-  window.addEventListener(
-    'pointermove',
-    (e) => {
-      updatePointer(e.clientX, e.clientY);
-    },
-    { passive: true }
-  );
-
-  window.addEventListener('pointerleave', () => {
+  const onPointerLeave = () => {
     pointer.active = false;
-  });
+  };
 
-  document.addEventListener('mouseleave', () => {
-    pointer.active = false;
-  });
+  window.addEventListener('pointermove', onPointerMove, { passive: true });
+  window.addEventListener('pointerleave', onPointerLeave);
+  document.addEventListener('mouseleave', onPointerLeave);
 
   buttons.forEach((btn, idx) => {
     btn.addEventListener('click', () => {
@@ -77,20 +245,20 @@ function initFloatingCursorButtons() {
   const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
 
   const tick = (now) => {
+    if (!isRunning) return;
+
     const t = now * 0.001;
     const stageRect = stage.getBoundingClientRect();
-    const scaleRatio = stageRect.width / 800; // normalize motion relative to 800px stage
+    const scaleRatio = stageRect.width / 800;
     const radius = Math.max(150, stageRect.width * 0.44);
     const maxLift = 24 * scaleRatio;
     const idleAmp = reducedMotion ? 0 : 4.5 * scaleRatio;
 
     for (const state of states) {
-      // Resting center without current transform offset
       const rect = state.el.getBoundingClientRect();
       const baseCx = rect.left + rect.width * 0.5 - state.tx;
       const baseCy = rect.top + rect.height * 0.5 - state.ty;
 
-      // Gentle idle up-and-down wave staggered per button
       const idleWave = Math.sin(t * 2.4 + state.index * 0.95) * idleAmp;
 
       let targetTx = 0;
@@ -107,7 +275,6 @@ function initFloatingCursorButtons() {
 
         if (dist < radius) {
           const proximity = Math.pow(1 - dist / radius, 1.5);
-          // Cursor-driven lift ("naik") + subtle magnetic follow + wave bob
           const cursorLift = -proximity * maxLift;
           const followX = clamp(dx * 0.14 * proximity, -14 * scaleRatio, 14 * scaleRatio);
           const followY = clamp(dy * 0.11 * proximity, -12 * scaleRatio, 10 * scaleRatio);
@@ -121,12 +288,10 @@ function initFloatingCursorButtons() {
         }
       }
 
-      // Decay click bounce impulse
       state.clickBounce *= 0.82;
       if (Math.abs(state.clickBounce) < 0.05) state.clickBounce = 0;
       targetTy += state.clickBounce * scaleRatio;
 
-      // Smooth spring lerp
       const ease = 0.16;
       state.tx += (targetTx - state.tx) * ease;
       state.ty += (targetTy - state.ty) * ease;
@@ -143,8 +308,16 @@ function initFloatingCursorButtons() {
       state.el.style.setProperty('--shadow-blur', `${state.shadowBlur.toFixed(1)}px`);
     }
 
-    requestAnimationFrame(tick);
+    rafId = requestAnimationFrame(tick);
   };
 
-  requestAnimationFrame(tick);
+  rafId = requestAnimationFrame(tick);
+
+  return () => {
+    isRunning = false;
+    if (rafId) cancelAnimationFrame(rafId);
+    window.removeEventListener('pointermove', onPointerMove);
+    window.removeEventListener('pointerleave', onPointerLeave);
+    document.removeEventListener('mouseleave', onPointerLeave);
+  };
 }

@@ -40,5 +40,36 @@ export const pagesData = [
       { id: 'btn-kuis', action: 'kuis', icon: '/icons/kuis.svg', label: 'Kuis Interaktif' },
       { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' }
     ]
+  },
+  {
+    id: 2,
+    pageNumber: 2,
+    type: 'content-page-02',
+    title: 'Kata Pengantar',
+    bodyParagraphs: [
+      'Indonesia memiliki banyak budaya yang berbeda. Setiap daerah memiliki ciri khasnya sendiri, seperti pakaian adat, rumah adat, bahasa, makanan khas, kesenian, dan tradisi. Perbedaan tersebut membuat Indonesia menjadi negara yang kaya akan budaya. Melalui buku ini, kita akan mengikuti perjalanan beberapa anak yang belajar mengenal budaya dari daerah yang berbeda. Dari cerita mereka, kita akan belajar bagaimana menghargai perbedaan, bekerja sama, dan peduli terhadap budaya Indonesia.',
+      'Yuk, kita belajar sambil mengikuti petualangan mereka!'
+    ],
+    assets: {
+      background: '/pages/page-02/backgorund.png',
+      light: '/pages/page-02/cahaya.png',
+      cloudDark: '/pages/page-02/awan.png',
+      cloudLight: '/pages/page-02/awan-02.png',
+      mountain: '/pages/page-02/gunung.png',
+      hills: '/pages/page-02/hamparan-gunung.png',
+      houseLeft: '/pages/page-02/rumah-adat-jawa-barat.png',
+      tree: '/pages/page-02/pohon.png',
+      houseRight: '/pages/page-02/rumah-adat-sumatra.png',
+      rocks: '/pages/page-02/batu.png',
+      noteFrame: '/pages/page-02/template-catatan.png',
+      titleArt: '/pages/page-02/kata-pengantar.svg',
+      foliage: '/pages/page-02/daun-daun.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Dengarkan Narasi' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
+      { id: 'btn-kuis', action: 'kuis', icon: '/icons/kuis.svg', label: 'Kuis Interaktif' }
+    ]
   }
 ];
