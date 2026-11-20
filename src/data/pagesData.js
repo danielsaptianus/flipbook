@@ -22,9 +22,9 @@ export const pagesData = [
       flower: '/pages/page-01/bunga.png',
       foliage: '/pages/page-01/daun-daun.png',
       houses: [
-        { id: 'joglo', src: '/pages/page-01/rumah-adat-jawa-barat.png', alt: 'Rumah Adat Joglo' },
+        { id: 'joglo', src: '/pages/page-01/rumah-adat-jawa-tengah.png', alt: 'Rumah Adat Joglo' },
         { id: 'honai', src: '/pages/page-01/rumah-adat-papua.png', alt: 'Rumah Adat Honai' },
-        { id: 'julang', src: '/pages/page-01/rumah-adat-jawa-tengah.png', alt: 'Rumah Adat Julang Ngapak' },
+        { id: 'julang', src: '/pages/page-01/rumah-adat-jawa-barat.png', alt: 'Rumah Adat Julang Ngapak' },
         { id: 'gadang', src: '/pages/page-01/rumah-adat-sumatra.png', alt: 'Rumah Adat Gadang' }
       ],
       characters: [

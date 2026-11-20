@@ -247,11 +247,11 @@ body {
 
 /* 4. Mountain & Rolling Hills */
 .layer-mountain {
-  left: 55.5%;
-  top: 31.1%;
-  width: 70%;
+  left: 60%;
+  top: 29.5%;
+  width: 44%;
   height: auto;
-  z-index: 4;
+  z-index: 6;
 }
 
 .layer-meadow-base {
@@ -260,7 +260,7 @@ body {
   bottom: 0;
   height: 52%;
   background: linear-gradient(180deg, #98d343 0%, #80bf31 30%, #5ba82a 100%);
-  z-index: 5;
+  z-index: 4;
 }
 
 .layer-hills {
@@ -268,7 +268,7 @@ body {
   top: 34.5%;
   width: 100%;
   height: auto;
-  z-index: 6;
+  z-index: 5;
 }
 
 /* 5. Traditional Houses */
@@ -279,27 +279,27 @@ body {
 }
 
 .layer-house-joglo {
-  left: 11.8%;
-  top: 48.2%;
-  width: 26.8%;
+  left: 21.6%;
+  top: 50.6%;
+  width: 11.5%;
 }
 
 .layer-house-honai {
-  left: 29.8%;
-  top: 46.2%;
+  left: 29.7%;
+  top: 46.5%;
   width: 17.5%;
 }
 
 .layer-house-julang {
-  left: 66.8%;
-  top: 41.2%;
-  width: 16.5%;
+  left: 65.0%;
+  top: 47.8%;
+  width: 17%;
 }
 
 .layer-house-gadang {
-  left: 80.6%;
-  top: 42.2%;
-  width: 22.4%;
+  left: 81.5%;
+  top: 43.6%;
+  width: 16.5%;
 }
 
 /* 6. Tree & Rafflesia Flower */
@@ -371,9 +371,9 @@ body {
 .subtitle-art-img {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -46%);
-  width: 48%;
+  top: 36%;
+  transform: translate(-50%, -50%);
+  width: 54%;
   height: auto;
   display: block;
   pointer-events: none;
