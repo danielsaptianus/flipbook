@@ -93,6 +93,7 @@ export const pagesData = [
     ],
     assets: {
       background: '/pages/page-03/backgorund.png',
+      light: '/pages/page-01/cahaya.png',
       cloudDark: '/pages/page-03/awan.png',
       cloudLight: '/pages/page-03/awan-02.png',
       mountain: '/pages/page-03/gunung.png',
@@ -104,8 +105,8 @@ export const pagesData = [
     },
     controls: [
       { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
-      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
-      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' }
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
   }
 ];

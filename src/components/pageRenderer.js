@@ -194,7 +194,10 @@ function renderPage03(data) {
       <!-- Layer 1: Background Langit -->
       <img src="${assets.background}" alt="" class="layer layer-p3-bg" draggable="false" />
 
-      <!-- Layer 2: Awan Mega Mendung -->
+      <!-- Layer 2: Efek Cahaya Atas -->
+      <img src="${assets.light}" alt="" class="layer layer-light" draggable="false" />
+
+      <!-- Layer 3: Awan Mega Mendung -->
       <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tl" draggable="false" />
       <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tr" draggable="false" />
       <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-ml" draggable="false" />
