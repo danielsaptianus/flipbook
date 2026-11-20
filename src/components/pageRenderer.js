@@ -83,14 +83,23 @@ function renderPage01(data) {
         draggable="false"
       />
 
-      <!-- Layer 10: Pita Subjudul -->
-      <div
-        class="layer layer-ribbon-group"
+      <!-- Layer 10: Pita Emas Subjudul -->
+      <img
+        src="${assets.titleRibbon}"
+        alt=""
+        class="layer layer-ribbon-art"
         style="${getCanvaStyle('page01', 'ribbon')}"
-      >
-        <img src="${assets.titleRibbon}" alt="" class="subtitle-ribbon-img" draggable="false" />
-        <img src="${assets.subtitleArt}" alt="${data.subtitleTop} ${data.subtitleBottom}" class="subtitle-art-img" draggable="false" />
-      </div>
+        draggable="false"
+      />
+
+      <!-- Layer 11: Teks Subjudul -->
+      <img
+        src="${assets.subtitleArt}"
+        alt="${data.subtitleTop} ${data.subtitleBottom}"
+        class="layer layer-subtitle-art"
+        style="${getCanvaStyle('page01', 'subtitle')}"
+        draggable="false"
+      />
 
       <!-- Layer 11: 4 Karakter Anak Nusantara -->
       <img src="${assets.characters[0].src}" alt="${assets.characters[0].alt}" class="layer layer-char layer-char-sinta" style="${getCanvaStyle('page01', 'charSinta')}" draggable="false" />
