@@ -959,16 +959,16 @@ body {
 /* 2x3 Grid of Buttons */
 .p4-buttons-grid {
   position: absolute;
-  top: 15%;
+  top: 13.5%;
   left: 6%;
   width: 88%;
-  height: 82%;
+  height: 78%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   column-gap: clamp(8px, 2cqi, 24px);
-  row-gap: clamp(6px, 1.4cqi, 16px);
-  padding: clamp(6px, 1.5cqi, 14px) clamp(6px, 1.5cqi, 14px);
+  row-gap: clamp(4px, 1.1cqi, 14px);
+  padding: clamp(4px, 1.2cqi, 12px) clamp(6px, 1.5cqi, 14px);
   align-items: center;
   justify-items: center;
   pointer-events: auto;

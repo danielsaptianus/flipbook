@@ -29,7 +29,7 @@ export const canvaLayouts = {
   // ==========================================================
   page01: {
     // Judul Utama "BERAGAM BUDAYA INDONESIA"
-    title: { x: 1.33, y: 1.09, w: 5.87, h: 1.47, rotate: 2, zIndex: 10 },
+    title: { x: 1.18, y: 1.09, w: 5.87, h: 1.47, rotate: 2, zIndex: 10 },
 
     // Pita Emas (Background Subjudul)
     ribbon: { x: 2.07, y: 2.44, w: 4.11, h: 1.13, rotate: 0, zIndex: 9 },
@@ -95,7 +95,7 @@ export const canvaLayouts = {
     rocks: { x: 6.69, y: 4.68, w: 1.47, h: 1.5, rotate: 0, zIndex: 19 },
 
     // Dedaunan Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },
+    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
   },
 
   // ==========================================================
@@ -119,7 +119,7 @@ export const canvaLayouts = {
     hills: { x: -1.05, y: 3.5, w: 12.83, h: 5.32, rotate: 0, zIndex: 6 },
 
     // Dedaunan Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },
+    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
   },
 
   // ==========================================================
@@ -127,16 +127,16 @@ export const canvaLayouts = {
   // ==========================================================
   page04: {
     // Template Bingkai Tombol (Card)
-    cardFrame: { x: 1.62, y: 0.61, w: 4.76, h: 7.10, rotate: 0, zIndex: 10 },
+    cardFrame: { x: 1.62, y: 0.50, w: 4.76, h: 7.10, rotate: 0, zIndex: 10 },
 
     // Mahkota Ornamen Bali di atas kartu
-    crown: { x: 3.00, y: 0.16, w: 2.00, h: 1.22, rotate: 0, zIndex: 12 },
+    crown: { x: 2.95, y: 0.10, w: 2.10, h: 1.24, rotate: 0, zIndex: 12 },
 
     // Gunung Kanan Latar
     mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 4 },
 
-    // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
+    // Hamparan Bukit (Diperlebar & diperpanjang agar menutup celah biru langit)
+    hills: { x: -1.05, y: 3.20, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumah Honai Kiri
     houseLeft: { x: 0.15, y: 3.65, w: 1.24, h: 0.90, rotate: 0, zIndex: 6 },
@@ -149,7 +149,7 @@ export const canvaLayouts = {
     flowersRight: { x: 6.40, y: 4.88, w: 1.60, h: 0.75, rotate: 0, flipH: true, zIndex: 7 },
 
     // Dedaunan Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },
+    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
   }
 };
 

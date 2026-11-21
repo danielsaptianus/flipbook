@@ -322,7 +322,8 @@ function renderPage04(data) {
 
       <!-- Layer 9: Template Kartu Tombol -->
       <div class="layer layer-p4-card-wrapper" style="${getCanvaStyle('page04', 'cardFrame')}">
-        <img src="${assets.cardFrame}" alt="" class="p4-card-frame-img" draggable="false" />
+        <img src="${assets.cardFrame}" alt="${title}" class="p4-card-frame-img" draggable="false" />
+        <h1 class="sr-only">${title}</h1>
 
         <!-- 2x3 Grid of Buttons -->
         <div class="p4-buttons-grid">
