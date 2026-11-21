@@ -77,10 +77,10 @@ export const canvaLayouts = {
     noteFrame: { x: 1.31, y: 0.52, w: 5.57, h: 7.05, rotate: 0, zIndex: 10 },
 
     // Gunung Kanan Latar
-    mountain: { x: 4.44, y: 2.49, w: 5.60, h: 1.74, rotate: 0, zIndex: 4 },
+    mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
+    hills: { x: 0.00, y: 2.76, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
 
     // Rumah Adat Kiri (terselip di belakang pohon)
     houseLeft: { x: 0.64, y: 4.52, w: 1.08, h: 0.55, rotate: 0, zIndex: 7 },

@@ -73,7 +73,6 @@ function renderPage01(data) {
       <img src="${assets.tree}" alt="" class="layer layer-tree" style="${getCanvaStyle('page01', 'tree')}" draggable="false" />
 
       <!-- Layer 9: Judul Utama -->
-      <h1 class="sr-only">${data.titleTop} ${data.titleBottom} - ${data.subtitleTop} ${data.subtitleBottom}</h1>
       <img
         src="${assets.titleArt}"
         alt="${data.titleTop} ${data.titleBottom}"
@@ -167,7 +166,6 @@ function renderPage02(data) {
       <div class="layer layer-p2-note-wrapper" style="${getCanvaStyle('page02', 'noteFrame')}">
         <img src="${assets.noteFrame}" alt="" class="p2-note-frame-img" draggable="false" />
         <div class="p2-note-content">
-          <h1 class="sr-only">${title}</h1>
           <img src="${assets.titleArt || '/pages/page-02/kata-pengantar.svg'}" alt="${title}" class="p2-note-title-img" draggable="false" />
           <div class="p2-note-body">
             <p>${bodyParagraphs[0]}</p>
