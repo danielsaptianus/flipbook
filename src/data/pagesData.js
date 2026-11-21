@@ -141,5 +141,38 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 5,
+    pageNumber: 5,
+    type: 'content-page-05',
+    title: 'PETUNJUK PENGGUNAAN',
+    bodyParagraphs: [
+      'Di buku ini ada 3 cerita. Bacalah setiap cerita sampai selesai dengan baik. Jangan terburu-buru, ya!',
+      'Di setiap cerita akan muncul <span class="p5-keyword p5-keyword--misi">🎯 MISI</span> dan <span class="p5-keyword p5-keyword--kuis">❓ KUIS</span> secara otomatis. Kerjakan kuis setelah ceritanya selesai dibaca.',
+      'Di akhir buku, kamu akan memainkan <span class="p5-keyword p5-keyword--games">🎮 GAMES</span>.'
+    ],
+    assets: {
+      background: '/pages/page-01/backgorund.png',
+      light: '/pages/page-01/cahaya.png',
+      cloudDark: '/pages/page-01/awan.png',
+      cloudLight: '/pages/page-01/awan-02.png',
+      mountain: '/pages/page-01/gunung.png',
+      hills: '/pages/page-01/hamparan-gunung.png',
+      houseLeft: '/pages/page-05/rumah-adat.png',
+      tree: '/pages/page-05/pohon.png',
+      houseRight: '/pages/page-05/rumah-gadang.png',
+      character: '/pages/page-05/karakter.png',
+      flowers: '/pages/page-05/bunga.png',
+      titleBanner: '/pages/page-05/template-sub-judul.png',
+      noteCard: '/pages/page-05/template-catatan.png',
+      foliage: '/pages/page-01/daun-daun.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

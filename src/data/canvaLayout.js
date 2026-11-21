@@ -150,6 +150,42 @@ export const canvaLayouts = {
 
     // Dedaunan Depan Bawah
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
+  },
+
+  // ==========================================================
+  // HALAMAN 5 (PETUNJUK PENGGUNAAN)
+  // ==========================================================
+  page05: {
+    // Template Banner Judul "PETUNJUK PENGGUNAAN" (Atas)
+    titleBanner: { x: 1.55, y: 0.90, w: 4.90, h: 0.91, rotate: 0, zIndex: 15 },
+
+    // Template Bingkai Catatan Kuning dengan Toa / Megaphone
+    noteCard: { x: 1.62, y: 2.14, w: 4.77, h: 5.11, rotate: 0, zIndex: 10 },
+
+    // Rumah Adat Kiri (Julang Ngapak)
+    houseLeft: { x: 0.20, y: 2.48, w: 2.25, h: 2.00, rotate: 0, zIndex: 6 },
+
+    // Pohon Besar Kiri
+    tree: { x: -0.40, y: 2.20, w: 2.24, h: 2.80, rotate: 0, zIndex: 7 },
+
+    // Rumah Joglo Kanan
+    houseRight: { x: 5.92, y: 2.73, w: 2.35, h: 1.26, rotate: 0, zIndex: 6 },
+
+    // Karakter Anak Perempuan Kanan
+    character: { x: 7.47, y: 2.74, w: 0.50, h: 1.50, rotate: 0, zIndex: 7 },
+
+    // Gunung Kanan Latar (Sama persis seperti halaman sebelumnya)
+    mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 4 },
+
+    // Hamparan Bukit (Sama persis seperti halaman sebelumnya)
+    hills: { x: -1.05, y: 3.20, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
+
+    // Rumput Bunga Kiri & Kanan (Sama persis seperti halaman sebelumnya)
+    flowersLeft:  { x: 0.00, y: 4.88, w: 1.60, h: 0.75, rotate: 0, zIndex: 8 },
+    flowersRight: { x: 6.40, y: 4.88, w: 1.60, h: 0.75, rotate: 0, flipH: true, zIndex: 8 },
+
+    // Dedaunan Depan Bawah (Sama persis seperti halaman sebelumnya)
+    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
   }
 };
 

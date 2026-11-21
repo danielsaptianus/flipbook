@@ -1041,6 +1041,168 @@ body {
   pointer-events: none;
 }
 
+/* =========================================
+   PAGE 05 (PETUNJUK PENGGUNAAN)
+   ========================================= */
+.layer-p5-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p5-mountain {
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.layer-p5-hills {
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.layer-p5-house-left {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p5-tree {
+  height: auto;
+  z-index: 7;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p5-house-right {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p5-character {
+  height: auto;
+  z-index: 7;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.layer-p5-flowers {
+  height: auto;
+  z-index: 8;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p5-flowers-left {
+  left: 0%;
+  top: 61%;
+  width: 20%;
+}
+
+.layer-p5-flowers-right {
+  right: 0%;
+  top: 61%;
+  width: 20%;
+}
+
+/* Banner Judul */
+.layer-p5-banner-wrapper {
+  position: absolute;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.p5-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+
+/* Note Card & Content */
+.layer-p5-note-wrapper {
+  position: absolute;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.p5-note-frame-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 24px rgba(18, 48, 86, 0.2));
+}
+
+.p5-note-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8.5% 8.5% 9% 8.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(10px, 2.3cqi, 20px);
+  pointer-events: auto;
+}
+
+.p5-note-p {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(0.85rem, 2.6cqi, 1.38rem);
+  line-height: 1.38;
+  color: #111827;
+  letter-spacing: 0.015em;
+  margin: 0;
+  padding: 0;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.p5-keyword {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.p5-keyword--misi {
+  color: #c2410c;
+}
+
+.p5-keyword--kuis {
+  color: #dc2626;
+}
+
+.p5-keyword--games {
+  color: #1e293b;
+}
+
+.layer-p5-foliage {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  max-height: 38%;
+  object-fit: contain;
+  object-position: bottom;
+  z-index: 18;
+  pointer-events: none;
+}
+
 /* Ambient Storybook Animations */
 @keyframes cloudFloat {
   0%,

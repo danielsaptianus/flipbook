@@ -181,7 +181,11 @@ function toggleAudioNarration(audioBtn) {
   } else if (currentPage.type === 'content-page-02') {
     textToRead = `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`;
   } else if (currentPage.type === 'content-page-03') {
-    textToRead = `Daftar Isi. Cover halaman 1, Kata Pengantar halaman 2, Daftar Isi halaman 3, Kenali Tombol halaman 4, Yuk Kita Mulai halaman 5, Cerita 1 Tiga Warna di Festival Sekolah halaman 7.`;
+    textToRead = `Daftar Isi. Cover halaman 1, Kata Pengantar halaman 2, Daftar Isi halaman 3, Kenali Tombol halaman 4, Petunjuk Penggunaan halaman 5, Cerita 1 Tiga Warna di Festival Sekolah halaman 7.`;
+  } else if (currentPage.type === 'content-page-04') {
+    textToRead = `Kenali Tombol. Audio untuk mendengarkan suara narasi. Kembali untuk halaman sebelumnya. Lanjut untuk halaman berikutnya. Kuis untuk membuka kuis interaktif. Home untuk kembali ke halaman utama. Games untuk bermain mini games.`;
+  } else if (currentPage.type === 'content-page-05') {
+    textToRead = `${currentPage.title}. ${currentPage.bodyParagraphs.map(p => p.replace(/<[^>]*>/g, '')).join(' ')}`;
   }
 
   isAudioSpeaking = true;

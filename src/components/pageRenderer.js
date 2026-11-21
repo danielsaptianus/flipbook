@@ -13,6 +13,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-04') {
     return renderPage04(pageData);
   }
+  if (pageData.type === 'content-page-05') {
+    return renderPage05(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -343,6 +346,80 @@ function renderPage04(data) {
       </nav>
 
       <!-- Layer 13: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage05(data) {
+  const { assets, controls, title, bodyParagraphs } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  return `
+    <article class="page-05-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit -->
+      <img src="${assets.background}" alt="" class="layer layer-p5-bg" draggable="false" />
+
+      <!-- Layer 2: Efek Cahaya Atas -->
+      <img src="${assets.light}" alt="" class="layer layer-light" draggable="false" />
+
+      <!-- Layer 3: Awan Mega Mendung -->
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tl" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tr" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-ml" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-mr" draggable="false" />
+      <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-l" draggable="false" />
+      <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-r" draggable="false" />
+
+      <!-- Layer 4: Gunung Kanan (posisi sama seperti halaman sebelumnya) -->
+      <img src="${assets.mountain}" alt="" class="layer layer-p5-mountain" style="${getCanvaStyle('page05', 'mountain')}" draggable="false" />
+
+      <!-- Layer 5: Hamparan Bukit Hijau (posisi sama seperti halaman sebelumnya) -->
+      <img src="${assets.hills}" alt="" class="layer layer-p5-hills" style="${getCanvaStyle('page05', 'hills')}" draggable="false" />
+
+      <!-- Layer 6: Rumah Adat Kiri (Julang Ngapak) -->
+      <img src="${assets.houseLeft}" alt="Rumah Adat Julang Ngapak" class="layer layer-p5-house-left" style="${getCanvaStyle('page05', 'houseLeft')}" draggable="false" />
+
+      <!-- Layer 7: Pohon Besar Kiri -->
+      <img src="${assets.tree}" alt="Pohon Rindang" class="layer layer-p5-tree" style="${getCanvaStyle('page05', 'tree')}" draggable="false" />
+
+      <!-- Layer 8: Rumah Joglo Kanan -->
+      <img src="${assets.houseRight}" alt="Rumah Joglo Jawa" class="layer layer-p5-house-right" style="${getCanvaStyle('page05', 'houseRight')}" draggable="false" />
+
+      <!-- Layer 9: Karakter Anak Perempuan Kanan -->
+      <img src="${assets.character}" alt="Karakter Anak Perempuan" class="layer layer-p5-character" style="${getCanvaStyle('page05', 'character')}" draggable="false" />
+
+      <!-- Layer 10: Rumput Bunga Kiri & Kanan (posisi sama seperti halaman sebelumnya) -->
+      <img src="${assets.flowers}" alt="" class="layer layer-p5-flowers layer-p5-flowers-left" style="${getCanvaStyle('page05', 'flowersLeft')}" draggable="false" />
+      <img src="${assets.flowers}" alt="" class="layer layer-p5-flowers layer-p5-flowers-right" style="${getCanvaStyle('page05', 'flowersRight')}" draggable="false" />
+
+      <!-- Layer 11: Template Banner Judul "PETUNJUK PENGGUNAAN" -->
+      <div class="layer layer-p5-banner-wrapper" style="${getCanvaStyle('page05', 'titleBanner')}">
+        <img src="${assets.titleBanner}" alt="${title}" class="p5-banner-img" draggable="false" />
+        <h1 class="sr-only">${title}</h1>
+      </div>
+
+      <!-- Layer 12: Template Bingkai Catatan Petunjuk & Isi Teks -->
+      <div class="layer layer-p5-note-wrapper" style="${getCanvaStyle('page05', 'noteCard')}">
+        <img src="${assets.noteCard}" alt="" class="p5-note-frame-img" draggable="false" />
+        <div class="p5-note-content">
+          <p class="p5-note-p">${bodyParagraphs[0]}</p>
+          <p class="p5-note-p">${bodyParagraphs[1]}</p>
+          <p class="p5-note-p">${bodyParagraphs[2]}</p>
+        </div>
+      </div>
+
+      <!-- Layer 13: Dedaunan & Semak Depan Bawah (posisi sama seperti halaman sebelumnya) -->
+      <img src="${assets.foliage}" alt="" class="layer layer-p5-foliage" style="${getCanvaStyle('page05', 'foliage')}" draggable="false" />
+
+      <!-- Layer 14: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p5" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 15: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>
