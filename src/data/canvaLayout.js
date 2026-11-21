@@ -29,44 +29,44 @@ export const canvaLayouts = {
   // ==========================================================
   page01: {
     // Judul Utama "BERAGAM BUDAYA INDONESIA"
-    title: { x: 1.33, y: 1.09, w: 5.80, h: 1.47, rotate: 0, zIndex: 10 },
+    title: { x: 1.33, y: 1.09, w: 5.87, h: 1.47, rotate: 2, zIndex: 10 },
 
     // Pita Emas (Background Subjudul)
-    ribbon: { x: 1.35, y: 2.25, w: 5.30, h: 1.46, rotate: 0, zIndex: 9 },
+    ribbon: { x: 2.07, y: 2.44, w: 4.11, h: 1.13, rotate: 0, zIndex: 9 },
 
     // Teks Subjudul "Cerita Nilai untuk Literasi Sosial" (di atas pita emas)
-    subtitle: { x: 2.91, y: 2.46, w: 2.60, h: 0.71, rotate: 0, zIndex: 10 },
+    subtitle: { x: 2.91, y: 2.48, w: 2.60, h: 0.65, rotate: 0, zIndex: 10 },
 
     // Burung Cenderawasih Kiri & Kanan
-    birdLeft:  { x: 0.43, y: 0.59, w: 1.29, h: 1.29, rotate: 0, zIndex: 5 },
-    birdRight: { x: 6.28, y: 0.56, w: 1.29, h: 1.29, rotate: 0, flipH: true, zIndex: 5 },
+    birdLeft:  { x: 0.43, y: 0.6, w: 1.21, h: 1.71, rotate: 0, zIndex: 5 },
+    birdRight: { x: 6.38, y: 0.55, w: 1.24, h: 1.76, rotate: 0, flipH: true, zIndex: 5 },
 
     // Gunung di sebelah kanan (di depan bukit / z-index 6)
-    mountain: { x: 4.80, y: 2.42, w: 3.50, h: 1.12, rotate: 0, zIndex: 6 },
+    mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 5 },
 
     // Hamparan Bukit Hijau
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
+    hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
 
     // Pohon Besar Kiri
-    tree: { x: -0.15, y: 3.82, w: 2.00, h: 2.10, rotate: 0, zIndex: 8 },
+    tree: { x: -0.33, y: 3.41, w: 2.2, h: 2.31, rotate: 0, zIndex: 8 },
 
     // Rumah Adat Nusantara (di atas bukit)
-    joglo:  { x: 1.73, y: 4.05, w: 0.94, h: 0.82, rotate: 0, zIndex: 7 }, // Jawa Tengah
-    honai:  { x: 2.38, y: 3.72, w: 1.40, h: 1.14, rotate: 0, zIndex: 7 }, // Papua
-    julang: { x: 5.20, y: 3.82, w: 1.36, h: 0.70, rotate: 0, zIndex: 7 }, // Jawa Barat
-    gadang: { x: 6.52, y: 3.49, w: 1.32, h: 0.80, rotate: 0, zIndex: 7 }, // Sumatra
+    joglo:  { x: 5.28, y: 3.27, w: 1.38, h: 1.2, rotate: 0, zIndex: 10 }, // Jawa Tengah
+    honai:  { x: 2.38, y: 3.72, w: 1.43, h: 1.13, rotate: 0, zIndex: 5 }, // Papua
+    julang: { x: 0.77, y: 3.88, w: 2.54, h: 1.27, rotate: 0, zIndex: 7 }, // Jawa Barat
+    gadang: { x: 6.49, y: 3.24, w: 2.1, h: 1.23, rotate: 0, zIndex: 7 }, // Sumatra
 
     // 4 Karakter Anak Nusantara
-    charSinta: { x: 1.60, y: 4.64, w: 1.50, h: 2.64, rotate: 0, zIndex: 12 },
-    charNaya:  { x: 2.86, y: 4.69, w: 1.40, h: 2.56, rotate: 0, zIndex: 12 },
-    charDanu:  { x: 3.96, y: 4.59, w: 1.46, h: 2.64, rotate: 0, zIndex: 12 },
-    charRafi:  { x: 5.14, y: 4.64, w: 1.46, h: 2.64, rotate: 0, zIndex: 12 },
+    charSinta: { x: 0.95, y: 4.76, w: 1.87, h: 3.9, rotate: 0, zIndex: 20 },
+    charNaya:  { x: 2.19, y: 4.33, w: 2.14, h: 4.24, rotate: 0, zIndex: 20 },
+    charDanu:  { x: 3.52, y: 4.24, w: 2.06, h: 4.16, rotate: 0, zIndex: 20 },
+    charRafi:  { x: 5.17, y: 4.41, w: 2.06, h: 4.25, rotate: 0, zIndex: 19 },
 
     // Dedaunan & Semak Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },
+    foliage: { x: -1.10, y: 5., w: 10.25, h: 4.70, rotate: 0, zIndex: 18 },
 
     // Bunga Rafflesia Kiri Bawah (Di depan semak / z-index 19)
-    flower: { x: 0.12, y: 5.48, w: 1.40, h: 0.85, rotate: 0, zIndex: 19 },
+    flower: { x: 0.12, y: 5.44, w: 2.04, h: 1.2, rotate: 0, zIndex: 19 },
   },
 
   // ==========================================================

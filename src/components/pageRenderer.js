@@ -61,7 +61,6 @@ function renderPage01(data) {
       <img src="${assets.mountain}" alt="" class="layer layer-mountain" style="${getCanvaStyle('page01', 'mountain')}" draggable="false" />
 
       <!-- Layer 6: Hamparan Bukit & Padang Hijau -->
-      <div class="layer layer-meadow-base" aria-hidden="true"></div>
       <img src="${assets.hills}" alt="" class="layer layer-hills" style="${getCanvaStyle('page01', 'hills')}" draggable="false" />
 
       <!-- Layer 7: Rumah Adat Nusantara (di atas bukit) -->
@@ -150,7 +149,6 @@ function renderPage02(data) {
       <img src="${assets.mountain}" alt="" class="layer layer-p2-mountain" style="${getCanvaStyle('page02', 'mountain')}" draggable="false" />
 
       <!-- Layer 5: Hamparan Bukit & Padang Hijau -->
-      <div class="layer layer-p2-meadow-base" aria-hidden="true"></div>
       <img src="${assets.hills}" alt="" class="layer layer-p2-hills" style="${getCanvaStyle('page02', 'hills')}" draggable="false" />
 
       <!-- Layer 6: Rumah Adat Jawa Barat (terselip di belakang pohon) -->
@@ -230,7 +228,6 @@ function renderPage03(data) {
       <img src="${assets.mountain}" alt="" class="layer layer-p3-mountain" style="${getCanvaStyle('page03', 'mountain')}" draggable="false" />
 
       <!-- Layer 5: Hamparan Bukit Hijau -->
-      <div class="layer layer-p3-meadow-base" aria-hidden="true"></div>
       <img src="${assets.hills}" alt="" class="layer layer-p3-hills" style="${getCanvaStyle('page03', 'hills')}" draggable="false" />
 
       <!-- Layer 6: Buket Bunga Kiri & Kanan -->
