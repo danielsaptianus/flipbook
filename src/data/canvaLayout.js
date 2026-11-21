@@ -80,19 +80,19 @@ export const canvaLayouts = {
     mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
+    hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
 
     // Rumah Adat Kiri (terselip di belakang pohon)
     houseLeft: { x: 0.64, y: 4.52, w: 1.08, h: 0.55, rotate: 0, zIndex: 7 },
 
     // Pohon Besar Kiri
-    tree: { x: -0.32, y: 3.52, w: 2.00, h: 2.09, rotate: 0, zIndex: 8 },
+    tree: { x: -0.32, y: 3.47, w: 2.15, h: 2.25, rotate: 0, zIndex: 11 },
 
     // Rumah Gadang Kanan
-    houseRight: { x: 6.60, y: 3.48, w: 1.36, h: 0.80, rotate: 0, zIndex: 7 },
+    houseRight: { x: 6, y: 3.38, w: 2.1, h: 1.23, rotate: 0, zIndex: 7 },
 
     // Batu & Bunga Kanan Bawah
-    rocks: { x: 6.52, y: 4.92, w: 1.48, h: 0.93, rotate: 0, zIndex: 8 },
+    rocks: { x: 6.69, y: 4.68, w: 1.47, h: 1.5, rotate: 0, zIndex: 19 },
 
     // Dedaunan Depan Bawah
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },
@@ -106,17 +106,47 @@ export const canvaLayouts = {
     noteFrame: { x: 1.31, y: 0.52, w: 5.57, h: 7.05, rotate: 0, zIndex: 10 },
 
     // Kupu-kupu Biru di pojok bingkai
-    butterfly: { x: 6.30, y: 0.27, w: 1.12, h: 1.12, rotate: 0, zIndex: 15 },
+    butterfly: { x: 6.74, y: 0.5, w: 1.12, h: 1.12, rotate: 0, zIndex: 15 },
 
     // Buket Bunga Kiri & Kanan
-    flowerLeft:  { x: -0.20, y: 4.16, w: 1.80, h: 2.56, rotate: 0, zIndex: 11 },
-    flowerRight: { x: 6.40, y: 4.16, w: 1.80, h: 2.56, rotate: 0, flipH: true, zIndex: 11 },
+    flowerLeft:  { x: -0.20, y: 4.16, w: 1.76, h: 1.73, rotate: 0, zIndex: 19 },
+    flowerRight: { x: 6.40, y: 4.16, w: 1.76, h: 1.73, rotate: 0, flipH: true, zIndex: 19 },
 
     // Gunung Kanan Latar
-    mountain: { x: 4.44, y: 2.49, w: 5.60, h: 1.74, rotate: 0, zIndex: 4 },
+    mountain: { x: 4.57, y: 2.67, w: 4.58, h: 1.33, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
+    hills: { x: -1.05, y: 3.5, w: 12.83, h: 5.32, rotate: 0, zIndex: 6 },
+
+    // Dedaunan Depan Bawah
+    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },
+  },
+
+  // ==========================================================
+  // HALAMAN 4 (KENALI TOMBOL)
+  // ==========================================================
+  page04: {
+    // Template Bingkai Tombol (Card)
+    cardFrame: { x: 1.62, y: 0.61, w: 4.76, h: 7.10, rotate: 0, zIndex: 10 },
+
+    // Mahkota Ornamen Bali di atas kartu
+    crown: { x: 3.00, y: 0.16, w: 2.00, h: 1.22, rotate: 0, zIndex: 12 },
+
+    // Gunung Kanan Latar
+    mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 4 },
+
+    // Hamparan Bukit
+    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
+
+    // Rumah Honai Kiri
+    houseLeft: { x: 0.15, y: 3.65, w: 1.24, h: 0.90, rotate: 0, zIndex: 6 },
+
+    // Rumah Gadang Kanan
+    houseRight: { x: 6.36, y: 3.38, w: 1.64, h: 0.94, rotate: 0, zIndex: 6 },
+
+    // Rumput Bunga Kiri & Kanan
+    flowersLeft:  { x: 0.00, y: 4.88, w: 1.60, h: 0.75, rotate: 0, zIndex: 7 },
+    flowersRight: { x: 6.40, y: 4.88, w: 1.60, h: 0.75, rotate: 0, flipH: true, zIndex: 7 },
 
     // Dedaunan Depan Bawah
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 18 },

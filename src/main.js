@@ -139,6 +139,30 @@ function setupInteractions() {
       }
     });
   });
+
+  // Interactive Button Cards on Page 4 (Kenali Tombol)
+  const introBtns = stage.querySelectorAll('.p4-circle-btn');
+  introBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const action = btn.dataset.action;
+      if (action === 'audio') {
+        audioService.speak('Ini tombol Audio, digunakan untuk mendengarkan narasi suara cerita.');
+      } else if (action === 'back') {
+        goToPage(3, 'backward');
+      } else if (action === 'next') {
+        goToPage(5, 'forward');
+      } else if (action === 'home') {
+        goToPage(1, 'backward');
+      } else if (action === 'kuis') {
+        audioService.speak('Ini tombol Kuis, untuk menguji pemahaman budaya setelah membaca cerita.');
+        showTemporaryNotice('Kuis interaktif segera hadir di Halaman 12!');
+      } else if (action === 'games') {
+        audioService.speak('Ini tombol Games, untuk memainkan permainan budaya nusantara yang seru.');
+        showTemporaryNotice('Mini games interaktif segera hadir!');
+      }
+    });
+  });
 }
 
 function toggleAudioNarration(audioBtn) {

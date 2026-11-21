@@ -10,6 +10,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-03') {
     return renderPage03(pageData);
   }
+  if (pageData.type === 'content-page-04') {
+    return renderPage04(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -255,6 +258,90 @@ function renderPage03(data) {
       </nav>
 
       <!-- Layer 11: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage04(data) {
+  const { assets, controls, title, buttons } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  const buttonsHTML = buttons
+    .map(
+      (btn) => `
+      <div class="p4-btn-cell" data-action="${btn.action}">
+        <button
+          type="button"
+          class="p4-circle-btn p4-circle-btn--${btn.action}"
+          data-action="${btn.action}"
+          aria-label="${btn.label}: ${btn.desc}"
+          title="${btn.desc}"
+        >
+          <img src="${btn.icon}" alt="" class="p4-circle-btn-img" draggable="false" />
+        </button>
+        <span class="p4-btn-label">${btn.label}</span>
+      </div>
+    `
+    )
+    .join('');
+
+  return `
+    <article class="page-04-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit -->
+      <img src="${assets.background}" alt="" class="layer layer-p4-bg" draggable="false" />
+
+      <!-- Layer 2: Efek Cahaya Atas -->
+      <img src="${assets.light}" alt="" class="layer layer-light" draggable="false" />
+
+      <!-- Layer 3: Awan Mega Mendung -->
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tl" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tr" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-ml" draggable="false" />
+      <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-mr" draggable="false" />
+      <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-l" draggable="false" />
+      <img src="${assets.cloudLight}" alt="" class="layer layer-cloud layer-cloud-light-r" draggable="false" />
+
+      <!-- Layer 4: Gunung Kanan -->
+      <img src="${assets.mountain}" alt="" class="layer layer-p4-mountain" style="${getCanvaStyle('page04', 'mountain')}" draggable="false" />
+
+      <!-- Layer 5: Hamparan Bukit Hijau -->
+      <img src="${assets.hills}" alt="" class="layer layer-p4-hills" style="${getCanvaStyle('page04', 'hills')}" draggable="false" />
+
+      <!-- Layer 6: Rumah Honai Kiri -->
+      <img src="${assets.houseLeft}" alt="Rumah Adat Honai" class="layer layer-p4-house-left" style="${getCanvaStyle('page04', 'houseLeft')}" draggable="false" />
+
+      <!-- Layer 7: Rumah Gadang Kanan -->
+      <img src="${assets.houseRight}" alt="Rumah Adat Gadang" class="layer layer-p4-house-right" style="${getCanvaStyle('page04', 'houseRight')}" draggable="false" />
+
+      <!-- Layer 8: Rumput Bunga Kiri & Kanan -->
+      <img src="${assets.flowers}" alt="" class="layer layer-p4-flowers layer-p4-flowers-left" style="${getCanvaStyle('page04', 'flowersLeft')}" draggable="false" />
+      <img src="${assets.flowers}" alt="" class="layer layer-p4-flowers layer-p4-flowers-right" style="${getCanvaStyle('page04', 'flowersRight')}" draggable="false" />
+
+      <!-- Layer 9: Template Kartu Tombol -->
+      <div class="layer layer-p4-card-wrapper" style="${getCanvaStyle('page04', 'cardFrame')}">
+        <img src="${assets.cardFrame}" alt="" class="p4-card-frame-img" draggable="false" />
+
+        <!-- 2x3 Grid of Buttons -->
+        <div class="p4-buttons-grid">
+          ${buttonsHTML}
+        </div>
+      </div>
+
+      <!-- Layer 10: Mahkota Ornamen Bali di atas kartu -->
+      <img src="${assets.crown}" alt="${title}" class="layer layer-p4-crown" style="${getCanvaStyle('page04', 'crown')}" draggable="false" />
+
+      <!-- Layer 11: Dedaunan & Semak Depan Bawah -->
+      <img src="${assets.foliage}" alt="" class="layer layer-p4-foliage" style="${getCanvaStyle('page04', 'foliage')}" draggable="false" />
+
+      <!-- Layer 12: Tombol Navigasi Floating (Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p4" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 13: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

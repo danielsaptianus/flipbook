@@ -92,21 +92,54 @@ export const pagesData = [
       { title: 'Refleksi Bersama', page: 44 }
     ],
     assets: {
-      background: '/pages/page-03/backgorund.png',
+      background: '/pages/page-01/backgorund.png',
       light: '/pages/page-01/cahaya.png',
-      cloudDark: '/pages/page-03/awan.png',
-      cloudLight: '/pages/page-03/awan-02.png',
-      mountain: '/pages/page-03/gunung.png',
-      hills: '/pages/page-03/hamparan-gunung.png',
+      cloudDark: '/pages/page-01/awan.png',
+      cloudLight: '/pages/page-01/awan-02.png',
+      mountain: '/pages/page-01/gunung.png',
+      hills: '/pages/page-01/hamparan-gunung.png',
       flower: '/pages/page-03/bunga.png',
       butterfly: '/pages/page-03/kupu-kupu.png',
       noteFrame: '/pages/page-03/template-catatan.png',
-      foliage: '/pages/page-03/daun-daun.png'
+      foliage: '/pages/page-01/daun-daun.png'
     },
     controls: [
       { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' },
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' }
+    ]
+  },
+  {
+    id: 4,
+    pageNumber: 4,
+    type: 'content-page-04',
+    title: 'KENALI TOMBOL',
+    buttons: [
+      { id: 'btn-intro-audio', action: 'audio', icon: '/icons/audio.svg', label: 'AUDIO', desc: 'Dengarkan narasi suara' },
+      { id: 'btn-intro-back', action: 'back', icon: '/icons/back.svg', label: 'KEMBALI', desc: 'Kembali ke halaman sebelumnya' },
+      { id: 'btn-intro-next', action: 'next', icon: '/icons/next.svg', label: 'LANJUT', desc: 'Lanjut ke halaman berikutnya' },
+      { id: 'btn-intro-kuis', action: 'kuis', icon: '/icons/kuis.svg', label: 'KUIS', desc: 'Buka kuis interaktif' },
+      { id: 'btn-intro-home', action: 'home', icon: '/icons/home.svg', label: 'HOME', desc: 'Kembali ke halaman utama' },
+      { id: 'btn-intro-games', action: 'games', icon: '/icons/game.svg', label: 'GAMES', desc: 'Buka permainan mini' }
+    ],
+    assets: {
+      background: '/pages/page-04/backgorund.png',
+      light: '/pages/page-01/cahaya.png',
+      cloudDark: '/pages/page-04/awan.png',
+      cloudLight: '/pages/page-04/awan-02.png',
+      mountain: '/pages/page-04/gunung.png',
+      hills: '/pages/page-04/hamparan-gunung.png',
+      houseLeft: '/pages/page-04/rumah-honai.png',
+      houseRight: '/pages/page-04/rumah-gadang.png',
+      flowers: '/pages/page-04/rumput-bunga.png',
+      cardFrame: '/pages/page-04/template-icons.png',
+      crown: '/pages/page-04/ornamen-mahkota.png',
+      foliage: '/pages/page-04/daun-daun.png'
+    },
+    controls: [
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
   }
 ];
