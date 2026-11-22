@@ -186,6 +186,8 @@ function toggleAudioNarration(audioBtn) {
     textToRead = `Kenali Tombol. Audio untuk mendengarkan suara narasi. Kembali untuk halaman sebelumnya. Lanjut untuk halaman berikutnya. Kuis untuk membuka kuis interaktif. Home untuk kembali ke halaman utama. Games untuk bermain mini games.`;
   } else if (currentPage.type === 'content-page-05') {
     textToRead = `${currentPage.title}. ${currentPage.bodyParagraphs.map(p => p.replace(/<[^>]*>/g, '')).join(' ')}`;
+  } else if (currentPage.type === 'content-page-06') {
+    textToRead = `Yuk, Kita Mulai! Petualang Ceritanya! Kenalkan para sahabat nusantara: Naya dari Jawa Barat, Rafi dari Sumatera Barat, Sinta dari Jawa Tengah, dan Danu dari Papua. Mari berpetualang bersama!`;
   }
 
   isAudioSpeaking = true;

@@ -174,5 +174,47 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 6,
+    pageNumber: 6,
+    type: 'content-page-06',
+    title: 'Yuk, Kita Mulai! Petualang Ceritanya!',
+    characters: [
+      { name: 'Naya', origin: '(Jawa Barat)' },
+      { name: 'Rafi', origin: '(Sumatera Barat)' },
+      { name: 'Sinta', origin: '(Jawa tengah)' },
+      { name: 'Danu', origin: '(Papua)' }
+    ],
+    assets: {
+      background: '/pages/page-06/background.png',
+      light: '/pages/page-06/cahaya.png',
+      sun: '/pages/page-06/awan-matahari.png',
+      tree: '/pages/page-06/pohon.png',
+      butterflies: '/pages/page-06/kupu-kupu.png',
+      title: '/pages/page-06/judul.png',
+      hills: '/pages/page-06/hamparan-gunung.png',
+      houseGadang: '/pages/page-06/rumah-gadang.png',
+      houseHonai: '/pages/page-06/honai.png',
+      houseJulang: '/pages/page-06/julang-ngapak.png',
+      houseJateng: '/pages/page-06/rumah-adat-jateng.png',
+      angklung: '/pages/page-06/angklung.png',
+      gamelan: '/pages/page-06/alat-musik.png',
+      pond: '/pages/page-06/air.png',
+      rocks: '/pages/page-06/batu.png',
+      charNaya: '/pages/page-06/naya.png',
+      charRafi: '/pages/page-06/rafi.png',
+      charSinta: '/pages/page-06/sinta.png',
+      charDanu: '/pages/page-06/danu.png',
+      nameBadge: '/pages/page-06/template-nama.png',
+      grass: '/pages/page-06/rumput-daun.png',
+      flowers: '/pages/page-06/bunga.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

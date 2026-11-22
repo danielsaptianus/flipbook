@@ -186,6 +186,56 @@ export const canvaLayouts = {
 
     // Dedaunan Depan Bawah (Sama persis seperti halaman sebelumnya)
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
+  },
+
+  // ==========================================================
+  // HALAMAN 6 (YUK, KITA MULAI! PETUALANG CERITANYA!)
+  // ==========================================================
+  page06: {
+    // Judul Utama "Yuk, Kita Mulai! Petualang Ceritanya!"
+    title: { x: 1.05, y: 0.80, w: 5.80, h: 1.60, rotate: 0, zIndex: 12 },
+
+    // Dahan Pohon Rindang Kiri Atas
+    tree: { x: -0.15, y: -0.10, w: 3.75, h: 2.81, rotate: 0, zIndex: 10 },
+
+    // Matahari & Awan Kanan Atas
+    sun: { x: 6.45, y: 0.15, w: 1.40, h: 0.98, rotate: 0, zIndex: 5 },
+
+    // Kawanan Kupu-kupu Biru
+    butterflies: { x: 1.00, y: 0.65, w: 2.70, h: 2.15, rotate: 0, zIndex: 11 },
+
+    // Hamparan Perbukitan Hijau
+    hills: { x: -0.20, y: 2.60, w: 8.40, h: 3.50, rotate: 0, zIndex: 4 },
+
+    // Rumah Adat di Atas Bukit (Kiri ke Kanan)
+    houseGadang: { x: 0.00, y: 3.50, w: 2.10, h: 1.24, rotate: 0, zIndex: 5 },
+    houseHonai:  { x: 2.30, y: 3.65, w: 1.30, h: 1.03, rotate: 0, zIndex: 5 },
+    houseJulang: { x: 4.90, y: 2.75, w: 1.55, h: 1.35, rotate: 0, zIndex: 5 },
+    houseJateng: { x: 6.30, y: 2.80, w: 2.15, h: 1.08, rotate: 0, zIndex: 5 },
+
+    // Kolam Air & Batu Kiri
+    pond:  { x: 0.85, y: 5.30, w: 2.20, h: 0.55, rotate: 0, zIndex: 6 },
+    rocks: { x: 0.88, y: 4.88, w: 0.70, h: 0.59, rotate: 0, zIndex: 6 },
+
+    // Alat Musik Tradisional Kanan (Angklung & Kolintang)
+    angklung: { x: 6.85, y: 4.40, w: 0.95, h: 1.05, rotate: 0, zIndex: 6 },
+    gamelan:  { x: 5.75, y: 5.15, w: 1.65, h: 0.47, rotate: 0, zIndex: 6 },
+
+    // 4 Karakter Sahabat Nusantara
+    charNaya:  { x: 1.10, y: 3.45, w: 1.64, h: 3.12, rotate: 0, zIndex: 15 },
+    charRafi:  { x: 2.60, y: 3.40, w: 1.48, h: 3.32, rotate: 0, zIndex: 15 },
+    charSinta: { x: 4.20, y: 3.60, w: 1.56, h: 2.95, rotate: 0, zIndex: 15 },
+    charDanu:  { x: 5.72, y: 3.38, w: 1.55, h: 3.40, rotate: 0, zIndex: 15 },
+
+    // Kartu Nama 4 Karakter
+    nameNaya:  { x: 0.78, y: 6.54, w: 1.50, h: 0.68, rotate: 0, zIndex: 18 },
+    nameRafi:  { x: 2.45, y: 6.54, w: 1.50, h: 0.68, rotate: 0, zIndex: 18 },
+    nameSinta: { x: 4.12, y: 6.54, w: 1.50, h: 0.68, rotate: 0, zIndex: 18 },
+    nameDanu:  { x: 5.75, y: 6.54, w: 1.50, h: 0.68, rotate: 0, zIndex: 18 },
+
+    // Rumput & Dedaunan Depan Bawah
+    grass:   { x: 0.00, y: 4.90, w: 8.00, h: 3.10, rotate: 0, zIndex: 16 },
+    flowers: { x: 0.00, y: 6.35, w: 8.00, h: 1.65, rotate: 0, zIndex: 17 },
   }
 };
 

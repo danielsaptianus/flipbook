@@ -1203,6 +1203,165 @@ body {
   pointer-events: none;
 }
 
+/* =========================================
+   PAGE 06 (YUK, KITA MULAI! PETUALANG CERITANYA!)
+   ========================================= */
+.layer-p6-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p6-light {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.layer-p6-sun {
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  animation: cloudFloat 6s ease-in-out infinite;
+}
+
+.layer-p6-hills {
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.layer-p6-house {
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p6-pond {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.layer-p6-rocks {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p6-music {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p6-tree {
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p6-butterflies {
+  height: auto;
+  z-index: 11;
+  pointer-events: none;
+  animation: birdHover 4s ease-in-out infinite;
+}
+
+.layer-p6-title {
+  height: auto;
+  z-index: 12;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.2));
+}
+
+.layer-p6-char {
+  height: auto;
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+  transition: transform 0.25s ease;
+}
+
+.layer-p6-char:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.layer-p6-grass {
+  height: auto;
+  z-index: 16;
+  pointer-events: none;
+}
+
+.layer-p6-flowers {
+  height: auto;
+  z-index: 17;
+  pointer-events: none;
+}
+
+/* Kartu Nama 4 Karakter */
+.layer-p6-name-badge {
+  position: absolute;
+  z-index: 18;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p6-name-badge-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
+}
+
+.p6-name-badge-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  line-height: 1.1;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+.p6-name-title {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(0.75rem, 2cqi, 1.05rem);
+  color: #5c3010;
+  letter-spacing: 0.02em;
+}
+
+.p6-name-origin {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: clamp(0.55rem, 1.4cqi, 0.75rem);
+  color: #7c4a25;
+}
+
 /* Ambient Storybook Animations */
 @keyframes cloudFloat {
   0%,
