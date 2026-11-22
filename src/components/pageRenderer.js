@@ -22,6 +22,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-07') {
     return renderPage07(pageData);
   }
+  if (pageData.type === 'content-page-08') {
+    return renderPage08(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -610,6 +613,51 @@ function renderPage07(data) {
       </nav>
 
       <!-- Layer 17: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage08(data) {
+  const { assets, controls, title } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  return `
+    <article class="page-08-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit Lembut -->
+      <img src="${assets.background}" alt="" class="layer layer-p8-bg" draggable="false" />
+
+      <!-- Layer 2: Efek Cahaya Mentari -->
+      <img src="${assets.light}" alt="" class="layer layer-light layer-p8-light" draggable="false" />
+
+      <!-- Layer 3: Awan & Mentari Atas -->
+      <img src="${assets.clouds}" alt="" class="layer layer-p8-clouds" style="${getCanvaStyle('page08', 'clouds')}" draggable="false" />
+
+      <!-- Layer 4: Gedung Sekolah Dasar -->
+      <img src="${assets.school}" alt="Gedung Sekolah" class="layer layer-p8-school" style="${getCanvaStyle('page08', 'school')}" draggable="false" />
+
+      <!-- Layer 5: Pohon Rindang Kanan -->
+      <img src="${assets.tree}" alt="Pohon Rindang" class="layer layer-p8-tree" style="${getCanvaStyle('page08', 'tree')}" draggable="false" />
+
+      <!-- Layer 6: Jalanan & Hamparan Rumput -->
+      <img src="${assets.road}" alt="" class="layer layer-p8-road" style="${getCanvaStyle('page08', 'road')}" draggable="false" />
+
+      <!-- Layer 7: 3 Karakter Sahabat Berseragam Sekolah (Rafi, Naya, Danu) -->
+      <img src="${assets.charRafi}" alt="Rafi Berseragam Sekolah" class="layer layer-p8-char layer-p8-char-rafi" style="${getCanvaStyle('page08', 'charRafi')}" draggable="false" />
+      <img src="${assets.charNaya}" alt="Naya Berseragam Sekolah" class="layer layer-p8-char layer-p8-char-naya" style="${getCanvaStyle('page08', 'charNaya')}" draggable="false" />
+      <img src="${assets.charDanu}" alt="Danu Berseragam Sekolah" class="layer layer-p8-char layer-p8-char-danu" style="${getCanvaStyle('page08', 'charDanu')}" draggable="false" />
+
+      <!-- Layer 8: Bunga & Semak Depan Kiri -->
+      <img src="${assets.flowers}" alt="" class="layer layer-p8-flowers" style="${getCanvaStyle('page08', 'flowers')}" draggable="false" />
+
+      <!-- Layer 9: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p8" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 10: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

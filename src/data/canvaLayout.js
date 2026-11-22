@@ -290,6 +290,31 @@ export const canvaLayouts = {
     nameRafi: { x: 1.50, y: 6.45, w: 1.50, h: 0.58, rotate: 0, zIndex: 18 },
     nameNaya: { x: 3.20, y: 6.45, w: 1.50, h: 0.58, rotate: 0, zIndex: 18 },
     nameDanu: { x: 4.90, y: 6.45, w: 1.50, h: 0.58, rotate: 0, zIndex: 18 },
+  },
+
+  // ==========================================================
+  // HALAMAN 8 (CERITA 1: MENJELANG FESTIVAL DI SEKOLAH)
+  // ==========================================================
+  page08: {
+    // Awan Cerah & Mentari Atas
+    clouds: { x: 0.20, y: 0.20, w: 7.60, h: 2.80, rotate: 0, zIndex: 3 },
+
+    // Gedung Sekolah Dasar di Cakrawala
+    school: { x: 1.35, y: 2.65, w: 5.30, h: 2.12, rotate: 0, zIndex: 5 },
+
+    // Pohon Rindang Kanan
+    tree: { x: 5.10, y: 2.40, w: 3.20, h: 2.87, rotate: 0, zIndex: 6 },
+
+    // Jalan & Hamparan Rumput
+    road: { x: -0.20, y: 3.90, w: 8.40, h: 4.20, rotate: 0, zIndex: 7 },
+
+    // Semak & Bunga Kiri Depan
+    flowers: { x: 0.00, y: 6.60, w: 4.80, h: 1.47, rotate: 0, zIndex: 12 },
+
+    // 3 Karakter Anak Berjalan Mengenakan Seragam Sekolah (Merah-Putih)
+    charRafi: { x: 1.65, y: 4.55, w: 1.45, h: 3.20, rotate: 0, zIndex: 10 },
+    charNaya: { x: 3.25, y: 4.50, w: 1.55, h: 3.25, rotate: 0, zIndex: 10 },
+    charDanu: { x: 4.85, y: 4.30, w: 1.60, h: 3.45, rotate: 0, zIndex: 10 },
   }
 };
 

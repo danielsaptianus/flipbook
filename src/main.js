@@ -190,6 +190,8 @@ function toggleAudioNarration(audioBtn) {
     textToRead = `Yuk, Kita Mulai! Petualang Ceritanya! Kenalkan para sahabat nusantara: Naya dari Jawa Barat, Rafi dari Sumatera Barat, Sinta dari Jawa Tengah, dan Danu dari Papua. Mari berpetualang bersama!`;
   } else if (currentPage.type === 'content-page-07') {
     textToRead = `Cerita 1. Tiga Warna di Festival Sekolah. Nilai: Toleransi. Bersama para sahabat nusantara: Rafi dari Sumatera Barat, Naya dari Jawa Barat, dan Danu dari Papua di festival sekolah!`;
+  } else if (currentPage.type === 'content-page-08') {
+    textToRead = `Cerita 1: Menuju Sekolah. Pagi yang cerah di sekolah, Rafi, Naya, dan Danu berjalan bersama menuju sekolah untuk menyambut festival sekolah yang meriah!`;
   }
 
   isAudioSpeaking = true;

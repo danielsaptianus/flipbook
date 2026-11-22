@@ -253,5 +253,34 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 8,
+    pageNumber: 8,
+    type: 'content-page-08',
+    title: 'Cerita 1: Menuju Sekolah',
+    characters: [
+      { name: 'Rafi', role: 'Siswa' },
+      { name: 'Naya', role: 'Siswi' },
+      { name: 'Danu', role: 'Siswa' }
+    ],
+    assets: {
+      background: '/pages/page-08/background.png',
+      light: '/pages/page-06/cahaya.png',
+      clouds: '/pages/page-08/awan.png',
+      school: '/pages/page-08/sekolah.png',
+      tree: '/pages/page-08/pohon.png',
+      road: '/pages/page-08/jalan.png',
+      flowers: '/pages/page-08/bunga-dayb.png',
+      charRafi: '/pages/page-08/rafi.png',
+      charNaya: '/pages/page-08/naya.png',
+      charDanu: '/pages/page-08/danu.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];
