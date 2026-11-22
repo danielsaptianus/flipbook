@@ -127,13 +127,13 @@ export const canvaLayouts = {
   // ==========================================================
   page04: {
     // Template Bingkai Tombol (Card)
-    cardFrame: { x: 1.62, y: 0.50, w: 4.76, h: 7.10, rotate: 0, zIndex: 10 },
+    cardFrame: { x: 1.62, y: 0.61, w: 4.76, h: 7.12, rotate: 0, zIndex: 10 },
 
     // Mahkota Ornamen Bali di atas kartu
-    crown: { x: 2.95, y: 0.10, w: 2.10, h: 1.24, rotate: 0, zIndex: 12 },
+    crown: { x: 3.22, y: 0.06, w: 1.51, h: 0.92, rotate: 0, zIndex: 12 },
 
     // Gunung Kanan Latar
-    mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 4 },
+    mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 6 },
 
     // Hamparan Bukit (Diperlebar & diperpanjang agar menutup celah biru langit)
     hills: { x: -1.05, y: 3.20, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
@@ -142,11 +142,11 @@ export const canvaLayouts = {
     houseLeft: { x: 0.15, y: 3.65, w: 1.24, h: 0.90, rotate: 0, zIndex: 6 },
 
     // Rumah Gadang Kanan
-    houseRight: { x: 6.36, y: 3.38, w: 1.64, h: 0.94, rotate: 0, zIndex: 6 },
+    houseRight: { x: 5.57, y: 2.4, w: 3.26, h: 1.87, rotate: 0, zIndex: 6 },
 
     // Rumput Bunga Kiri & Kanan
-    flowersLeft:  { x: 0.00, y: 4.88, w: 1.60, h: 0.75, rotate: 0, zIndex: 7 },
-    flowersRight: { x: 6.40, y: 4.88, w: 1.60, h: 0.75, rotate: 0, flipH: true, zIndex: 7 },
+    flowersLeft:  { x: 0.00, y: 4.88, w: 2.44, h: 0.75, rotate: 0, zIndex: 8 },
+    flowersRight: { x: 6.40, y: 4.82, w: 2.44, h: 0.75, rotate: 0, flipH: true, zIndex: 8 },
 
     // Dedaunan Depan Bawah
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
@@ -181,8 +181,8 @@ export const canvaLayouts = {
     hills: { x: -1.05, y: 3.20, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumput Bunga Kiri & Kanan (Sama persis seperti halaman sebelumnya)
-    flowersLeft:  { x: 0.00, y: 4.88, w: 1.60, h: 0.75, rotate: 0, zIndex: 8 },
-    flowersRight: { x: 6.40, y: 4.88, w: 1.60, h: 0.75, rotate: 0, flipH: true, zIndex: 8 },
+    flowersLeft:  { x: 0.00, y: 4.81, w: 1.60, h: 0.75, rotate: 13, zIndex: 8 },
+    flowersRight: { x: 6.40, y: 4.89, w: 1.60, h: 0.75, rotate: 13, flipH: true, zIndex: 8 },
 
     // Dedaunan Depan Bawah (Sama persis seperti halaman sebelumnya)
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
@@ -204,8 +204,8 @@ export const canvaLayouts = {
     // Kawanan Kupu-kupu Biru
     butterflies: { x: 1.00, y: 0.65, w: 2.70, h: 2.15, rotate: 0, zIndex: 11 },
 
-    // Hamparan Perbukitan Hijau
-    hills: { x: -0.20, y: 2.60, w: 8.40, h: 3.50, rotate: 0, zIndex: 4 },
+    // Hamparan Perbukitan Hijau (Diperlebar & diperpanjang ke bawah agar menutup celah biru langit)
+    hills: { x: -0.50, y: 2.45, w: 9.00, h: 5.65, rotate: 0, zIndex: 4 },
 
     // Rumah Adat di Atas Bukit (Kiri ke Kanan)
     houseGadang: { x: 0.00, y: 3.50, w: 2.10, h: 1.24, rotate: 0, zIndex: 5 },

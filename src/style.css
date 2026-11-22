@@ -165,14 +165,19 @@ body {
   z-index: 1;
 }
 
-.layer-light {
+.layer-light,
+.layer-p2-light {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 24%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.6;
+  object-position: top center;
   z-index: 2;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 1;
 }
 
 /* 2. Mega Mendung Clouds */
@@ -411,16 +416,6 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-}
-
-.layer-p2-light {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 25%;
-  object-fit: cover;
-  opacity: 0.6;
-  z-index: 2;
 }
 
 .layer-p2-mountain {
@@ -1016,6 +1011,11 @@ body {
   pointer-events: none;
 }
 
+.p4-circle-btn--games .p4-circle-btn-img {
+  width: 75%;
+  height: 75%;
+}
+
 .p4-btn-label {
   font-family: var(--font-title);
   font-weight: 800;
@@ -1150,19 +1150,19 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 8.5% 8.5% 9% 8.5%;
+  padding: 10% 14.5% 12% 14.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(10px, 2.3cqi, 20px);
+  gap: clamp(8px, 1.8cqi, 16px);
   pointer-events: auto;
 }
 
 .p5-note-p {
   font-family: var(--font-title);
   font-weight: 800;
-  font-size: clamp(0.85rem, 2.6cqi, 1.38rem);
-  line-height: 1.38;
+  font-size: clamp(0.7rem, 2.15cqi, 1.08rem);
+  line-height: 1.44;
   color: #111827;
   letter-spacing: 0.015em;
   margin: 0;
@@ -1235,6 +1235,9 @@ body {
 
 .layer-p6-hills {
   height: auto;
+  min-height: 70%;
+  object-fit: cover;
+  object-position: top center;
   z-index: 4;
   pointer-events: none;
 }
