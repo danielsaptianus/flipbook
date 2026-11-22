@@ -1413,14 +1413,16 @@ body {
 }
 
 .layer-p7-tree {
-  height: auto;
+  object-fit: contain;
+  object-position: bottom left;
   z-index: 8;
   pointer-events: none;
   filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.18));
 }
 
 .layer-p7-swing {
-  height: auto;
+  object-fit: contain;
+  object-position: top right;
   z-index: 9;
   pointer-events: none;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
@@ -1450,14 +1452,16 @@ body {
 }
 
 .layer-p7-title {
-  height: auto;
+  object-fit: contain;
+  object-position: center;
   z-index: 14;
   pointer-events: none;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
 }
 
 .layer-p7-char {
-  height: auto;
+  object-fit: contain;
+  object-position: top center;
   z-index: 15;
   pointer-events: none;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
@@ -1481,7 +1485,7 @@ body {
 .p7-name-badge-bg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   display: block;
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
@@ -1500,14 +1504,14 @@ body {
   text-align: center;
   pointer-events: none;
   line-height: 1.1;
-  padding: 4px 6px;
+  padding: 2px 4px;
   box-sizing: border-box;
 }
 
 .p7-name-title {
   font-family: 'Archivo Black', var(--font-title);
   font-weight: 800;
-  font-size: clamp(0.78rem, 2.1cqi, 1.1rem);
+  font-size: clamp(0.68rem, 1.8cqi, 0.95rem);
   color: #1e3a5f;
   letter-spacing: 0.02em;
 }
@@ -1515,8 +1519,20 @@ body {
 .p7-name-origin {
   font-family: var(--font-title);
   font-weight: 700;
-  font-size: clamp(0.58rem, 1.45cqi, 0.78rem);
+  font-size: clamp(0.52rem, 1.3cqi, 0.72rem);
   color: #2c4d75;
+}
+
+/* Floating Dock Halaman 7: pastikan tidak tumpang tindih dengan lencana */
+.floating-nav-dock--p7 {
+  bottom: 0.8%;
+  gap: clamp(6px, 1.4cqw, 14px);
+  z-index: 25;
+}
+
+.floating-nav-dock--p7 .floating-nav-btn {
+  width: clamp(38px, 8.4cqw, 66px);
+  height: clamp(38px, 8.4cqw, 66px);
 }
 
 /* Ambient Storybook Animations */
