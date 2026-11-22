@@ -19,6 +19,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-06') {
     return renderPage06(pageData);
   }
+  if (pageData.type === 'content-page-07') {
+    return renderPage07(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -520,6 +523,93 @@ function renderPage06(data) {
       </nav>
 
       <!-- Layer 16: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage07(data) {
+  const { assets, controls, title, subtitle, characters } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  return `
+    <article class="page-07-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title} - ${subtitle}">
+      <!-- Layer 1: Background Langit Cerah -->
+      <img src="${assets.background}" alt="" class="layer layer-p7-bg" draggable="false" />
+
+      <!-- Layer 2: Efek Cahaya Mentari -->
+      <img src="${assets.light}" alt="" class="layer layer-light layer-p7-light" draggable="false" />
+
+      <!-- Layer 3: Awan-awan -->
+      <img src="${assets.clouds}" alt="" class="layer layer-p7-clouds" style="${getCanvaStyle('page07', 'clouds')}" draggable="false" />
+
+      <!-- Layer 4: Burung-burung Terbang Kiri -->
+      <img src="${assets.birds}" alt="" class="layer layer-p7-birds" style="${getCanvaStyle('page07', 'birds')}" draggable="false" />
+
+      <!-- Layer 5: Rumah Gadang Kiri (Belakang Pohon) -->
+      <img src="${assets.houseGadang}" alt="Rumah Gadang" class="layer layer-p7-gadang" style="${getCanvaStyle('page07', 'houseGadang')}" draggable="false" />
+
+      <!-- Layer 6: Rumah Julang Ngapak Tengah Kiri -->
+      <img src="${assets.houseJulang}" alt="Rumah Julang Ngapak" class="layer layer-p7-julang" style="${getCanvaStyle('page07', 'houseJulang')}" draggable="false" />
+
+      <!-- Layer 7: Gedung Sekolah Kanan -->
+      <img src="${assets.school}" alt="Sekolah" class="layer layer-p7-school" style="${getCanvaStyle('page07', 'school')}" draggable="false" />
+
+      <!-- Layer 8: Pohon Besar Rindang Kiri -->
+      <img src="${assets.tree}" alt="Pohon Rindang" class="layer layer-p7-tree" style="${getCanvaStyle('page07', 'tree')}" draggable="false" />
+
+      <!-- Layer 9: Ayunan Ranting Kanan Atas -->
+      <img src="${assets.swing}" alt="Ayunan Ranting" class="layer layer-p7-swing" style="${getCanvaStyle('page07', 'swing')}" draggable="false" />
+
+      <!-- Layer 10: Hamparan Rumput Taman -->
+      <img src="${assets.garden}" alt="" class="layer layer-p7-garden" style="${getCanvaStyle('page07', 'garden')}" draggable="false" />
+
+      <!-- Layer 11: Bebatuan Kiri Bawah -->
+      <img src="${assets.rocks}" alt="" class="layer layer-p7-rocks" style="${getCanvaStyle('page07', 'rocks')}" draggable="false" />
+
+      <!-- Layer 12: Papan Kayu -->
+      <img src="${assets.signpost}" alt="" class="layer layer-p7-signpost" style="${getCanvaStyle('page07', 'signpost')}" draggable="false" />
+
+      <!-- Layer 13: Judul Utama (Cerita 1: Tiga Warna di Festival Sekolah - Toleransi) -->
+      <img src="${assets.title}" alt="${title} - ${subtitle}" class="layer layer-p7-title" style="${getCanvaStyle('page07', 'title')}" draggable="false" />
+      <h1 class="sr-only">${title} (${subtitle})</h1>
+
+      <!-- Layer 14: 3 Karakter Anak Nusantara -->
+      <img src="${assets.charRafi}" alt="Rafi (Sumatera Barat)" class="layer layer-p7-char layer-p7-char-rafi" style="${getCanvaStyle('page07', 'charRafi')}" draggable="false" />
+      <img src="${assets.charNaya}" alt="Naya (Jawa Barat)" class="layer layer-p7-char layer-p7-char-naya" style="${getCanvaStyle('page07', 'charNaya')}" draggable="false" />
+      <img src="${assets.charDanu}" alt="Danu (Papua)" class="layer layer-p7-char layer-p7-char-danu" style="${getCanvaStyle('page07', 'charDanu')}" draggable="false" />
+
+      <!-- Layer 15: 3 Lencana Nama Karakter -->
+      <div class="layer layer-p7-name-badge layer-p7-name-rafi" style="${getCanvaStyle('page07', 'nameRafi')}">
+        <img src="${assets.nameBadge}" alt="" class="p7-name-badge-bg" draggable="false" />
+        <div class="p7-name-badge-text">
+          <span class="p7-name-title">${characters[0].name}</span>
+          <span class="p7-name-origin">${characters[0].origin}</span>
+        </div>
+      </div>
+      <div class="layer layer-p7-name-badge layer-p7-name-naya" style="${getCanvaStyle('page07', 'nameNaya')}">
+        <img src="${assets.nameBadge}" alt="" class="p7-name-badge-bg" draggable="false" />
+        <div class="p7-name-badge-text">
+          <span class="p7-name-title">${characters[1].name}</span>
+          <span class="p7-name-origin">${characters[1].origin}</span>
+        </div>
+      </div>
+      <div class="layer layer-p7-name-badge layer-p7-name-danu" style="${getCanvaStyle('page07', 'nameDanu')}">
+        <img src="${assets.nameBadge}" alt="" class="p7-name-badge-bg" draggable="false" />
+        <div class="p7-name-badge-text">
+          <span class="p7-name-title">${characters[2].name}</span>
+          <span class="p7-name-origin">${characters[2].origin}</span>
+        </div>
+      </div>
+
+      <!-- Layer 16: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p7" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 17: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

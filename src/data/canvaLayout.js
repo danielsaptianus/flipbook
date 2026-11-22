@@ -218,14 +218,14 @@ export const canvaLayouts = {
     rocks: { x: 0.88, y: 4.88, w: 0.70, h: 0.59, rotate: 0, zIndex: 6 },
 
     // Alat Musik Tradisional Kanan (Angklung & Kolintang)
-    angklung: { x: 6.85, y: 4.40, w: 0.95, h: 1.05, rotate: 0, zIndex: 6 },
-    gamelan:  { x: 5.75, y: 5.15, w: 1.65, h: 0.47, rotate: 0, zIndex: 6 },
+    angklung: { x: 6.85, y: 4.15, w: 0.95, h: 1.05, rotate: 0, zIndex: 6 },
+    gamelan:  { x: 5.75, y: 4.70, w: 1.65, h: 0.47, rotate: 0, zIndex: 6 },
 
     // 4 Karakter Sahabat Nusantara
-    charNaya:  { x: 1.10, y: 3.45, w: 1.64, h: 3.12, rotate: 0, zIndex: 15 },
-    charRafi:  { x: 2.60, y: 3.40, w: 1.48, h: 3.32, rotate: 0, zIndex: 15 },
-    charSinta: { x: 4.20, y: 3.60, w: 1.56, h: 2.95, rotate: 0, zIndex: 15 },
-    charDanu:  { x: 5.72, y: 3.38, w: 1.55, h: 3.40, rotate: 0, zIndex: 15 },
+    charNaya:  { x: 0.85, y: 3.50, w: 1.80, h: 3.55, rotate: 0, zIndex: 15 },
+    charRafi:  { x: 2.40, y: 3.40, w: 1.80, h: 3.60, rotate: 0, zIndex: 15 },
+    charSinta: { x: 4.10, y: 3.60, w: 1.80, h: 3.65, rotate: 0, zIndex: 15 },
+    charDanu:  { x: 5.70, y: 3.40, w: 1.5, h: 3.50, rotate: 0, zIndex: 15 },
 
     // Kartu Nama 4 Karakter
     nameNaya:  { x: 0.78, y: 6.54, w: 1.50, h: 0.68, rotate: 0, zIndex: 18 },
@@ -234,8 +234,62 @@ export const canvaLayouts = {
     nameDanu:  { x: 5.75, y: 6.54, w: 1.50, h: 0.68, rotate: 0, zIndex: 18 },
 
     // Rumput & Dedaunan Depan Bawah
-    grass:   { x: 0.00, y: 4.90, w: 8.00, h: 3.10, rotate: 0, zIndex: 16 },
-    flowers: { x: 0.00, y: 6.35, w: 8.00, h: 1.65, rotate: 0, zIndex: 17 },
+    grass:   { x: -0.10, y: 4.90, w: 9.00, h: 3.10, rotate: 0, zIndex: 14 },
+    flowers: { x: 0, y: 6.7, w: 8.00, h: 1.65, rotate: 0, zIndex: 17 },
+  },
+
+  // ==========================================================
+  // HALAMAN 7 (CERITA 1: TIGA WARNA DI FESTIVAL SEKOLAH - TOLERANSI)
+  // Spesifikasi Tipografi Canva:
+  // - Font: Archivo Black
+  // - Efek lengkungan: Lengkungan 33
+  // - Cerita 1: ukuran 32
+  // - Tiga Warna di Festival Sekolah: ukuran 34
+  // - Toleransi: ukuran 18,5
+  // ==========================================================
+  page07: {
+    // Judul Utama (Cerita 1: Tiga Warna di Festival Sekolah - Toleransi)
+    title: { x: 1.15, y: 0.25, w: 5.70, h: 3.10, rotate: 0, zIndex: 14 },
+
+    // Awan-awan Atas
+    clouds: { x: 0.00, y: 0.30, w: 8.00, h: 2.30, rotate: 0, zIndex: 3 },
+
+    // Burung-burung Terbang Kiri
+    birds: { x: 0.00, y: 1.50, w: 1.80, h: 1.60, rotate: 0, zIndex: 4 },
+
+    // Rumah Gadang Kiri (Latar Belakang Pohon)
+    houseGadang: { x: 0.00, y: 2.70, w: 2.90, h: 1.75, rotate: 0, zIndex: 5 },
+
+    // Pohon Besar Rindang Kiri
+    tree: { x: -0.60, y: 1.40, w: 3.90, h: 6.60, rotate: 0, zIndex: 8 },
+
+    // Rumah Julang Ngapak (Tengah Kiri)
+    houseJulang: { x: 2.60, y: 3.60, w: 1.50, h: 1.30, rotate: 0, zIndex: 6 },
+
+    // Gedung Sekolah Kanan
+    school: { x: 4.10, y: 3.75, w: 4.20, h: 1.70, rotate: 0, zIndex: 5 },
+
+    // Dahan Pohon & Ayunan Gantung Kanan Atas
+    swing: { x: 5.50, y: 0.60, w: 2.60, h: 3.40, rotate: 0, zIndex: 9 },
+
+    // Hamparan Rumput Taman
+    garden: { x: -0.50, y: 3.40, w: 9.00, h: 5.20, rotate: 0, zIndex: 7 },
+
+    // Bebatuan Kiri Bawah
+    rocks: { x: 0.00, y: 6.10, w: 1.20, h: 1.20, rotate: 0, zIndex: 10 },
+
+    // Papan Kayu Kiri (Di samping bebatuan)
+    signpost: { x: 1.25, y: 6.15, w: 1.15, h: 1.35, rotate: 0, zIndex: 10 },
+
+    // 3 Karakter Anak Nusantara
+    charRafi: { x: 1.70, y: 3.75, w: 1.65, h: 3.65, rotate: 0, zIndex: 15 },
+    charNaya: { x: 3.00, y: 3.95, w: 2.10, h: 3.65, rotate: 0, zIndex: 15 },
+    charDanu: { x: 4.80, y: 2.15, w: 1.65, h: 4.75, rotate: 0, zIndex: 15 },
+
+    // 3 Kartu Nama Karakter
+    nameRafi: { x: 1.45, y: 6.60, w: 1.70, h: 0.70, rotate: 0, zIndex: 18 },
+    nameNaya: { x: 3.15, y: 6.60, w: 1.70, h: 0.70, rotate: 0, zIndex: 18 },
+    nameDanu: { x: 4.85, y: 6.60, w: 1.70, h: 0.70, rotate: 0, zIndex: 18 },
   }
 };
 

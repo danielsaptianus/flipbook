@@ -216,5 +216,42 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 7,
+    pageNumber: 7,
+    type: 'content-page-07',
+    title: 'Cerita 1: Tiga Warna di Festival Sekolah',
+    subtitle: 'Toleransi',
+    characters: [
+      { name: 'Rafi', origin: '(Sumatera Barat)' },
+      { name: 'Naya', origin: '(Jawa Barat)' },
+      { name: 'Danu', origin: '(Papua)' }
+    ],
+    assets: {
+      background: '/pages/page-07/background.png',
+      light: '/pages/page-07/cahaya.png',
+      clouds: '/pages/page-07/awan-awan.png',
+      birds: '/pages/page-07/burung-burung.png',
+      tree: '/pages/page-07/pohon.png',
+      houseGadang: '/pages/page-07/rumah-gadang.png',
+      houseJulang: '/pages/page-07/julang-ngapak.png',
+      school: '/pages/page-07/sekolah.png',
+      swing: '/pages/page-07/ayunan-ranting.png',
+      garden: '/pages/page-07/hamparan-taman.png',
+      rocks: '/pages/page-07/batu.png',
+      signpost: '/pages/page-07/papan.png',
+      charRafi: '/pages/page-07/rafi.png',
+      charNaya: '/pages/page-07/naya.png',
+      charDanu: '/pages/page-07/danu.png',
+      nameBadge: '/pages/page-07/template-nama.png',
+      title: '/pages/page-07/judul.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

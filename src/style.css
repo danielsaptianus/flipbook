@@ -1365,6 +1365,160 @@ body {
   color: #7c4a25;
 }
 
+/* =========================================
+   PAGE 07 (CERITA 1: TIGA WARNA DI FESTIVAL SEKOLAH - TOLERANSI)
+   ========================================= */
+.layer-p7-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p7-clouds {
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  animation: cloudFloat 7s ease-in-out infinite;
+}
+
+.layer-p7-birds {
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+  animation: birdHover 4.5s ease-in-out infinite;
+}
+
+.layer-p7-gadang {
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p7-julang {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p7-school {
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p7-tree {
+  height: auto;
+  z-index: 8;
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p7-swing {
+  height: auto;
+  z-index: 9;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p7-garden {
+  height: auto;
+  min-height: 65%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.layer-p7-rocks {
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p7-signpost {
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p7-title {
+  height: auto;
+  z-index: 14;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p7-char {
+  height: auto;
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+  transition: transform 0.25s ease;
+}
+
+.layer-p7-char:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Lencana Nama Karakter Halaman 7 */
+.layer-p7-name-badge {
+  position: absolute;
+  z-index: 18;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p7-name-badge-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
+}
+
+.p7-name-badge-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  line-height: 1.1;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+.p7-name-title {
+  font-family: 'Archivo Black', var(--font-title);
+  font-weight: 800;
+  font-size: clamp(0.78rem, 2.1cqi, 1.1rem);
+  color: #1e3a5f;
+  letter-spacing: 0.02em;
+}
+
+.p7-name-origin {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: clamp(0.58rem, 1.45cqi, 0.78rem);
+  color: #2c4d75;
+}
+
 /* Ambient Storybook Animations */
 @keyframes cloudFloat {
   0%,

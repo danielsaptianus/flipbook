@@ -188,6 +188,8 @@ function toggleAudioNarration(audioBtn) {
     textToRead = `${currentPage.title}. ${currentPage.bodyParagraphs.map(p => p.replace(/<[^>]*>/g, '')).join(' ')}`;
   } else if (currentPage.type === 'content-page-06') {
     textToRead = `Yuk, Kita Mulai! Petualang Ceritanya! Kenalkan para sahabat nusantara: Naya dari Jawa Barat, Rafi dari Sumatera Barat, Sinta dari Jawa Tengah, dan Danu dari Papua. Mari berpetualang bersama!`;
+  } else if (currentPage.type === 'content-page-07') {
+    textToRead = `Cerita 1. Tiga Warna di Festival Sekolah. Nilai: Toleransi. Bersama para sahabat nusantara: Rafi dari Sumatera Barat, Naya dari Jawa Barat, dan Danu dari Papua di festival sekolah!`;
   }
 
   isAudioSpeaking = true;
