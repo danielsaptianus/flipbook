@@ -637,8 +637,9 @@ function renderPage08(data) {
       <!-- Layer 2: Efek Cahaya Mentari -->
       <img src="${assets.light}" alt="" class="layer layer-light layer-p8-light" draggable="false" />
 
-      <!-- Layer 3: Awan & Mentari Atas -->
-      <img src="${assets.clouds}" alt="" class="layer layer-p8-clouds" style="${getCanvaStyle('page08', 'clouds')}" draggable="false" />
+      <!-- Layer 3: Awan Cerah Kiri & Kanan Atas -->
+      <img src="${assets.clouds}" alt="" class="layer layer-p8-clouds layer-p8-clouds-left" style="${getCanvaStyle('page08', 'cloudsLeft')}" draggable="false" />
+      <img src="${assets.clouds}" alt="" class="layer layer-p8-clouds layer-p8-clouds-right" style="${getCanvaStyle('page08', 'cloudsRight')}" draggable="false" />
 
       <!-- Layer 4: Gedung Sekolah Dasar -->
       <img src="${assets.school}" alt="Gedung Sekolah" class="layer layer-p8-school" style="${getCanvaStyle('page08', 'school')}" draggable="false" />

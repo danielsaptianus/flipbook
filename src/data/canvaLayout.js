@@ -300,9 +300,9 @@ export const canvaLayouts = {
     // Teks Narasi Cerita (Font: League Spartan, uk 15, letter-spacing -15)
     storyBox: { x: 0.50, y: 0.35, w: 7.00, h: 'auto', rotate: 0, zIndex: 15 },
 
-    // Awan Cerah & Mentari Atas
-    clouds: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, zIndex: 3 },
-    cloudsLeft: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, zIndex: 3 },
+    // Awan Cerah Kiri & Kanan Atas
+    cloudsLeft: { x: -0.10, y: 0.13, w: 4.29, h: 2.49, rotate: 0, zIndex: 3 },
+    cloudsRight: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, flipH: true, zIndex: 3 },
 
     // Gedung Sekolah Dasar di Cakrawala
     school: { x: 0, y: 2.13, w: 5.34, h: 2.13, rotate: 0, zIndex: 5 },

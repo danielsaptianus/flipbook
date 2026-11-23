@@ -1564,7 +1564,15 @@ body {
   height: auto;
   z-index: 3;
   pointer-events: none;
-  animation: cloudFloat 8s ease-in-out infinite;
+}
+
+.layer-p8-clouds-left {
+  animation: cloudFloat 7.5s ease-in-out infinite;
+}
+
+.layer-p8-clouds-right {
+  animation: cloudFloatMirrored 8s ease-in-out infinite;
+  animation-delay: -3.5s;
 }
 
 .layer-p8-school {
