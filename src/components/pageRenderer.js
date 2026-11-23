@@ -655,8 +655,9 @@ function renderPage08(data) {
       <img src="${assets.charNaya}" alt="Naya Berseragam Sekolah" class="layer layer-p8-char layer-p8-char-naya" style="${getCanvaStyle('page08', 'charNaya')}" draggable="false" />
       <img src="${assets.charDanu}" alt="Danu Berseragam Sekolah" class="layer layer-p8-char layer-p8-char-danu" style="${getCanvaStyle('page08', 'charDanu')}" draggable="false" />
 
-      <!-- Layer 8: Bunga & Semak Depan Kiri -->
-      <img src="${assets.flowers}" alt="" class="layer layer-p8-flowers" style="${getCanvaStyle('page08', 'flowers')}" draggable="false" />
+      <!-- Layer 8: Bunga & Semak Depan Kiri & Kanan -->
+      <img src="${assets.flowers}" alt="" class="layer layer-p8-flowers layer-p8-flowers-left" style="${getCanvaStyle('page08', 'flowersLeft')}" draggable="false" />
+      <img src="${assets.flowers}" alt="" class="layer layer-p8-flowers layer-p8-flowers-right" style="${getCanvaStyle('page08', 'flowersRight')}" draggable="false" />
 
       <!-- Layer 9: Teks Narasi Cerita (League Spartan) -->
       <div class="layer layer-p8-story-wrapper" style="${getCanvaStyle('page08', 'storyBox')}">

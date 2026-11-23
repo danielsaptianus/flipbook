@@ -298,28 +298,30 @@ export const canvaLayouts = {
   // ==========================================================
   page08: {
     // Teks Narasi Cerita (Font: League Spartan, uk 15, letter-spacing -15)
-    storyBox: { x: 0.50, y: 0.35, w: 7.00, h: 'auto', rotate: 0, zIndex: 15 },
+    storyBox: { x: 0.76, y: 1.23, w: 6.38, h: 2.77, rotate: 0, zIndex: 15 },
 
     // Awan Cerah Kiri & Kanan Atas
-    cloudsLeft: { x: -0.10, y: 0.13, w: 4.29, h: 2.49, rotate: 0, zIndex: 3 },
-    cloudsRight: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, flipH: true, zIndex: 3 },
+    cloudsRight: { x: 0, y: 1.57, w: 4.02, h: 2.33, rotate: 0, zIndex: 3 },
+    cloudsLeft: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, flipH: true, zIndex: 3 },
 
     // Gedung Sekolah Dasar di Cakrawala
     school: { x: 0, y: 2.13, w: 5.34, h: 2.13, rotate: 0, zIndex: 5 },
 
     // Pohon Rindang Kanan
-    tree: { x: 5.10, y: 2.40, w: 3.20, h: 2.87, rotate: 0, zIndex: 6 },
+    tree: { x: -0.30, y: 3.00, w: 2.89, h: 2.59, rotate: 0, zIndex: 13 },
 
     // Jalan & Hamparan Rumput
     road: { x: -0.20, y: 3.90, w: 8.40, h: 4.20, rotate: 0, zIndex: 7 },
 
-    // Semak & Bunga Kiri Depan
-    flowers: { x: 0.00, y: 6.60, w: 4.80, h: 1.47, rotate: 0, zIndex: 12 },
+    // Semak & Bunga Kiri & Kanan Depan
+    flowersLeft: { x: 0.00, y: 6.60, w: 3, h: 0.91, rotate: 0, zIndex: 12 },
+    flowersRight: { x: 5.00, y: 6.60, w: 3, h: 0.91, rotate: 0, flipH: true, zIndex: 12 },
+    flowers: { x: 0.00, y: 6.60, w: 3, h: 0.91, rotate: 0, zIndex: 12 },
 
     // 3 Karakter Anak Berjalan Mengenakan Seragam Sekolah (Merah-Putih)
-    charRafi: { x: 1.65, y: 4.55, w: 1.45, h: 3.20, rotate: 0, zIndex: 10 },
-    charNaya: { x: 3.25, y: 4.50, w: 1.55, h: 3.25, rotate: 0, zIndex: 10 },
-    charDanu: { x: 4.85, y: 4.30, w: 1.60, h: 3.45, rotate: 0, zIndex: 10 },
+    charRafi: { x: 3.41, y: 5.28, w: 1.12, h: 2.72, rotate: 0, zIndex: 10 },
+    charNaya: { x: 1.96, y: 5.18, w: 1.33, h: 2.94, rotate: 0, zIndex: 10 },
+    charDanu: { x: 4.54, y: 4.67, w: 1.38, h: 3.48, rotate: 0, zIndex: 10 },
   }
 };
 
