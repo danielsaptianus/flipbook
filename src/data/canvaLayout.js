@@ -305,18 +305,17 @@ export const canvaLayouts = {
     cloudsLeft: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, flipH: true, zIndex: 3 },
 
     // Gedung Sekolah Dasar di Cakrawala
-    school: { x: 0, y: 2.13, w: 5.34, h: 2.13, rotate: 0, zIndex: 5 },
+    school: { x: 0, y: 4.30, w: 5.34, h: 2.13, rotate: 0, zIndex: 8 },
 
     // Pohon Rindang Kanan
-    tree: { x: -0.30, y: 3.00, w: 2.89, h: 2.59, rotate: 0, zIndex: 13 },
+    tree: { x: -0.65, y: 4.18, w: 2.89, h: 2.59, rotate: 0, zIndex: 13 },
 
     // Jalan & Hamparan Rumput
-    road: { x: -0.20, y: 3.90, w: 8.40, h: 4.20, rotate: 0, zIndex: 7 },
+    road: { x: -0.00, y: 5.28, w: 8., h: 3.84, rotate: 0, zIndex: 7 },
 
     // Semak & Bunga Kiri & Kanan Depan
-    flowersLeft: { x: 0.00, y: 6.60, w: 3, h: 0.91, rotate: 0, zIndex: 12 },
-    flowersRight: { x: 5.00, y: 6.60, w: 3, h: 0.91, rotate: 0, flipH: true, zIndex: 12 },
-    flowers: { x: 0.00, y: 6.60, w: 3, h: 0.91, rotate: 0, zIndex: 12 },
+    flowersLeft: { x: -0.07, y: 5.35, w: 3, h: 0.91, rotate: 0, zIndex: 12 },
+    flowersRight: { x: 5.00, y: 5.36, w: 3, h: 0.91, rotate: 0, flipH: true, zIndex: 12 },
 
     // 3 Karakter Anak Berjalan Mengenakan Seragam Sekolah (Merah-Putih)
     charRafi: { x: 3.41, y: 5.28, w: 1.12, h: 2.72, rotate: 0, zIndex: 10 },
