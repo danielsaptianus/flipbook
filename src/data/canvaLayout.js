@@ -249,7 +249,7 @@ export const canvaLayouts = {
   // ==========================================================
   page07: {
     // Judul Utama (Cerita 1: Tiga Warna di Festival Sekolah - Toleransi)
-    title: { x: 1.50, y: 0.28, w: 5.36, h: 2.72, rotate: 0, zIndex: 16 },
+    title: { x: 1.34, y: 0.13, w: 5.70, h: 2.99, rotate: 0, zIndex: 16 },
 
     // Awan-awan Atas
     cloudsLeft: { x: -0.10, y: 0.20, w: 5.21, h: 1.98, rotate: 0, zIndex: 3 },
