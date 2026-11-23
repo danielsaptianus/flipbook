@@ -356,9 +356,9 @@ export const canvaLayouts = {
   },
 
   // ==========================================================
-  // HALAMAN 10 (MISI 1: PEMECAHAN MASALAH)
+  // MISI 01 / HALAMAN 10 (MISI 1: PEMECAHAN MASALAH)
   // ==========================================================
-  page10: {
+  mission01: {
     // Badge Judul MISI
     misi: { x: 3.02, y: 0.41, w: 2.18, h: 0.77, rotate: 0, zIndex: 15 },
 
@@ -373,11 +373,11 @@ export const canvaLayouts = {
     questionCard: { x: 2.07, y: 2.36, w: 4.07, h: 1.65, rotate: 0, zIndex: 13 },
 
     // Kartu Pilihan Jawaban (A, B, C)
-    answerCard: { x: 1.42, y: 4.21, w: 5.31, h: 4.22, rotate: 0, zIndex: 14 },
+    answerCard: { x: 1.42, y: 3.10, w: 5.31, h: 4.22, rotate: 0, zIndex: 14 },
 
-    // Pagar Kayu Bawah Kiri
+    // Pagar Kayu Bawah Kiri & Kanan
     fenceLeft: { x: -0.07, y: 6.36, w: 2.28, h: 1.64, rotate: 0, zIndex: 6 },
-    fenceRight: { x: 2.15, y: 1.55, w: 2.15, h: 1.55, rotate: 0, flipH: true, zIndex: 6 },
+    fenceRight: { x: 5.85, y: 6.51, w: 2.15, h: 1.55, rotate: 0, flipH: true, zIndex: 6 },
 
     // Semak Dedaunan & Bunga Bawah Kiri
     bushBottomLeft: { x: -0.3, y: 6.43, w: 2.53, h: 2.53, rotate: 0, zIndex: 8 },
@@ -386,6 +386,10 @@ export const canvaLayouts = {
     bushBottomRight: { x: 6.77, y: 6.86, w: 1.47, h: 1.14, rotate: 0, zIndex: 8 },
   }
 };
+
+// Aliases untuk kompatibilitas layout Misi 1
+canvaLayouts.page10 = canvaLayouts.mission01;
+canvaLayouts.misi01 = canvaLayouts.mission01;
 
 /**
  * Helper untuk mengonversi data Canva { x, y, w, h, rotate, flipH, zIndex } ke inline CSS style

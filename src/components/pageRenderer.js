@@ -726,6 +726,14 @@ function renderPage09(data) {
       <div class="layer layer-p9-story-wrapper" style="${getCanvaStyle('page09', 'storyBox')}">
         <div class="p9-story-card">
           ${paragraphsHTML}
+          <button type="button" class="p9-mission-trigger-btn" id="btn-open-misi-01" data-mission="misi-01" aria-label="Buka Misi 1: Solusi Terbaik">
+            <span class="p9-mission-icon">💡</span>
+            <div class="p9-mission-text">
+              <span class="p9-mission-tag">MISI 1</span>
+              <span class="p9-mission-title">Bantu Temukan Solusi!</span>
+            </div>
+            <span class="p9-mission-arrow">➜</span>
+          </button>
         </div>
       </div>
 

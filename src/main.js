@@ -1,6 +1,9 @@
 import { pagesData } from './data/pagesData.js';
 import { renderPageHTML } from './components/pageRenderer.js';
 import { audioService } from './services/audioService.js';
+import { quizService } from './services/quizService.js';
+import { getMissionById } from './data/missionsData.js';
+import { renderMissionModalHTML } from './components/missionModal.js';
 
 let currentPageIndex = 0;
 let isAudioSpeaking = false;
@@ -96,7 +99,12 @@ function setupInteractions() {
       if (currentPageIndex < pagesData.length - 1) {
         goToPage(currentPageIndex + 2, 'forward');
       } else {
-        showTemporaryNotice('Halaman berikutnya segera hadir!');
+        const currentPage = pagesData[currentPageIndex];
+        if (currentPage?.hasMission && currentPage?.missionId) {
+          openMissionModal(currentPage.missionId);
+        } else {
+          showTemporaryNotice('Halaman berikutnya segera hadir!');
+        }
       }
     });
   }
@@ -140,7 +148,17 @@ function setupInteractions() {
     });
   });
 
-  // Interactive Mission Options on Page 10
+  // Interactive Mission Trigger (misalnya tombol Misi 1 di Halaman 9)
+  const missionTriggers = stage.querySelectorAll('[data-mission]');
+  missionTriggers.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const missionId = btn.dataset.mission || 'misi-01';
+      openMissionModal(missionId);
+    });
+  });
+
+  // Interactive Mission Options on Page 10 (fallback jika dibuka langsung)
   const missionBtns = stage.querySelectorAll('.p10-option-btn');
   if (missionBtns.length > 0) {
     const existingAnswer = quizService.getAnswer(10);
@@ -410,4 +428,72 @@ function initFloatingCursorButtons() {
     window.removeEventListener('pointerleave', onPointerLeave);
     document.removeEventListener('mouseleave', onPointerLeave);
   };
+}
+
+/**
+ * Membuka Pop-up Modal Misi Interaktif
+ * @param {string} missionId - ID misi (misal: 'misi-01')
+ */
+function openMissionModal(missionId = 'misi-01') {
+  const missionData = getMissionById(missionId);
+  if (!missionData) return;
+
+  const modalRoot = document.getElementById('mission-modal-root');
+  if (!modalRoot) return;
+
+  const existingAnswer = quizService.getAnswer(missionId);
+  modalRoot.innerHTML = renderMissionModalHTML(missionData, existingAnswer);
+
+  const backdrop = document.getElementById('mission-modal');
+  requestAnimationFrame(() => {
+    backdrop?.classList.add('is-open');
+  });
+
+  const closeBtn = document.getElementById('btn-close-mission');
+  const returnStoryBtn = document.getElementById('btn-return-story');
+
+  const closeModal = () => {
+    backdrop?.classList.remove('is-open');
+    setTimeout(() => {
+      modalRoot.innerHTML = '';
+    }, 320);
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+  returnStoryBtn?.addEventListener('click', closeModal);
+
+  // Klik di luar container untuk menutup modal
+  backdrop?.addEventListener('click', (e) => {
+    if (e.target === backdrop) {
+      closeModal();
+    }
+  });
+
+  // Tutup dengan tombol ESC
+  const handleKeydown = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+      window.removeEventListener('keydown', handleKeydown);
+    }
+  };
+  window.addEventListener('keydown', handleKeydown);
+
+  // Handle pilihan interaktif A, B, C di dalam modal
+  const optionBtns = backdrop.querySelectorAll('.mission-option-btn');
+  optionBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const key = btn.dataset.key;
+      const isCorrect = quizService.submitAnswer(missionId, key, missionData.correctAnswer);
+
+      optionBtns.forEach((b) => b.classList.remove('is-correct', 'is-wrong'));
+      btn.classList.add(isCorrect ? 'is-correct' : 'is-wrong');
+
+      if (isCorrect) {
+        showTemporaryNotice(missionData.feedback?.correct || '🎉 Luar biasa! Solusi terbaik!');
+      } else {
+        showTemporaryNotice(missionData.feedback?.wrong || 'Coba pikirkan lagi ya!');
+      }
+    });
+  });
 }
