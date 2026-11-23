@@ -1774,6 +1774,194 @@ body {
   z-index: 25;
 }
 
+/* =========================================
+   PAGE 10 (MISI 1: PEMECAHAN MASALAH)
+   ========================================= */
+.layer-p10-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p10-foliage-top {
+  height: auto;
+  z-index: 12;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
+  animation: leafSwayMirrored 7s ease-in-out infinite;
+}
+
+.layer-p10-fence {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.layer-p10-bush-left {
+  height: auto;
+  z-index: 8;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p10-bush-right {
+  height: auto;
+  z-index: 8;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p10-header-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.p10-misi-img {
+  height: 85%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+}
+
+.p10-lampu-container {
+  position: relative;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.p10-lampu-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.p10-header-title {
+  position: absolute;
+  left: 36%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-title);
+  font-size: clamp(0.78rem, 2.2cqw, 1.15rem);
+  font-weight: 800;
+  color: #5c3d2e;
+  letter-spacing: 0.04em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.layer-p10-question-wrapper {
+  position: absolute;
+  z-index: 13;
+  pointer-events: none;
+}
+
+.p10-question-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p10-answer-wrapper {
+  position: absolute;
+  z-index: 14;
+}
+
+.p10-answer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.p10-options-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.p10-option-btn {
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: clamp(12px, 2.5cqw, 20px);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.22s ease;
+  padding: 0;
+  outline: none;
+}
+
+.p10-option-btn:hover {
+  background: rgba(244, 162, 97, 0.12);
+  border-color: rgba(244, 162, 97, 0.6);
+  transform: scale(1.015);
+}
+
+.p10-option-btn:active {
+  transform: scale(0.99);
+}
+
+.p10-option-btn--a {
+  top: 13%;
+  height: 25%;
+}
+
+.p10-option-btn--b {
+  top: 41%;
+  height: 25%;
+}
+
+.p10-option-btn--c {
+  top: 69%;
+  height: 26%;
+}
+
+.p10-option-indicator {
+  display: none;
+}
+
+.p10-option-btn.is-correct {
+  background: rgba(42, 157, 143, 0.18);
+  border: 3px solid #2a9d8f;
+  box-shadow: 0 0 16px rgba(42, 157, 143, 0.45);
+}
+
+.p10-option-btn.is-wrong {
+  background: rgba(231, 111, 81, 0.18);
+  border: 3px solid #e76f51;
+  animation: shakeOption 0.4s ease;
+}
+
+@keyframes shakeOption {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.floating-nav-dock--p10 {
+  bottom: 1.2%;
+  gap: clamp(6px, 1.4cqw, 14px);
+  z-index: 25;
+}
+
 /* Ambient Storybook Animations */
 @keyframes cloudFloat {
   0%,

@@ -28,6 +28,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-09') {
     return renderPage09(pageData);
   }
+  if (pageData.type === 'content-page-10') {
+    return renderPage10(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -736,6 +739,79 @@ function renderPage09(data) {
       </nav>
 
       <!-- Layer 12: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage10(data) {
+  const { assets, controls, title, question, options = [] } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  const optionsHTML = options
+    .map(
+      (opt) => `
+      <button
+        type="button"
+        class="p10-option-btn p10-option-btn--${opt.key.toLowerCase()}"
+        data-key="${opt.key}"
+        aria-label="Pilihan ${opt.key}: ${opt.text}"
+      >
+        <span class="p10-option-indicator">${opt.key}</span>
+        <span class="sr-only">${opt.text}</span>
+      </button>
+    `
+    )
+    .join('');
+
+  return `
+    <article class="page-10-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Tekstur Lembut -->
+      <img src="${assets.background}" alt="" class="layer layer-p10-bg" draggable="false" />
+
+      <!-- Layer 2: Dedaunan Hias Pojok Kanan Atas -->
+      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-foliage-top" style="${getCanvaStyle('page10', 'foliageTop')}" draggable="false" />
+
+      <!-- Layer 3: Pagar Kayu Bawah Kiri -->
+      <img src="${assets.fence}" alt="" class="layer layer-p10-fence" style="${getCanvaStyle('page10', 'fence')}" draggable="false" />
+
+      <!-- Layer 4: Semak Dedaunan Bawah Kiri -->
+      <img src="${assets.bushBottomLeft}" alt="" class="layer layer-p10-bush-left" style="${getCanvaStyle('page10', 'bushBottomLeft')}" draggable="false" />
+
+      <!-- Layer 5: Semak Bunga Bawah Kanan -->
+      <img src="${assets.bushBottomRight}" alt="" class="layer layer-p10-bush-right" style="${getCanvaStyle('page10', 'bushBottomRight')}" draggable="false" />
+
+      <!-- Layer 6: Banner Judul MISI & Lampu Ide -->
+      <div class="layer layer-p10-header-wrapper" style="${getCanvaStyle('page10', 'headerBanner')}">
+        <img src="${assets.misiBadge}" alt="Misi" class="p10-misi-img" draggable="false" />
+        <div class="p10-lampu-container">
+          <img src="${assets.lampuHeader}" alt="" class="p10-lampu-img" draggable="false" />
+          <h1 class="p10-header-title">MISI 1</h1>
+        </div>
+      </div>
+
+      <!-- Layer 7: Template Kartu Pertanyaan -->
+      <div class="layer layer-p10-question-wrapper" style="${getCanvaStyle('page10', 'questionCard')}">
+        <img src="${assets.questionCard}" alt="${question}" class="p10-question-img" draggable="false" />
+        <h2 class="sr-only">${question}</h2>
+      </div>
+
+      <!-- Layer 8: Template Kartu Pilihan Jawaban Interaktif -->
+      <div class="layer layer-p10-answer-wrapper" style="${getCanvaStyle('page10', 'answerCard')}">
+        <img src="${assets.answerCard}" alt="Pilihan Jawaban" class="p10-answer-img" draggable="false" />
+        <div class="p10-options-grid">
+          ${optionsHTML}
+        </div>
+      </div>
+
+      <!-- Layer 9: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p10" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 10: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

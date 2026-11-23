@@ -331,8 +331,8 @@ export const canvaLayouts = {
     storyBox: { x: 0.73, y: 1.34, w: 6.86, h: 'auto', rotate: 0, zIndex: 15 },
 
     // Dedaunan Hias Atas Kiri & Kanan
-    foliageLeft: { x: -0.10, y: -0.10, w: 2.80, h: 2.30, rotate: 0, zIndex: 14 },
-    foliageRight: { x: 5.40, y: -0.10, w: 2.80, h: 2.30, rotate: 0, flipH: true, zIndex: 14 },
+    foliageLeft: { x: -0.28, y: -0.09, w: 2.88, h: 2.40, rotate: 0, zIndex: 14 },
+    foliageRight: { x: 5.13, y: -0.03, w: 2.97, h: 2.48, rotate: 0, flipH: true, zIndex: 14 },
 
     // Gedung Sekolah di Belakang
     school: { x: 1.20, y: 4.40, w: 3.50, h: 1.80, rotate: 0, zIndex: 6 },
@@ -357,6 +357,32 @@ export const canvaLayouts = {
     charNaya: { x: 0.64, y: 5.50, w: 0.85, h: 2.32, rotate: 0, zIndex: 10 },
     charRafi: { x: 1.60, y: 5.45, w: 1.20, h: 2.54, rotate: 0, zIndex: 10 },
     charDanu: { x: 2.66, y: 5.25, w: 1.60, h: 2.53, rotate: 0, zIndex: 10 },
+  },
+
+  // ==========================================================
+  // HALAMAN 10 (MISI 1: PEMECAHAN MASALAH)
+  // ==========================================================
+  page10: {
+    // Header Banner Gabungan MISI & Lampu Ide
+    headerBanner: { x: 0.60, y: 0.35, w: 6.80, h: 1.15, rotate: 0, zIndex: 15 },
+
+    // Dedaunan Hias Kanan Atas
+    foliageTop: { x: 5.50, y: -0.10, w: 2.60, h: 2.17, rotate: 0, zIndex: 12 },
+
+    // Kartu Pertanyaan Kuning
+    questionCard: { x: 0.90, y: 1.35, w: 6.20, h: 2.45, rotate: 0, zIndex: 13 },
+
+    // Kartu Pilihan Jawaban (A, B, C)
+    answerCard: { x: 0.85, y: 3.60, w: 6.30, h: 3.30, rotate: 0, zIndex: 14 },
+
+    // Pagar Kayu Bawah Kiri
+    fence: { x: 0.10, y: 5.80, w: 2.80, h: 2.02, rotate: 0, zIndex: 6 },
+
+    // Semak Dedaunan & Bunga Bawah Kiri
+    bushBottomLeft: { x: -0.20, y: 6.20, w: 3.80, h: 2.00, rotate: 0, zIndex: 8 },
+
+    // Semak Bawah Kanan
+    bushBottomRight: { x: 6.00, y: 6.50, w: 2.20, h: 1.72, rotate: 0, zIndex: 8 },
   }
 };
 

@@ -324,5 +324,34 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 10,
+    pageNumber: 10,
+    type: 'content-page-10',
+    title: 'Misi 1: Solusi Terbaik',
+    question: 'Apa solusi terbaik agar mereka tidak bertengkar?',
+    options: [
+      { key: 'A', text: 'Hanya budaya Naya yang tampil, karena Naya bicara lebih dulu.', isCorrect: false },
+      { key: 'B', text: 'Tidak ada budaya yang tampil.', isCorrect: false },
+      { key: 'C', text: 'Ketiga budaya tampil bersama, dan setiap anak bergantian mengenalkan budayanya.', isCorrect: true }
+    ],
+    assets: {
+      background: '/pages/page-10/background.png',
+      misiBadge: '/pages/page-10/misi.png',
+      lampuHeader: '/pages/page-10/lampu.png',
+      foliageTop: '/pages/page-10/daun-atas.png',
+      questionCard: '/pages/page-10/template-pertanyaan.png',
+      answerCard: '/pages/page-10/template-jawaban.png',
+      fence: '/pages/page-10/pagar.png',
+      bushBottomLeft: '/pages/page-10/daun-bawah.png',
+      bushBottomRight: '/pages/page-10/daun-bawah-kanan.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

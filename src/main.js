@@ -140,6 +140,35 @@ function setupInteractions() {
     });
   });
 
+  // Interactive Mission Options on Page 10
+  const missionBtns = stage.querySelectorAll('.p10-option-btn');
+  if (missionBtns.length > 0) {
+    const existingAnswer = quizService.getAnswer(10);
+    if (existingAnswer) {
+      const selectedBtn = stage.querySelector(`.p10-option-btn[data-key="${existingAnswer.selected}"]`);
+      if (selectedBtn) {
+        selectedBtn.classList.add(existingAnswer.isCorrect ? 'is-correct' : 'is-wrong');
+      }
+    }
+
+    missionBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const key = btn.dataset.key;
+        const isCorrect = quizService.submitAnswer(10, key, 'C');
+
+        missionBtns.forEach((b) => b.classList.remove('is-correct', 'is-wrong'));
+        btn.classList.add(isCorrect ? 'is-correct' : 'is-wrong');
+
+        if (isCorrect) {
+          showTemporaryNotice('🎉 Luar biasa! Ketiga budaya tampil bersama!');
+        } else {
+          showTemporaryNotice('Coba pikirkan lagi solusi terbaik untuk semua sahabat ya!');
+        }
+      });
+    });
+  }
+
   // Interactive Button Cards on Page 4 (Kenali Tombol)
   const introBtns = stage.querySelectorAll('.p4-circle-btn');
   introBtns.forEach((btn) => {
@@ -198,6 +227,8 @@ function toggleAudioNarration(audioBtn) {
     textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
       ? currentPage.bodyParagraphs.join(' ')
       : `Naya berkata, "Kita tampilkan budaya Jawa Barat saja, ya." Rafi menggeleng. "Aku juga ingin mengenalkan Rumah Gadang." Danu menambahkan, "Aku ingin kalian mengenal Rumah Honai." Tidak ada yang mau mengalah.`;
+  } else if (currentPage.type === 'content-page-10') {
+    textToRead = `Misi 1: Solusi Terbaik. Pertanyaan: Apa solusi terbaik agar mereka tidak bertengkar? Pilihan A: Hanya budaya Naya yang tampil, karena Naya bicara lebih dulu. Pilihan B: Tidak ada budaya yang tampil. Pilihan C: Ketiga budaya tampil bersama, dan setiap anak bergantian mengenalkan budayanya. Ketuk pilihan jawabanmu untuk menyelesaikan misi!`;
   }
 
   isAudioSpeaking = true;
