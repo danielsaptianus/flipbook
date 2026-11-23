@@ -28,7 +28,13 @@ export const missionsData = {
       answerCard: '/mission/misi-01/template-jawaban.png',
       fence: '/mission/misi-01/pagar.png',
       bushBottomLeft: '/mission/misi-01/daun-bawah.png',
-      bushBottomRight: '/mission/misi-01/daun-bawah-kanan.png'
+      bushBottomRight: '/mission/misi-01/daun-bawah-kanan.png',
+      feedbackRight: {
+        popupFull: '/mission/misi-01/feedback/right/pop-up-jawaban-benar.png',
+        card: '/mission/misi-01/feedback/right/jawaban-benar.png',
+        btnContinue: '/mission/misi-01/feedback/right/lanjut-cerita.png',
+        background: '/mission/misi-01/feedback/right/background.png'
+      }
     }
   }
 };

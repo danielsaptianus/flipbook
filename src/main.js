@@ -3,7 +3,7 @@ import { renderPageHTML } from './components/pageRenderer.js';
 import { audioService } from './services/audioService.js';
 import { quizService } from './services/quizService.js';
 import { getMissionById } from './data/missionsData.js';
-import { renderMissionModalHTML } from './components/missionModal.js';
+import { renderMissionModalHTML, renderFeedbackRightHTML } from './components/missionModal.js';
 
 let currentPageIndex = 0;
 let isAudioSpeaking = false;
@@ -491,6 +491,23 @@ function openMissionModal(missionId = 'misi-01') {
 
       if (isCorrect) {
         showTemporaryNotice(missionData.feedback?.correct || '🎉 Luar biasa! Solusi terbaik!');
+
+        // Tampilkan pop-up Jawaban Benar (Misi Berhasil) setelah selebrasi
+        setTimeout(() => {
+          const feedbackLayer = backdrop.querySelector('#mission-feedback-layer');
+          if (feedbackLayer) {
+            feedbackLayer.innerHTML = renderFeedbackRightHTML(missionData);
+            feedbackLayer.classList.add('is-active');
+
+            // Handle klik tombol "Lanjut Cerita"
+            const continueBtn = feedbackLayer.querySelector('#btn-feedback-continue');
+            continueBtn?.addEventListener('click', (ev) => {
+              ev.stopPropagation();
+              closeModal();
+              showTemporaryNotice('🎉 Hebat! Kamu telah menyelesaikan Misi 1!');
+            });
+          }
+        }, 650);
       } else {
         showTemporaryNotice(missionData.feedback?.wrong || 'Coba pikirkan lagi ya!');
       }

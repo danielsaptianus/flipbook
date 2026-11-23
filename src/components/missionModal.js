@@ -87,8 +87,52 @@ export function renderMissionModalHTML(missionData, existingAnswer = null) {
               <span>Kembali Membaca Cerita</span>
             </button>
           </div>
+
+          <!-- Layer 12: Layer Feedback Interaktif (Jawaban Benar / Salah) -->
+          <div id="mission-feedback-layer" class="mission-feedback-layer" aria-live="polite"></div>
         </div>
       </div>
+    </div>
+  `;
+}
+
+/**
+ * Render HTML untuk Pop-up Jawaban Benar (Misi Berhasil)
+ * @param {Object} missionData - Data misi
+ * @returns {string} HTML string
+ */
+export function renderFeedbackRightHTML(missionData) {
+  const assets = missionData.assets.feedbackRight || {
+    popupFull: '/mission/misi-01/feedback/right/pop-up-jawaban-benar.png',
+    btnContinue: '/mission/misi-01/feedback/right/lanjut-cerita.png'
+  };
+
+  return `
+    <div class="feedback-modal-view feedback-modal-view--right" id="feedback-right-view">
+      <!-- Full Composite Canvas Canva Pop-up Jawaban Benar -->
+      <img
+        src="${assets.popupFull}"
+        alt="Jawaban Benar! Misi Berhasil!"
+        class="feedback-bg-img"
+        draggable="false"
+      />
+
+      <!-- Tombol Interaktif Lanjut Cerita -->
+      <button
+        type="button"
+        class="feedback-action-btn feedback-action-btn--continue"
+        id="btn-feedback-continue"
+        style="${getCanvaStyle('missionFeedbackRight', 'continueBtn')}"
+        aria-label="Lanjut Cerita"
+        title="Lanjut Cerita"
+      >
+        <img
+          src="${assets.btnContinue}"
+          alt="Lanjut Cerita"
+          class="feedback-action-btn-img"
+          draggable="false"
+        />
+      </button>
     </div>
   `;
 }

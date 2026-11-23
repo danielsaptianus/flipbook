@@ -384,6 +384,20 @@ export const canvaLayouts = {
 
     // Semak Bawah Kanan
     bushBottomRight: { x: 6.77, y: 6.86, w: 1.47, h: 1.14, rotate: 0, zIndex: 8 },
+  },
+
+  // ==========================================================
+  // FEEDBACK MISI 1: JAWABAN BENAR (POP-UP MISI BERHASIL)
+  // ==========================================================
+  missionFeedbackRight: {
+    // Background Komposit Penuh Canva
+    popupFull: { x: 0, y: 0, w: 8.00, h: 8.00, rotate: 0, zIndex: 1 },
+
+    // Kartu Pop-up Jawaban Benar
+    card: { x: 1.10, y: 0.99, w: 5.81, h: 3.86, rotate: 0, zIndex: 10 },
+
+    // Tombol Interaktif "Lanjut Cerita"
+    continueBtn: { x: 1.51, y: 5.84, w: 5.14, h: 0.90, rotate: 0, zIndex: 20 },
   }
 };
 
