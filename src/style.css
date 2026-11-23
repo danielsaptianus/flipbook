@@ -1779,15 +1779,26 @@ body {
   z-index: 1;
 }
 
-.layer-p10-foliage-top {
+.layer-p10-foliage-top,
+.layer-p10-foliage-top-right,
+.layer-p10-foliage-top-left {
   height: auto;
   z-index: 12;
   pointer-events: none;
   filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p10-foliage-top-right {
   animation: leafSwayMirrored 7s ease-in-out infinite;
 }
 
-.layer-p10-fence {
+.layer-p10-foliage-top-left {
+  animation: leafSway 7s ease-in-out infinite;
+}
+
+.layer-p10-fence,
+.layer-p10-fence-left,
+.layer-p10-fence-right {
   height: auto;
   z-index: 6;
   pointer-events: none;

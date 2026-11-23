@@ -768,10 +768,14 @@ function renderPage10(data) {
       <img src="${assets.background}" alt="" class="layer layer-p10-bg" draggable="false" />
 
       <!-- Layer 2: Dedaunan Hias Pojok Kanan Atas -->
-      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-foliage-top" style="${getCanvaStyle('page10', 'foliageTop')}" draggable="false" />
+      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-foliage-top-right" style="${getCanvaStyle('page10', 'foliageTopRight')}" draggable="false" />
 
-      <!-- Layer 3: Pagar Kayu Bawah Kiri -->
-      <img src="${assets.fence}" alt="" class="layer layer-p10-fence" style="${getCanvaStyle('page10', 'fence')}" draggable="false" />
+      <!-- Layer 3: Dedaunan Hias Pojok Kiri Atas -->
+      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-foliage-top-left" style="${getCanvaStyle('page10', 'foliageTopLeft')}" draggable="false" />
+
+      <!-- Layer 4: Pagar Kayu Bawah Kiri & Kanan -->
+      <img src="${assets.fence}" alt="" class="layer layer-p10-fence layer-p10-fence-left" style="${getCanvaStyle('page10', 'fenceLeft') || getCanvaStyle('page10', 'fence')}" draggable="false" />
+      <img src="${assets.fence}" alt="" class="layer layer-p10-fence layer-p10-fence-right" style="${getCanvaStyle('page10', 'fenceRight')}" draggable="false" />
 
       <!-- Layer 4: Semak Dedaunan Bawah Kiri -->
       <img src="${assets.bushBottomLeft}" alt="" class="layer layer-p10-bush-left" style="${getCanvaStyle('page10', 'bushBottomLeft')}" draggable="false" />

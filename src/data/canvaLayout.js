@@ -360,28 +360,30 @@ export const canvaLayouts = {
   // ==========================================================
   page10: {
     // Badge Judul MISI
-    misi: { x: 0.50, y: 0.40, w: 2.10, h: 0.82, rotate: 0, zIndex: 15 },
+    misi: { x: 3.02, y: 0.41, w: 2.18, h: 0.77, rotate: 0, zIndex: 15 },
 
     // Lampu Ide & Pengantar Masalah
-    lampu: { x: 2.70, y: 0.35, w: 4.80, h: 1.13, rotate: 0, zIndex: 14 },
+    lampu: { x: 1.23, y: 1.10, w: 5.45, h: 1.1, rotate: 0, zIndex: 14 },
 
-    // Dedaunan Hias Kanan Atas
-    foliageTop: { x: 5.50, y: -0.10, w: 2.60, h: 2.17, rotate: 0, zIndex: 12 },
+    // Dedaunan Hias Kanan Atas & Kiri
+    foliageTopRight: { x: 5.65, y: -0, w: 2.46, h: 2.05, rotate: 0, zIndex: 12 },
+    foliageTopLeft: { x: 0, y: 0, w: 2.46, h: 2.05, rotate: 0, flipH: true, zIndex: 12 },
 
     // Kartu Pertanyaan Kuning
-    questionCard: { x: 0.90, y: 1.35, w: 6.20, h: 2.45, rotate: 0, zIndex: 13 },
+    questionCard: { x: 2.07, y: 2.36, w: 4.07, h: 1.65, rotate: 0, zIndex: 13 },
 
     // Kartu Pilihan Jawaban (A, B, C)
-    answerCard: { x: 0.85, y: 3.60, w: 6.30, h: 3.30, rotate: 0, zIndex: 14 },
+    answerCard: { x: 1.42, y: 4.21, w: 5.31, h: 4.22, rotate: 0, zIndex: 14 },
 
     // Pagar Kayu Bawah Kiri
-    fence: { x: 0.10, y: 5.80, w: 2.80, h: 2.02, rotate: 0, zIndex: 6 },
+    fenceLeft: { x: -0.07, y: 6.36, w: 2.28, h: 1.64, rotate: 0, zIndex: 6 },
+    fenceRight: { x: 2.15, y: 1.55, w: 2.15, h: 1.55, rotate: 0, flipH: true, zIndex: 6 },
 
     // Semak Dedaunan & Bunga Bawah Kiri
-    bushBottomLeft: { x: -0.20, y: 6.20, w: 3.80, h: 2.00, rotate: 0, zIndex: 8 },
+    bushBottomLeft: { x: -0.3, y: 6.43, w: 2.53, h: 2.53, rotate: 0, zIndex: 8 },
 
     // Semak Bawah Kanan
-    bushBottomRight: { x: 6.00, y: 6.50, w: 2.20, h: 1.72, rotate: 0, zIndex: 8 },
+    bushBottomRight: { x: 6.77, y: 6.86, w: 1.47, h: 1.14, rotate: 0, zIndex: 8 },
   }
 };
 
