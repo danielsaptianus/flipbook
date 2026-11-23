@@ -259,6 +259,11 @@ export const pagesData = [
     pageNumber: 8,
     type: 'content-page-08',
     title: 'Cerita 1: Menuju Sekolah',
+    bodyParagraphs: [
+      'Hari ini sekolah Naya mengadakan Festival Budaya Indonesia. Setiap kelompok menampilkan budaya dari beberapa daerah.',
+      'Naya memakai pakaian adat Sunda dan membawa gambar Rumah Julang Ngapak. Rafi memakai pakaian adat Minangkabau dan membawa gambar Rumah Gadang. Danu membawa gambar Rumah Honai dari Papua.',
+      'Mereka bertiga satu kelompok. Awalnya mereka sangat bersemangat.'
+    ],
     characters: [
       { name: 'Rafi', role: 'Siswa' },
       { name: 'Naya', role: 'Siswi' },

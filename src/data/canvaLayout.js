@@ -297,11 +297,15 @@ export const canvaLayouts = {
   // HALAMAN 8 (CERITA 1: MENJELANG FESTIVAL DI SEKOLAH)
   // ==========================================================
   page08: {
+    // Teks Narasi Cerita (Font: League Spartan, uk 15, letter-spacing -15)
+    storyBox: { x: 0.50, y: 0.35, w: 7.00, h: 'auto', rotate: 0, zIndex: 15 },
+
     // Awan Cerah & Mentari Atas
-    clouds: { x: 0.20, y: 0.20, w: 7.60, h: 2.80, rotate: 0, zIndex: 3 },
+    clouds: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, zIndex: 3 },
+    cloudsLeft: { x: 3.77, y: 0.13, w: 4.29, h: 2.49, rotate: 0, zIndex: 3 },
 
     // Gedung Sekolah Dasar di Cakrawala
-    school: { x: 1.35, y: 2.65, w: 5.30, h: 2.12, rotate: 0, zIndex: 5 },
+    school: { x: 0, y: 2.13, w: 5.34, h: 2.13, rotate: 0, zIndex: 5 },
 
     // Pohon Rindang Kanan
     tree: { x: 5.10, y: 2.40, w: 3.20, h: 2.87, rotate: 0, zIndex: 6 },

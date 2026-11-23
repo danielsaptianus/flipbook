@@ -191,7 +191,9 @@ function toggleAudioNarration(audioBtn) {
   } else if (currentPage.type === 'content-page-07') {
     textToRead = `Cerita 1. Tiga Warna di Festival Sekolah. Nilai: Toleransi. Bersama para sahabat nusantara: Rafi dari Sumatera Barat, Naya dari Jawa Barat, dan Danu dari Papua di festival sekolah!`;
   } else if (currentPage.type === 'content-page-08') {
-    textToRead = `Cerita 1: Menuju Sekolah. Pagi yang cerah di sekolah, Rafi, Naya, dan Danu berjalan bersama menuju sekolah untuk menyambut festival sekolah yang meriah!`;
+    textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
+      ? currentPage.bodyParagraphs.join(' ')
+      : `Hari ini sekolah Naya mengadakan Festival Budaya Indonesia. Setiap kelompok menampilkan budaya dari beberapa daerah. Naya memakai pakaian adat Sunda dan membawa gambar Rumah Julang Ngapak. Rafi memakai pakaian adat Minangkabau dan membawa gambar Rumah Gadang. Danu membawa gambar Rumah Honai dari Papua. Mereka bertiga satu kelompok. Awalnya mereka sangat bersemangat.`;
   }
 
   isAudioSpeaking = true;
