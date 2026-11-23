@@ -1788,14 +1788,6 @@ body {
   filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
 }
 
-.layer-p10-foliage-top-right {
-  animation: leafSwayMirrored 7s ease-in-out infinite;
-}
-
-.layer-p10-foliage-top-left {
-  animation: leafSway 7s ease-in-out infinite;
-}
-
 .layer-p10-fence,
 .layer-p10-fence-left,
 .layer-p10-fence-right {
