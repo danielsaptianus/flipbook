@@ -321,6 +321,42 @@ export const canvaLayouts = {
     charRafi: { x: 3.41, y: 5.28, w: 1.12, h: 2.72, rotate: 0, zIndex: 10 },
     charNaya: { x: 1.96, y: 5.18, w: 1.33, h: 2.94, rotate: 0, zIndex: 10 },
     charDanu: { x: 4.54, y: 4.67, w: 1.38, h: 3.48, rotate: 0, zIndex: 10 },
+  },
+
+  // ==========================================================
+  // HALAMAN 9 (CERITA 1: BERBEDA KEINGINAN)
+  // ==========================================================
+  page09: {
+    // Teks Narasi Cerita (Font: League Spartan, uk 18.4, letter-spacing -15)
+    storyBox: { x: 0.73, y: 1.34, w: 6.86, h: 'auto', rotate: 0, zIndex: 15 },
+
+    // Dedaunan Hias Atas Kiri & Kanan
+    foliageLeft: { x: -0.10, y: -0.10, w: 2.80, h: 2.30, rotate: 0, zIndex: 14 },
+    foliageRight: { x: 5.40, y: -0.10, w: 2.80, h: 2.30, rotate: 0, flipH: true, zIndex: 14 },
+
+    // Gedung Sekolah di Belakang
+    school: { x: 1.20, y: 4.40, w: 3.50, h: 1.80, rotate: 0, zIndex: 6 },
+
+    // Pohon Rindang Kiri dengan Ayunan
+    tree: { x: -0.65, y: 4.18, w: 2.89, h: 2.59, rotate: 0, zIndex: 7 },
+
+    // Rumah Adat Kanan Belakang
+    traditionalHouse: { x: 6.00, y: 3.80, w: 2.10, h: 1.70, rotate: 0, zIndex: 6 },
+
+    // Orang Menumbuk di Depan Rumah Adat
+    mortarActivity: { x: 6.65, y: 4.90, w: 1.35, h: 1.80, rotate: 0, zIndex: 7 },
+
+    // Jalan Setapak Melengkung & Rumput
+    road: { x: 0.00, y: 5.28, w: 8.00, h: 3.84, rotate: 0, zIndex: 5 },
+
+    // Semak & Bunga Kiri & Kanan Depan
+    flowersLeft: { x: -0.07, y: 6.80, w: 2.80, h: 0.90, rotate: 0, zIndex: 12 },
+    flowersRight: { x: 6.60, y: 7.00, w: 2.20, h: 0.80, rotate: 0, flipH: true, zIndex: 12 },
+
+    // 3 Karakter Anak (Naya Memohon, Rafi Bingung, Danu Berargumen)
+    charNaya: { x: 0.64, y: 5.50, w: 0.85, h: 2.32, rotate: 0, zIndex: 10 },
+    charRafi: { x: 1.60, y: 5.45, w: 1.20, h: 2.54, rotate: 0, zIndex: 10 },
+    charDanu: { x: 2.66, y: 5.25, w: 1.60, h: 2.53, rotate: 0, zIndex: 10 },
   }
 };
 

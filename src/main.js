@@ -194,6 +194,10 @@ function toggleAudioNarration(audioBtn) {
     textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
       ? currentPage.bodyParagraphs.join(' ')
       : `Hari ini sekolah Naya mengadakan Festival Budaya Indonesia. Setiap kelompok menampilkan budaya dari beberapa daerah. Naya memakai pakaian adat Sunda dan membawa gambar Rumah Julang Ngapak. Rafi memakai pakaian adat Minangkabau dan membawa gambar Rumah Gadang. Danu membawa gambar Rumah Honai dari Papua. Mereka bertiga satu kelompok. Awalnya mereka sangat bersemangat.`;
+  } else if (currentPage.type === 'content-page-09') {
+    textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
+      ? currentPage.bodyParagraphs.join(' ')
+      : `Naya berkata, "Kita tampilkan budaya Jawa Barat saja, ya." Rafi menggeleng. "Aku juga ingin mengenalkan Rumah Gadang." Danu menambahkan, "Aku ingin kalian mengenal Rumah Honai." Tidak ada yang mau mengalah.`;
   }
 
   isAudioSpeaking = true;

@@ -287,5 +287,42 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 9,
+    pageNumber: 9,
+    type: 'content-page-09',
+    title: 'Cerita 1: Berbeda Keinginan',
+    bodyParagraphs: [
+      'Naya berkata, "Kita tampilkan budaya Jawa Barat saja, ya."',
+      'Rafi menggeleng. "Aku juga ingin mengenalkan Rumah Gadang."',
+      'Danu menambahkan, "Aku ingin kalian mengenal Rumah Honai." Tidak ada yang mau mengalah.'
+    ],
+    characters: [
+      { name: 'Naya', role: 'Siswi' },
+      { name: 'Rafi', role: 'Siswa' },
+      { name: 'Danu', role: 'Siswa' }
+    ],
+    assets: {
+      background: '/pages/page-09/background.png',
+      foliageLeft: '/pages/page-09/daun.png',
+      foliageRight: '/pages/page-09/daun.png',
+      school: '/pages/page-09/sekolah.png',
+      tree: '/pages/page-09/pohon.png',
+      road: '/pages/page-09/jalan.png',
+      traditionalHouse: '/pages/page-09/rumat-adat.png',
+      mortarActivity: '/pages/page-09/orang-menumbuk.png',
+      flowersLeft: '/pages/page-09/bunga-daun.png',
+      flowersRight: '/pages/page-09/bunga-daun.png',
+      charNaya: '/pages/page-09/naya.png',
+      charRafi: '/pages/page-09/rafi.png',
+      charDanu: '/pages/page-09/danu.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

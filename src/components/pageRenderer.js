@@ -25,6 +25,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-08') {
     return renderPage08(pageData);
   }
+  if (pageData.type === 'content-page-09') {
+    return renderPage09(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -672,6 +675,67 @@ function renderPage08(data) {
       </nav>
 
       <!-- Layer 11: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage09(data) {
+  const { assets, controls, title, bodyParagraphs = [] } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  const paragraphsHTML = bodyParagraphs
+    .map((paragraph) => `<p class="p9-story-p">${paragraph}</p>`)
+    .join('');
+
+  return `
+    <article class="page-09-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit Lembut & Lapangan -->
+      <img src="${assets.background}" alt="" class="layer layer-p9-bg" draggable="false" />
+
+      <!-- Layer 2: Dedaunan Hias Atas Kiri & Kanan -->
+      <img src="${assets.foliageLeft}" alt="" class="layer layer-p9-foliage layer-p9-foliage-left" style="${getCanvaStyle('page09', 'foliageLeft')}" draggable="false" />
+      <img src="${assets.foliageRight}" alt="" class="layer layer-p9-foliage layer-p9-foliage-right" style="${getCanvaStyle('page09', 'foliageRight')}" draggable="false" />
+
+      <!-- Layer 3: Gedung Sekolah di Belakang -->
+      <img src="${assets.school}" alt="Gedung Sekolah" class="layer layer-p9-school" style="${getCanvaStyle('page09', 'school')}" draggable="false" />
+
+      <!-- Layer 4: Pohon Rindang Kiri -->
+      <img src="${assets.tree}" alt="Pohon Rindang" class="layer layer-p9-tree" style="${getCanvaStyle('page09', 'tree')}" draggable="false" />
+
+      <!-- Layer 5: Rumah Adat Kanan Belakang -->
+      <img src="${assets.traditionalHouse}" alt="Rumah Adat" class="layer layer-p9-house" style="${getCanvaStyle('page09', 'traditionalHouse')}" draggable="false" />
+
+      <!-- Layer 6: Jalan Setapak & Rumput -->
+      <img src="${assets.road}" alt="" class="layer layer-p9-road" style="${getCanvaStyle('page09', 'road')}" draggable="false" />
+
+      <!-- Layer 7: Kegiatan Menumbuk Padi di Depan Rumah Adat -->
+      <img src="${assets.mortarActivity}" alt="Menumbuk Padi" class="layer layer-p9-mortar" style="${getCanvaStyle('page09', 'mortarActivity')}" draggable="false" />
+
+      <!-- Layer 8: 3 Karakter Sahabat (Naya, Rafi, Danu) -->
+      <img src="${assets.charNaya}" alt="Naya" class="layer layer-p9-char layer-p9-char-naya" style="${getCanvaStyle('page09', 'charNaya')}" draggable="false" />
+      <img src="${assets.charRafi}" alt="Rafi" class="layer layer-p9-char layer-p9-char-rafi" style="${getCanvaStyle('page09', 'charRafi')}" draggable="false" />
+      <img src="${assets.charDanu}" alt="Danu" class="layer layer-p9-char layer-p9-char-danu" style="${getCanvaStyle('page09', 'charDanu')}" draggable="false" />
+
+      <!-- Layer 9: Semak & Bunga Depan Kiri & Kanan -->
+      <img src="${assets.flowersLeft}" alt="" class="layer layer-p9-flowers layer-p9-flowers-left" style="${getCanvaStyle('page09', 'flowersLeft')}" draggable="false" />
+      <img src="${assets.flowersRight}" alt="" class="layer layer-p9-flowers layer-p9-flowers-right" style="${getCanvaStyle('page09', 'flowersRight')}" draggable="false" />
+
+      <!-- Layer 10: Teks Narasi Cerita (League Spartan) -->
+      <div class="layer layer-p9-story-wrapper" style="${getCanvaStyle('page09', 'storyBox')}">
+        <div class="p9-story-card">
+          ${paragraphsHTML}
+        </div>
+      </div>
+
+      <!-- Layer 11: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p9" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 12: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

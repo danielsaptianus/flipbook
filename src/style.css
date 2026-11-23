@@ -1653,6 +1653,127 @@ body {
   z-index: 25;
 }
 
+/* =========================================
+   PAGE 09 (CERITA 1: BERBEDA KEINGINAN)
+   ========================================= */
+.layer-p9-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p9-foliage {
+  height: auto;
+  z-index: 14;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p9-foliage-left {
+  animation: leafSway 6s ease-in-out infinite;
+}
+
+.layer-p9-foliage-right {
+  animation: leafSwayMirrored 6.5s ease-in-out infinite;
+}
+
+.layer-p9-school {
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.layer-p9-tree {
+  object-fit: contain;
+  object-position: bottom left;
+  z-index: 7;
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p9-house {
+  object-fit: contain;
+  object-position: bottom right;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p9-mortar {
+  object-fit: contain;
+  object-position: bottom right;
+  z-index: 7;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p9-road {
+  height: auto;
+  min-height: 52%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.layer-p9-char {
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+  transition: transform 0.25s ease;
+}
+
+.layer-p9-char:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.layer-p9-flowers {
+  height: auto;
+  z-index: 12;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+}
+
+/* Layer Teks Narasi Halaman 9 */
+.layer-p9-story-wrapper {
+  z-index: 15;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.p9-story-card {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.p9-story-p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: clamp(0.88rem, 3.08cqw, 1.48rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: #724e39;
+  margin: 0 0 clamp(8px, 1.6cqw, 16px) 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
+}
+
+.p9-story-p:last-child {
+  margin-bottom: 0;
+}
+
+.floating-nav-dock--p9 {
+  bottom: 1.2%;
+  gap: clamp(6px, 1.4cqw, 14px);
+  z-index: 25;
+}
+
 /* Ambient Storybook Animations */
 @keyframes cloudFloat {
   0%,
@@ -1691,6 +1812,26 @@ body {
   }
   50% {
     transform: scaleX(-1) translate3d(0, -6px, 0) rotate(-1.5deg);
+  }
+}
+
+@keyframes leafSway {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(2px, 3px, 0) rotate(1.2deg);
+  }
+}
+
+@keyframes leafSwayMirrored {
+  0%,
+  100% {
+    transform: scaleX(-1) translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scaleX(-1) translate3d(2px, 3px, 0) rotate(1.2deg);
   }
 }
 
