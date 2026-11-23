@@ -335,7 +335,7 @@ export const canvaLayouts = {
     foliageRight: { x: 5.13, y: -0.03, w: 2.97, h: 2.48, rotate: 0, flipH: true, zIndex: 14 },
 
     // Gedung Sekolah di Belakang
-    school: { x: 1.20, y: 4.40, w: 3.50, h: 1.80, rotate: 0, zIndex: 6 },
+    school: { x: -1.24, y: 4.40, w: 5.34, h: 2.13, rotate: 0, zIndex: 6 },
 
     // Pohon Rindang Kiri dengan Ayunan
     tree: { x: -0.65, y: 4.18, w: 2.89, h: 2.59, rotate: 0, zIndex: 7 },
