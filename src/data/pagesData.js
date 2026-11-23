@@ -312,8 +312,6 @@ export const pagesData = [
       road: '/pages/page-09/jalan.png',
       traditionalHouse: '/pages/page-09/rumat-adat.png',
       mortarActivity: '/pages/page-09/orang-menumbuk.png',
-      flowersLeft: '/pages/page-09/bunga-daun.png',
-      flowersRight: '/pages/page-09/bunga-daun.png',
       charNaya: '/pages/page-09/naya.png',
       charRafi: '/pages/page-09/rafi.png',
       charDanu: '/pages/page-09/danu.png'

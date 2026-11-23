@@ -1733,13 +1733,6 @@ body {
   transform: translateY(-4px) scale(1.03);
 }
 
-.layer-p9-flowers {
-  height: auto;
-  z-index: 12;
-  pointer-events: none;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
-}
-
 /* Layer Teks Narasi Halaman 9 */
 .layer-p9-story-wrapper {
   z-index: 15;

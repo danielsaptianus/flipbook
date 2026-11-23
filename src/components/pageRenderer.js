@@ -722,23 +722,19 @@ function renderPage09(data) {
       <img src="${assets.charRafi}" alt="Rafi" class="layer layer-p9-char layer-p9-char-rafi" style="${getCanvaStyle('page09', 'charRafi')}" draggable="false" />
       <img src="${assets.charDanu}" alt="Danu" class="layer layer-p9-char layer-p9-char-danu" style="${getCanvaStyle('page09', 'charDanu')}" draggable="false" />
 
-      <!-- Layer 9: Semak & Bunga Depan Kiri & Kanan -->
-      <img src="${assets.flowersLeft}" alt="" class="layer layer-p9-flowers layer-p9-flowers-left" style="${getCanvaStyle('page09', 'flowersLeft')}" draggable="false" />
-      <img src="${assets.flowersRight}" alt="" class="layer layer-p9-flowers layer-p9-flowers-right" style="${getCanvaStyle('page09', 'flowersRight')}" draggable="false" />
-
-      <!-- Layer 10: Teks Narasi Cerita (League Spartan) -->
+      <!-- Layer 9: Teks Narasi Cerita (League Spartan) -->
       <div class="layer layer-p9-story-wrapper" style="${getCanvaStyle('page09', 'storyBox')}">
         <div class="p9-story-card">
           ${paragraphsHTML}
         </div>
       </div>
 
-      <!-- Layer 11: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <!-- Layer 10: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p9" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
-      <!-- Layer 12: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <!-- Layer 11: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>
