@@ -373,7 +373,7 @@ export const canvaLayouts = {
     questionCard: { x: 2.07, y: 2.36, w: 4.07, h: 1.65, rotate: 0, zIndex: 13 },
 
     // Kartu Pilihan Jawaban (A, B, C)
-    answerCard: { x: 1.42, y: 3.10, w: 5.31, h: 4.22, rotate: 0, zIndex: 14 },
+    answerCard: { x: 1.42, y: 3.10, w: 5.31, h: 4.22, rotate: 0, zIndex: 25 },
 
     // Pagar Kayu Bawah Kiri & Kanan
     fenceLeft: { x: -0.07, y: 6.36, w: 2.28, h: 1.64, rotate: 0, zIndex: 6 },

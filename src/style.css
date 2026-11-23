@@ -1915,7 +1915,8 @@ body {
 
 .layer-p10-answer-wrapper {
   position: absolute;
-  z-index: 14;
+  z-index: 25;
+  pointer-events: auto !important;
 }
 
 .p10-answer-img {
@@ -1934,25 +1935,30 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  pointer-events: auto !important;
+  z-index: 5;
 }
 
 .p10-option-btn {
   position: absolute;
-  left: 5%;
-  width: 90%;
+  left: 3%;
+  width: 94%;
   background: transparent;
   border: 2px solid transparent;
   border-radius: clamp(12px, 2.5cqw, 20px);
-  cursor: pointer;
+  cursor: pointer !important;
+  pointer-events: auto !important;
   box-sizing: border-box;
   transition: all 0.22s ease;
   padding: 0;
   outline: none;
+  z-index: 10;
 }
 
 .p10-option-btn:hover {
-  background: rgba(244, 162, 97, 0.12);
-  border-color: rgba(244, 162, 97, 0.6);
+  background: rgba(244, 162, 97, 0.15);
+  border-color: rgba(244, 162, 97, 0.7);
+  box-shadow: 0 4px 14px rgba(244, 162, 97, 0.25);
   transform: scale(1.015);
 }
 
@@ -1961,18 +1967,18 @@ body {
 }
 
 .p10-option-btn--a {
-  top: 13%;
-  height: 25%;
+  top: 25.5%;
+  height: 14.5%;
 }
 
 .p10-option-btn--b {
-  top: 41%;
-  height: 25%;
+  top: 41.2%;
+  height: 14.5%;
 }
 
 .p10-option-btn--c {
-  top: 69%;
-  height: 26%;
+  top: 56.8%;
+  height: 15.5%;
 }
 
 .p10-option-indicator {
@@ -2122,9 +2128,11 @@ body {
   height: 100%;
   z-index: 30;
   pointer-events: none;
+  display: none;
 }
 
 .mission-feedback-layer.is-active {
+  display: block;
   pointer-events: auto;
 }
 
