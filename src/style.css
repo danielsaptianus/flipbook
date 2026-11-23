@@ -1531,16 +1531,9 @@ body {
   color: #2c4d75;
 }
 
-/* Floating Dock Halaman 7: pastikan tidak tumpang tindih dengan lencana */
+/* Floating Dock Halaman 7: pastikan konsisten dengan halaman lain */
 .floating-nav-dock--p7 {
-  bottom: 0.8%;
-  gap: clamp(6px, 1.4cqw, 14px);
   z-index: 25;
-}
-
-.floating-nav-dock--p7 .floating-nav-btn {
-  width: clamp(38px, 8.4cqw, 66px);
-  height: clamp(38px, 8.4cqw, 66px);
 }
 
 /* =========================================
