@@ -249,42 +249,43 @@ export const canvaLayouts = {
   // ==========================================================
   page07: {
     // Judul Utama (Cerita 1: Tiga Warna di Festival Sekolah - Toleransi)
-    title: { x: 1.53, y: 0.28, w: 4.94, h: 2.71, rotate: 0, zIndex: 14 },
+    title: { x: 1.50, y: 0.28, w: 5.36, h: 2.72, rotate: 0, zIndex: 16 },
 
     // Awan-awan Atas
-    clouds: { x: 0.00, y: 0.20, w: 8.00, h: 1.80, rotate: 0, zIndex: 3 },
+    cloudsLeft: { x: -0.10, y: 0.20, w: 5.21, h: 1.98, rotate: 0, zIndex: 3 },
+    cloudsRight: { x: 2.80, y: 0.20, w: 5.21, h: 1.98, rotate: 0, flipH: true, zIndex: 3 },
 
     // Burung-burung Terbang Kiri
-    birds: { x: 0.20, y: 0.80, w: 1.20, h: 1.05, rotate: 0, zIndex: 4 },
+    birds: { x: 0.53, y: 0.89, w: 1.71, h: 1.49, rotate: 0, zIndex: 4 },
 
     // Rumah Gadang Kiri (Latar Belakang Pohon)
-    houseGadang: { x: 0.00, y: 3.30, w: 3.20, h: 1.90, rotate: 0, zIndex: 5 },
+    houseGadang: { x: -0.36, y: 3.38, w: 2.80, h: 1.68, rotate: 0, zIndex: 8 },
 
     // Pohon Besar Rindang Kiri
-    tree: { x: -0.70, y: 2.30, w: 3.70, h: 3.20, rotate: 0, zIndex: 8 },
+    tree: { x: -0.18, y: 2.83, w: 3.77, h: 3.22, rotate: 0, zIndex: 8 },
 
     // Rumah Julang Ngapak (Tengah Kiri)
-    houseJulang: { x: 2.70, y: 4.10, w: 1.20, h: 1.05, rotate: 0, zIndex: 6 },
+    houseJulang: { x: 2.30, y: 4.07, w: 1.53, h: 1.33, rotate: 0, zIndex: 8 },
 
     // Gedung Sekolah Kanan
-    school: { x: 4.20, y: 3.70, w: 3.80, h: 1.52, rotate: 0, zIndex: 5 },
+    school: { x: 3.82, y: 3.80, w: 4.29, h: 1.71, rotate: 0, zIndex: 8 },
 
     // Dahan Pohon & Ayunan Gantung Kanan
-    swing: { x: 5.35, y: 0.46, w: 2.65, h: 3.40, rotate: 0, zIndex: 9 },
+    swing: { x: 5.96, y: 2.90, w: 2.04, h: 2.73, rotate: 0, zIndex: 9 },
 
     // Hamparan Rumput Taman
-    garden: { x: -0.50, y: 3.60, w: 9.00, h: 5.00, rotate: 0, zIndex: 7 },
+    garden: { x: -0.66, y: 3.10, w: 8.66, h: 3.38, rotate: 0, zIndex: 7 },
 
     // Bebatuan Kiri Bawah
-    rocks: { x: 0.00, y: 5.80, w: 1.00, h: 1.00, rotate: 0, zIndex: 10 },
+    rocks: { x: -0.19, y: 5.22, w: 1.02, h: 1.04, rotate: 0, zIndex: 10 },
 
     // Papan Kayu Kiri (Di samping bebatuan)
-    signpost: { x: 0.70, y: 5.50, w: 0.85, h: 1.10, rotate: 0, zIndex: 10 },
+    signpost: { x: 1.39, y: 5.46, w: 1.09, h: 1.40, rotate: 0, zIndex: 10 },
 
     // 3 Karakter Anak Nusantara (Ukuran dan posisi persis Canva)
-    charRafi: { x: 1.50, y: 3.85, w: 1.75, h: 3.60, rotate: 0, zIndex: 15 },
-    charNaya: { x: 2.95, y: 4.00, w: 2.10, h: 3.70, rotate: 0, zIndex: 15 },
-    charDanu: { x: 4.80, y: 2.50, w: 1.60, h: 4.80, rotate: 0, zIndex: 15 },
+    charRafi: { x: 1.45, y: 4.25, w: 1.60, h: 3.50, rotate: 0, zIndex: 15 },
+    charNaya: { x: 2.95, y: 4.30, w: 2.10, h: 3.70, rotate: 0, zIndex: 15 },
+    charDanu: { x: 4.95, y: 3.50, w: 1.55, h: 4.40, rotate: 0, zIndex: 15 },
 
     // 3 Kartu Nama Karakter (Persis di bawah masing-masing karakter)
     nameRafi: { x: 1.50, y: 6.45, w: 1.50, h: 0.58, rotate: 0, zIndex: 18 },

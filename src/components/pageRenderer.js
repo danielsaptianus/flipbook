@@ -546,7 +546,8 @@ function renderPage07(data) {
       <img src="${assets.light}" alt="" class="layer layer-light layer-p7-light" draggable="false" />
 
       <!-- Layer 3: Awan-awan -->
-      <img src="${assets.clouds}" alt="" class="layer layer-p7-clouds" style="${getCanvaStyle('page07', 'clouds')}" draggable="false" />
+      <img src="${assets.clouds}" alt="" class="layer layer-p7-clouds layer-p7-clouds-left" style="${getCanvaStyle('page07', 'cloudsLeft')}" draggable="false" />
+      <img src="${assets.clouds}" alt="" class="layer layer-p7-clouds layer-p7-clouds-right" style="${getCanvaStyle('page07', 'cloudsRight')}" draggable="false" />
 
       <!-- Layer 4: Burung-burung Terbang Kiri -->
       <img src="${assets.birds}" alt="" class="layer layer-p7-birds" style="${getCanvaStyle('page07', 'birds')}" draggable="false" />
