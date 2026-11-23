@@ -359,8 +359,11 @@ export const canvaLayouts = {
   // HALAMAN 10 (MISI 1: PEMECAHAN MASALAH)
   // ==========================================================
   page10: {
-    // Header Banner Gabungan MISI & Lampu Ide
-    headerBanner: { x: 0.60, y: 0.35, w: 6.80, h: 1.15, rotate: 0, zIndex: 15 },
+    // Badge Judul MISI
+    misi: { x: 0.50, y: 0.40, w: 2.10, h: 0.82, rotate: 0, zIndex: 15 },
+
+    // Lampu Ide & Pengantar Masalah
+    lampu: { x: 2.70, y: 0.35, w: 4.80, h: 1.13, rotate: 0, zIndex: 14 },
 
     // Dedaunan Hias Kanan Atas
     foliageTop: { x: 5.50, y: -0.10, w: 2.60, h: 2.17, rotate: 0, zIndex: 12 },

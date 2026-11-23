@@ -779,22 +779,19 @@ function renderPage10(data) {
       <!-- Layer 5: Semak Bunga Bawah Kanan -->
       <img src="${assets.bushBottomRight}" alt="" class="layer layer-p10-bush-right" style="${getCanvaStyle('page10', 'bushBottomRight')}" draggable="false" />
 
-      <!-- Layer 6: Banner Judul MISI & Lampu Ide -->
-      <div class="layer layer-p10-header-wrapper" style="${getCanvaStyle('page10', 'headerBanner')}">
-        <img src="${assets.misiBadge}" alt="Misi" class="p10-misi-img" draggable="false" />
-        <div class="p10-lampu-container">
-          <img src="${assets.lampuHeader}" alt="" class="p10-lampu-img" draggable="false" />
-          <h1 class="p10-header-title">MISI 1</h1>
-        </div>
-      </div>
+      <!-- Layer 6: Badge Judul MISI -->
+      <img src="${assets.misiBadge}" alt="Misi" class="layer layer-p10-misi" style="${getCanvaStyle('page10', 'misi')}" draggable="false" />
 
-      <!-- Layer 7: Template Kartu Pertanyaan -->
+      <!-- Layer 7: Lampu Ide & Pengantar Masalah -->
+      <img src="${assets.lampuHeader}" alt="Pengantar Masalah" class="layer layer-p10-lampu" style="${getCanvaStyle('page10', 'lampu')}" draggable="false" />
+
+      <!-- Layer 8: Template Kartu Pertanyaan -->
       <div class="layer layer-p10-question-wrapper" style="${getCanvaStyle('page10', 'questionCard')}">
         <img src="${assets.questionCard}" alt="${question}" class="p10-question-img" draggable="false" />
         <h2 class="sr-only">${question}</h2>
       </div>
 
-      <!-- Layer 8: Template Kartu Pilihan Jawaban Interaktif -->
+      <!-- Layer 9: Template Kartu Pilihan Jawaban Interaktif -->
       <div class="layer layer-p10-answer-wrapper" style="${getCanvaStyle('page10', 'answerCard')}">
         <img src="${assets.answerCard}" alt="Pilihan Jawaban" class="p10-answer-img" draggable="false" />
         <div class="p10-options-grid">
@@ -802,12 +799,12 @@ function renderPage10(data) {
         </div>
       </div>
 
-      <!-- Layer 9: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <!-- Layer 10: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p10" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
-      <!-- Layer 10: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <!-- Layer 11: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

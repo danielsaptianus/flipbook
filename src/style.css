@@ -1808,48 +1808,18 @@ body {
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
 }
 
-.layer-p10-header-wrapper {
-  display: flex;
-  align-items: center;
-  position: absolute;
+.layer-p10-misi {
+  height: auto;
   z-index: 15;
   pointer-events: none;
-}
-
-.p10-misi-img {
-  height: 85%;
-  width: auto;
-  object-fit: contain;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
 }
 
-.p10-lampu-container {
-  position: relative;
-  height: 95%;
-  display: flex;
-  align-items: center;
-  margin-left: 12px;
-}
-
-.p10-lampu-img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
+.layer-p10-lampu {
+  height: auto;
+  z-index: 14;
+  pointer-events: none;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
-}
-
-.p10-header-title {
-  position: absolute;
-  left: 36%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--font-title);
-  font-size: clamp(0.78rem, 2.2cqw, 1.15rem);
-  font-weight: 800;
-  color: #5c3d2e;
-  letter-spacing: 0.04em;
-  margin: 0;
-  white-space: nowrap;
 }
 
 .layer-p10-question-wrapper {

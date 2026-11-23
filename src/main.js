@@ -228,7 +228,7 @@ function toggleAudioNarration(audioBtn) {
       ? currentPage.bodyParagraphs.join(' ')
       : `Naya berkata, "Kita tampilkan budaya Jawa Barat saja, ya." Rafi menggeleng. "Aku juga ingin mengenalkan Rumah Gadang." Danu menambahkan, "Aku ingin kalian mengenal Rumah Honai." Tidak ada yang mau mengalah.`;
   } else if (currentPage.type === 'content-page-10') {
-    textToRead = `Misi 1: Solusi Terbaik. Pertanyaan: Apa solusi terbaik agar mereka tidak bertengkar? Pilihan A: Hanya budaya Naya yang tampil, karena Naya bicara lebih dulu. Pilihan B: Tidak ada budaya yang tampil. Pilihan C: Ketiga budaya tampil bersama, dan setiap anak bergantian mengenalkan budayanya. Ketuk pilihan jawabanmu untuk menyelesaikan misi!`;
+    textToRead = `Misi 1: Solusi Terbaik. Naya, Rafi, dan Danu ingin budaya mereka saja yang tampil. Tidak ada yang mau mengalah. Pertanyaan: Apa solusi terbaik agar mereka tidak bertengkar? Pilihan A: Hanya budaya Naya yang tampil, karena Naya bicara lebih dulu. Pilihan B: Tidak ada budaya yang tampil. Pilihan C: Ketiga budaya tampil bersama, dan setiap anak bergantian mengenalkan budayanya. Ketuk pilihan jawabanmu untuk menyelesaikan misi!`;
   }
 
   isAudioSpeaking = true;
