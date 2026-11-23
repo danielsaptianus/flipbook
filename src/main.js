@@ -3,7 +3,7 @@ import { renderPageHTML } from './components/pageRenderer.js';
 import { audioService } from './services/audioService.js';
 import { quizService } from './services/quizService.js';
 import { getMissionById } from './data/missionsData.js';
-import { renderMissionModalHTML, renderFeedbackRightHTML } from './components/missionModal.js';
+import { renderMissionModalHTML, renderFeedbackRightHTML, renderFeedbackWrongHTML } from './components/missionModal.js';
 
 let currentPageIndex = 0;
 let isAudioSpeaking = false;
@@ -510,6 +510,25 @@ function openMissionModal(missionId = 'misi-01') {
         }, 650);
       } else {
         showTemporaryNotice(missionData.feedback?.wrong || 'Coba pikirkan lagi ya!');
+
+        // Tampilkan pop-up Jawaban Salah (Belum Tepat, Yuk Coba Lagi!)
+        setTimeout(() => {
+          const feedbackLayer = backdrop.querySelector('#mission-feedback-layer');
+          if (feedbackLayer) {
+            feedbackLayer.innerHTML = renderFeedbackWrongHTML(missionData);
+            feedbackLayer.classList.add('is-active');
+
+            // Handle klik tombol "Coba Lagi"
+            const retryBtn = feedbackLayer.querySelector('#btn-feedback-retry');
+            retryBtn?.addEventListener('click', (ev) => {
+              ev.stopPropagation();
+              feedbackLayer.classList.remove('is-active');
+              feedbackLayer.innerHTML = '';
+              // Reset status tombol opsi agar siswa dapat mencoba lagi
+              optionBtns.forEach((b) => b.classList.remove('is-correct', 'is-wrong'));
+            });
+          }
+        }, 650);
       }
     });
   });

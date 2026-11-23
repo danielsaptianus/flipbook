@@ -34,6 +34,12 @@ export const missionsData = {
         card: '/mission/misi-01/feedback/right/jawaban-benar.png',
         btnContinue: '/mission/misi-01/feedback/right/lanjut-cerita.png',
         background: '/mission/misi-01/feedback/right/background.png'
+      },
+      feedbackWrong: {
+        popupFull: '/mission/misi-01/feedback/wrong/pop-up-jawaban-salah.png',
+        card: '/mission/misi-01/feedback/wrong/jawaban-salah.png',
+        btnRetry: '/mission/misi-01/feedback/wrong/coba-lagi.png',
+        background: '/mission/misi-01/feedback/wrong/background.png'
       }
     }
   }

@@ -398,6 +398,20 @@ export const canvaLayouts = {
 
     // Tombol Interaktif "Lanjut Cerita"
     continueBtn: { x: 1.51, y: 5.84, w: 5.14, h: 0.90, rotate: 0, zIndex: 20 },
+  },
+
+  // ==========================================================
+  // FEEDBACK MISI 1: JAWABAN SALAH (POP-UP COBA LAGI)
+  // ==========================================================
+  missionFeedbackWrong: {
+    // Background Komposit Penuh Canva
+    popupFull: { x: 0, y: 0, w: 8.00, h: 8.00, rotate: 0, zIndex: 1 },
+
+    // Kartu Pop-up Jawaban Salah
+    card: { x: 1.16, y: 1.33, w: 5.70, h: 3.87, rotate: 0, zIndex: 10 },
+
+    // Tombol Interaktif "Coba Lagi"
+    retryBtn: { x: 1.30, y: 5.69, w: 5.34, h: 0.91, rotate: 0, zIndex: 20 },
   }
 };
 

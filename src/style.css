@@ -2187,6 +2187,10 @@ body {
   filter: drop-shadow(0 8px 20px rgba(247, 127, 0, 0.55));
 }
 
+.feedback-action-btn--retry:hover .feedback-action-btn-img {
+  filter: drop-shadow(0 8px 20px rgba(231, 111, 81, 0.6));
+}
+
 .feedback-action-btn:active .feedback-action-btn-img {
   transform: scale(0.97);
 }

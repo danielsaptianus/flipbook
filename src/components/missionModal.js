@@ -136,3 +136,44 @@ export function renderFeedbackRightHTML(missionData) {
     </div>
   `;
 }
+
+/**
+ * Render HTML untuk Pop-up Jawaban Salah (Belum Tepat, Yuk Coba Lagi!)
+ * @param {Object} missionData - Data misi
+ * @returns {string} HTML string
+ */
+export function renderFeedbackWrongHTML(missionData) {
+  const assets = missionData.assets.feedbackWrong || {
+    popupFull: '/mission/misi-01/feedback/wrong/pop-up-jawaban-salah.png',
+    btnRetry: '/mission/misi-01/feedback/wrong/coba-lagi.png'
+  };
+
+  return `
+    <div class="feedback-modal-view feedback-modal-view--wrong" id="feedback-wrong-view">
+      <!-- Full Composite Canvas Canva Pop-up Jawaban Salah -->
+      <img
+        src="${assets.popupFull}"
+        alt="Jawaban Salah! Belum Tepat, Yuk Coba Lagi!"
+        class="feedback-bg-img"
+        draggable="false"
+      />
+
+      <!-- Tombol Interaktif Coba Lagi -->
+      <button
+        type="button"
+        class="feedback-action-btn feedback-action-btn--retry"
+        id="btn-feedback-retry"
+        style="${getCanvaStyle('missionFeedbackWrong', 'retryBtn')}"
+        aria-label="Coba Lagi"
+        title="Coba Lagi"
+      >
+        <img
+          src="${assets.btnRetry}"
+          alt="Coba Lagi"
+          class="feedback-action-btn-img"
+          draggable="false"
+        />
+      </button>
+    </div>
+  `;
+}
