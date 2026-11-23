@@ -12,18 +12,20 @@ export function renderMissionModalHTML(missionData, existingAnswer = null) {
   const optionsHTML = options
     .map((opt) => {
       let statusClass = '';
+      let statusIcon = opt.key;
       if (existingAnswer && existingAnswer.selected === opt.key) {
         statusClass = existingAnswer.isCorrect ? 'is-correct' : 'is-wrong';
+        statusIcon = existingAnswer.isCorrect ? '✓' : '✗';
       }
       return `
         <button
           type="button"
-          class="p10-option-btn mission-option-btn mission-option-btn--${opt.key.toLowerCase()} ${statusClass}"
+          class="mission-option-btn mission-option-btn--${opt.key.toLowerCase()} ${statusClass}"
           data-key="${opt.key}"
           aria-label="Pilihan ${opt.key}: ${opt.text}"
         >
-          <span class="p10-option-indicator">${opt.key}</span>
-          <span class="sr-only">${opt.text}</span>
+          <span class="mission-option-badge">${statusIcon}</span>
+          <span class="mission-option-text">${opt.text}</span>
         </button>
       `;
     })
@@ -73,10 +75,9 @@ export function renderMissionModalHTML(missionData, existingAnswer = null) {
             <h2 id="mission-dialog-title" class="sr-only">${question}</h2>
           </div>
 
-          <!-- Layer 10: Template Kartu Pilihan Jawaban Interaktif (A, B, C) -->
-          <div class="layer layer-p10-answer-wrapper" style="${getCanvaStyle('mission01', 'answerCard')}">
-            <img src="${assets.answerCard}" alt="Pilihan Jawaban" class="p10-answer-img" draggable="false" />
-            <div class="p10-options-grid mission-options-grid">
+          <!-- Layer 10: Kartu Pilihan Jawaban Interaktif (A, B, C) -->
+          <div class="mission-answers-container" style="${getCanvaStyle('mission01', 'answerCard')}">
+            <div class="mission-options-list">
               ${optionsHTML}
             </div>
           </div>

@@ -486,8 +486,19 @@ function openMissionModal(missionId = 'misi-01') {
       const key = btn.dataset.key;
       const isCorrect = quizService.submitAnswer(missionId, key, missionData.correctAnswer);
 
-      optionBtns.forEach((b) => b.classList.remove('is-correct', 'is-wrong'));
+      // Reset semua status visual opsi
+      optionBtns.forEach((b) => {
+        b.classList.remove('is-correct', 'is-wrong');
+        const bBadge = b.querySelector('.mission-option-badge');
+        if (bBadge) bBadge.textContent = b.dataset.key;
+      });
+
+      // Tandai tombol yang dipilih
       btn.classList.add(isCorrect ? 'is-correct' : 'is-wrong');
+      const badge = btn.querySelector('.mission-option-badge');
+      if (badge) {
+        badge.textContent = isCorrect ? '✓' : '✗';
+      }
 
       if (isCorrect) {
         showTemporaryNotice(missionData.feedback?.correct || '🎉 Luar biasa! Solusi terbaik!');
@@ -525,7 +536,11 @@ function openMissionModal(missionId = 'misi-01') {
               feedbackLayer.classList.remove('is-active');
               feedbackLayer.innerHTML = '';
               // Reset status tombol opsi agar siswa dapat mencoba lagi
-              optionBtns.forEach((b) => b.classList.remove('is-correct', 'is-wrong'));
+              optionBtns.forEach((b) => {
+                b.classList.remove('is-correct', 'is-wrong');
+                const bBadge = b.querySelector('.mission-option-badge');
+                if (bBadge) bBadge.textContent = b.dataset.key;
+              });
             });
           }
         }, 650);
