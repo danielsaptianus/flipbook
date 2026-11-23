@@ -1381,7 +1381,15 @@ body {
   height: auto;
   z-index: 3;
   pointer-events: none;
-  animation: cloudFloat 7s ease-in-out infinite;
+}
+
+.layer-p7-clouds-left {
+  animation: cloudFloat 7.5s ease-in-out infinite;
+}
+
+.layer-p7-clouds-right {
+  animation: cloudFloatMirrored 8s ease-in-out infinite;
+  animation-delay: -3.5s;
 }
 
 .layer-p7-birds {

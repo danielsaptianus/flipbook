@@ -252,8 +252,8 @@ export const canvaLayouts = {
     title: { x: 1.34, y: 0.13, w: 5.70, h: 2.99, rotate: 0, zIndex: 16 },
 
     // Awan-awan Atas
-    cloudsLeft: { x: -0.10, y: 0.20, w: 5.21, h: 1.98, rotate: 0, zIndex: 3 },
-    cloudsRight: { x: 2.80, y: 0.20, w: 5.21, h: 1.98, rotate: 0, flipH: true, zIndex: 3 },
+    cloudsLeft: { x: -0.20, y: 0.20, w: 5.00, h: 1.90, rotate: 0, zIndex: 3 },
+    cloudsRight: { x: 3.20, y: 0.20, w: 5.00, h: 1.90, rotate: 0, flipH: true, zIndex: 3 },
 
     // Burung-burung Terbang Kiri
     birds: { x: 0.53, y: 0.89, w: 1.71, h: 1.49, rotate: 0, zIndex: 4 },
