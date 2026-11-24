@@ -1412,8 +1412,6 @@ body {
 }
 
 .layer-p7-school {
-  height: auto;
-  z-index: 5;
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
 }
@@ -1435,11 +1433,6 @@ body {
 }
 
 .layer-p7-garden {
-  height: auto;
-  min-height: 65%;
-  object-fit: cover;
-  object-position: top center;
-  z-index: 7;
   pointer-events: none;
 }
 

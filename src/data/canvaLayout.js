@@ -249,32 +249,32 @@ export const canvaLayouts = {
   // ==========================================================
   page07: {
     // Judul Utama (Cerita 1: Tiga Warna di Festival Sekolah - Toleransi)
-    title: { x: 1.34, y: 0.13, w: 5.70, h: 2.99, rotate: 0, zIndex: 16 },
+    title: { x: 1.7, y: 0.37, w: 4.99, h: 2.57, rotate: 0, zIndex: 16 },
 
     // Awan-awan Atas
-    cloudsLeft: { x: -0.20, y: 0.20, w: 5.00, h: 1.90, rotate: 0, zIndex: 3 },
-    cloudsRight: { x: 3.20, y: 0.20, w: 5.00, h: 1.90, rotate: 0, flipH: true, zIndex: 3 },
+    cloudsLeft: { x: 0, y: -0.01, w: 5.21, h: 1.98, rotate: 0, zIndex: 3 },
+    cloudsRight: { x: 2.78, y: -0.09, w: 5.33, h: 2.02, rotate: 0, flipH: true, zIndex: 3 },
 
     // Burung-burung Terbang Kiri
     birds: { x: 0.53, y: 0.89, w: 1.71, h: 1.49, rotate: 0, zIndex: 4 },
 
     // Rumah Gadang Kiri (Latar Belakang Pohon)
-    houseGadang: { x: -0.36, y: 3.38, w: 2.80, h: 1.68, rotate: 0, zIndex: 8 },
+    houseGadang: { x: -0.36, y: 3.38, w: 2.8, h: 1.68, rotate: 0, zIndex: 7 },
 
     // Pohon Besar Rindang Kiri
     tree: { x: -0.18, y: 2.83, w: 3.77, h: 3.22, rotate: 0, zIndex: 8 },
 
     // Rumah Julang Ngapak (Tengah Kiri)
-    houseJulang: { x: 2.30, y: 4.07, w: 1.53, h: 1.33, rotate: 0, zIndex: 8 },
+    houseJulang: { x: 2.30, y: 4.07, w: 1.53, h: 1.33, rotate: 0, zIndex: 7 },
 
     // Gedung Sekolah Kanan
-    school: { x: 3.82, y: 3.80, w: 4.29, h: 1.71, rotate: 0, zIndex: 8 },
+    school: { x: 3.82, y: 3.80, w: 4.29, h: 1.71, rotate: 0, zIndex: 7 },
 
     // Dahan Pohon & Ayunan Gantung Kanan
     swing: { x: 5.96, y: 2.90, w: 2.04, h: 2.73, rotate: 0, zIndex: 9 },
 
     // Hamparan Rumput Taman
-    garden: { x: -0.66, y: 3.10, w: 8.66, h: 3.38, rotate: 0, zIndex: 7 },
+    garden: { x: -0.66, y: 4.79, w: 8.66, h: 3.38, rotate: 0, zIndex: 7 },
 
     // Bebatuan Kiri Bawah
     rocks: { x: -0.19, y: 5.22, w: 1.02, h: 1.04, rotate: 0, zIndex: 10 },
