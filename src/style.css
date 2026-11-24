@@ -514,15 +514,20 @@ body {
 }
 
 .p2-note-title {
-  font-family: 'VAG Rounded', 'VAG Rounded Next', var(--font-title);
+  font-family: 'VAG Rounded Next', 'VAG Rounded', var(--font-title);
   font-weight: 800;
-  font-size: clamp(1.4rem, 4.625cqi, 2.45rem);
+  font-size: clamp(1.8rem, 6.75cqi, 3.55rem);
   color: #3653a1;
   text-align: center;
-  text-transform: uppercase;
-  margin-bottom: clamp(10px, 2.8cqi, 22px);
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  text-transform: none; /* Judul "Kata Pengantar" (Title Case) persis di Canva */
+  margin-bottom: clamp(14px, 3cqi, 26px);
+  letter-spacing: 0.015em;
+  text-shadow: 
+    0 1.5px 0 #ffffff,
+    0 -1.5px 0 #ffffff,
+    1.5px 0 0 #ffffff,
+    -1.5px 0 0 #ffffff,
+    0 2px 6px rgba(35, 73, 126, 0.25);
   line-height: 1.15;
   user-select: text;
   -webkit-user-select: text;
@@ -530,8 +535,8 @@ body {
 
 .p2-note-body {
   font-family: 'Etna', var(--font-body);
-  font-weight: 600;
-  font-size: clamp(0.65rem, 1.875cqi, 1.05rem);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 2.74cqi, 1.45rem);
   line-height: 1.4;
   color: #263660;
   letter-spacing: 0.027em; /* Canva letter-spacing: 27 (27/1000 em) */
@@ -541,11 +546,11 @@ body {
 }
 
 .p2-note-body p + p {
-  margin-top: clamp(12px, 2.6cqi, 22px);
+  margin-top: clamp(14px, 3.2cqi, 26px);
 }
 
 .p2-note-closing {
-  margin-top: clamp(12px, 2.6cqi, 22px);
+  margin-top: clamp(14px, 3.2cqi, 26px);
 }
 
 .layer-p2-foliage {
