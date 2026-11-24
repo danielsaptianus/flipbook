@@ -216,15 +216,22 @@ function renderPage03(data) {
   const controlsHTML = renderControlsHTML(controls);
 
   const itemsHTML = items
-    .map(
-      (item) => `
-      <li class="p3-toc-item" data-target-page="${item.page}">
-        <span class="p3-toc-title">${item.title}</span>
-        <span class="p3-toc-leader" aria-hidden="true"></span>
-        <span class="p3-toc-page">${item.page}</span>
-      </li>
-    `
-    )
+    .map((item) => {
+      if (item.isHeader || item.page === null || item.page === undefined) {
+        return `
+          <li class="p3-toc-header">
+            <span class="p3-toc-header-title">${item.title}</span>
+          </li>
+        `;
+      }
+      return `
+        <li class="p3-toc-item" data-target-page="${item.page}">
+          <span class="p3-toc-title">${item.title}</span>
+          <span class="p3-toc-leader" aria-hidden="true"></span>
+          <span class="p3-toc-page">${item.page}</span>
+        </li>
+      `;
+    })
     .join('');
 
   return `
@@ -233,7 +240,7 @@ function renderPage03(data) {
       <img src="${assets.background}" alt="" class="layer layer-p3-bg" draggable="false" />
 
       <!-- Layer 2: Efek Cahaya Atas -->
-      <img src="${assets.light}" alt="" class="layer layer-light" draggable="false" />
+      <img src="${assets.light}" alt="" class="layer layer-p2-light" draggable="false" />
 
       <!-- Layer 3: Awan Mega Mendung -->
       <img src="${assets.cloudDark}" alt="" class="layer layer-cloud layer-cloud-dark-tl" draggable="false" />
@@ -270,8 +277,8 @@ function renderPage03(data) {
       <!-- Layer 9: Dedaunan & Bunga Depan Bawah -->
       <img src="${assets.foliage}" alt="" class="layer layer-p3-foliage" style="${getCanvaStyle('page03', 'foliage')}" draggable="false" />
 
-      <!-- Layer 10: Tombol Navigasi Floating (Home, Next, Back) -->
-      <nav class="floating-nav-dock floating-nav-dock--p3" id="floating-nav-dock" aria-label="Navigasi Halaman">
+      <!-- Layer 10: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p2" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
