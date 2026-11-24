@@ -972,9 +972,9 @@ body {
 .layer-p4-card-wrapper {
   position: absolute;
   left: 20.25%;
-  top: 7.6%;
+  top: 6.5%;
   width: 59.5%;
-  height: 88.75%;
+  height: 80.5%;
   z-index: 10;
   pointer-events: auto;
 }
@@ -1002,7 +1002,7 @@ body {
   top: 13.5%;
   left: 6%;
   width: 88%;
-  height: 78%;
+  height: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -1056,16 +1056,11 @@ body {
   pointer-events: none;
 }
 
-.p4-circle-btn--games .p4-circle-btn-img {
-  width: 75%;
-  height: 75%;
-}
-
 .p4-btn-label {
-  font-family: var(--font-title);
+  font-family: 'VAG Rounded Next', 'VAG Rounded', var(--font-title);
   font-weight: 800;
   font-size: clamp(0.85rem, 2.7cqi, 1.5rem);
-  color: #111827;
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-align: center;

@@ -9,7 +9,7 @@ export const pagesData = [
     subtitleBottom: 'Literasi Sosial',
     assets: {
       background: '/pages/page-01/backgorund.png',
-      light: '/pages/page-01/cahaya.png',
+      light: '/pages/page-02/cahaya.png',
       cloudDark: '/pages/page-01/awan.png',
       cloudLight: '/pages/page-01/awan-02.png',
       bird: '/pages/page-01/burung.png',
@@ -140,7 +140,7 @@ export const pagesData = [
     ],
     assets: {
       background: '/pages/page-04/backgorund.png',
-      light: '/pages/page-01/cahaya.png',
+      light: '/pages/page-02/cahaya.png',
       cloudDark: '/pages/page-04/awan.png',
       cloudLight: '/pages/page-04/awan-02.png',
       mountain: '/pages/page-04/gunung.png',
@@ -170,7 +170,7 @@ export const pagesData = [
     ],
     assets: {
       background: '/pages/page-01/backgorund.png',
-      light: '/pages/page-01/cahaya.png',
+      light: '/pages/page-02/cahaya.png',
       cloudDark: '/pages/page-01/awan.png',
       cloudLight: '/pages/page-01/awan-02.png',
       mountain: '/pages/page-01/gunung.png',

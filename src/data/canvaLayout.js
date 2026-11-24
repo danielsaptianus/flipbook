@@ -127,10 +127,10 @@ export const canvaLayouts = {
   // ==========================================================
   page04: {
     // Template Bingkai Tombol (Card)
-    cardFrame: { x: 1.62, y: 0.61, w: 4.76, h: 7.12, rotate: 0, zIndex: 10 },
+    cardFrame: { x: 1.62, y: 0.52, w: 4.76, h: 6.45, rotate: 0, zIndex: 10 },
 
     // Mahkota Ornamen Bali di atas kartu
-    crown: { x: 3.22, y: 0.06, w: 1.51, h: 0.92, rotate: 0, zIndex: 12 },
+    crown: { x: 3.22, y: 0.04, w: 1.51, h: 0.85, rotate: 0, zIndex: 12 },
 
     // Gunung Kanan Latar
     mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 6 },
