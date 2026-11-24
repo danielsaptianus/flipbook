@@ -450,7 +450,6 @@ function openMissionModal(missionId = 'misi-01') {
     backdrop?.classList.add('is-open');
   });
 
-  const closeBtn = document.getElementById('btn-close-mission');
   const returnStoryBtn = document.getElementById('btn-return-story');
 
   const closeModal = () => {
@@ -460,7 +459,6 @@ function openMissionModal(missionId = 'misi-01') {
     }, 320);
   };
 
-  closeBtn?.addEventListener('click', closeModal);
   returnStoryBtn?.addEventListener('click', closeModal);
 
   // Klik di luar container untuk menutup modal

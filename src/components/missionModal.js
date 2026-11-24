@@ -34,14 +34,6 @@ export function renderMissionModalHTML(missionData, existingAnswer = null) {
   return `
     <div id="mission-modal" class="mission-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="mission-dialog-title">
       <div class="mission-modal-container">
-        <!-- Tombol Tutup / Kembali Modal (Pojok Kanan Atas) -->
-        <button type="button" class="mission-modal-close-btn" id="btn-close-mission" aria-label="Tutup Pop-up Misi">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-
         <!-- Canvas Misi Rasio 1:1 Berbasis Canva Calibrated Layout -->
         <div class="mission-modal-canvas" id="mission-canvas">
           <!-- Layer 1: Background Misi -->

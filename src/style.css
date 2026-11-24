@@ -2062,30 +2062,6 @@ body {
   transform: scale(1) translateY(0);
 }
 
-.mission-modal-close-btn {
-  position: absolute;
-  top: clamp(10px, 2.2cqw, 20px);
-  right: clamp(10px, 2.2cqw, 20px);
-  z-index: 60;
-  width: clamp(36px, 5.5cqw, 48px);
-  height: clamp(36px, 5.5cqw, 48px);
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  background: rgba(15, 23, 42, 0.65);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.22s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  padding: 0;
-}
-
-.mission-modal-close-btn:hover {
-  background: #e76f51;
-  transform: scale(1.1) rotate(90deg);
-}
 
 .mission-modal-canvas {
   position: relative;
