@@ -297,7 +297,8 @@ export const canvaLayouts = {
   // HALAMAN 8 (CERITA 1: MENJELANG FESTIVAL DI SEKOLAH)
   // ==========================================================
   page08: {
-    // Teks Narasi Cerita (Font: League Spartan, uk 15, letter-spacing -15)
+    // Teks Narasi Cerita (Gambar kalimat.png dari Canva)
+    kalimat: { x: 0.76, y: 1.23, w: 6.38, h: 2.77, rotate: 0, zIndex: 15 },
     storyBox: { x: 0.76, y: 1.23, w: 6.38, h: 2.77, rotate: 0, zIndex: 15 },
 
     // Awan Cerah Kiri & Kanan Atas

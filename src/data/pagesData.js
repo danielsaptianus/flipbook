@@ -295,7 +295,8 @@ export const pagesData = [
       flowers: '/pages/page-08/bunga-dayb.png',
       charRafi: '/pages/page-08/rafi.png',
       charNaya: '/pages/page-08/naya.png',
-      charDanu: '/pages/page-08/danu.png'
+      charDanu: '/pages/page-08/danu.png',
+      kalimat: '/pages/page-08/kalimat.png'
     },
     controls: [
       { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },

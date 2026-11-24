@@ -667,12 +667,8 @@ function renderPage08(data) {
       <img src="${assets.flowers}" alt="" class="layer layer-p8-flowers layer-p8-flowers-left" style="${getCanvaStyle('page08', 'flowersLeft')}" draggable="false" />
       <img src="${assets.flowers}" alt="" class="layer layer-p8-flowers layer-p8-flowers-right" style="${getCanvaStyle('page08', 'flowersRight')}" draggable="false" />
 
-      <!-- Layer 9: Teks Narasi Cerita (League Spartan) -->
-      <div class="layer layer-p8-story-wrapper" style="${getCanvaStyle('page08', 'storyBox')}">
-        <div class="p8-story-card">
-          ${paragraphsHTML}
-        </div>
-      </div>
+      <!-- Layer 9: Teks Narasi Cerita (Gambar Kalimat dari Canva) -->
+      <img src="${assets.kalimat}" alt="${bodyParagraphs.join(' ')}" class="layer layer-p8-kalimat" style="${getCanvaStyle('page08', 'kalimat') || getCanvaStyle('page08', 'storyBox')}" draggable="false" />
 
       <!-- Layer 10: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p8" id="floating-nav-dock" aria-label="Navigasi Halaman">
