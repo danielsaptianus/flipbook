@@ -189,8 +189,8 @@ function renderPage02(data) {
         <div class="p2-note-content">
           <h1 class="p2-note-title">${title}</h1>
           <div class="p2-note-body">
-            <p>${bodyParagraphs[0]}</p>
-            <p class="p2-note-closing">${bodyParagraphs[1]}</p>
+            ${bodyParagraphs.slice(0, -1).map((p) => `<p>${p}</p>`).join('')}
+            <p class="p2-note-closing">${bodyParagraphs[bodyParagraphs.length - 1]}</p>
           </div>
         </div>
       </div>

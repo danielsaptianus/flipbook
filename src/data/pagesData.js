@@ -46,7 +46,8 @@ export const pagesData = [
     type: 'content-page-02',
     title: 'Kata Pengantar',
     bodyParagraphs: [
-      'Indonesia memiliki banyak budaya yang berbeda. Setiap daerah memiliki ciri khasnya sendiri, seperti pakaian adat, rumah adat, bahasa, makanan khas, kesenian, dan tradisi. Perbedaan tersebut membuat Indonesia menjadi negara yang kaya akan budaya. Melalui buku ini, kita akan mengikuti perjalanan beberapa anak yang belajar mengenal budaya dari daerah yang berbeda. Dari cerita mereka, kita akan belajar bagaimana menghargai perbedaan, bekerja sama, dan peduli terhadap budaya Indonesia.',
+      'Indonesia memiliki banyak budaya yang berbeda. Setiap daerah memiliki ciri khasnya sendiri, seperti pakaian adat, rumah adat, bahasa, makanan khas, kesenian, dan tradisi. Perbedaan tersebut membuat Indonesia menjadi negara yang kaya akan budaya. ', 
+      'Melalui buku ini, kita akan mengikuti perjalanan beberapa anak yang belajar mengenal budaya dari daerah yang berbeda. Dari cerita mereka, kita akan belajar bagaimana menghargai perbedaan, bekerja sama, dan peduli terhadap budaya Indonesia.',
       'Yuk, kita belajar sambil mengikuti petualangan mereka!'
     ],
     assets: {
