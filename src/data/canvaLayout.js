@@ -58,15 +58,15 @@ export const canvaLayouts = {
 
     // 4 Karakter Anak Nusantara
     charSinta: { x: 0.95, y: 4.76, w: 1.87, h: 3.9, rotate: 0, zIndex: 20 },
-    charNaya:  { x: 2.19, y: 4.33, w: 2.14, h: 4.24, rotate: 0, zIndex: 20 },
-    charDanu:  { x: 3.52, y: 4.24, w: 2.06, h: 4.16, rotate: 0, zIndex: 20 },
-    charRafi:  { x: 5.17, y: 4.41, w: 2.06, h: 4.25, rotate: 0, zIndex: 19 },
+    charNaya:  { x: 2.2, y: 4.52, w: 2.09, h: 4.22, rotate: 0, zIndex: 20 },
+    charDanu:  { x: 3.49, y: 4.44, w: 2.09, h: 4.22, rotate: 0, zIndex: 20 },
+    charRafi:  { x: 5.17, y: 4.56, w: 2.06, h: 4.25, rotate: 0, zIndex: 19 },
 
     // Dedaunan & Semak Depan Bawah
     foliage: { x: -1.10, y: 5., w: 10.25, h: 4.70, rotate: 0, zIndex: 18 },
 
     // Bunga Rafflesia Kiri Bawah (Di depan semak / z-index 19)
-    flower: { x: 0.12, y: 5.44, w: 2.04, h: 1.2, rotate: 0, zIndex: 19 },
+    flower: { x: -0.16, y: 5.44, w: 2.04, h: 1.2, rotate: 0, zIndex: 19 },
   },
 
   // ==========================================================
@@ -83,16 +83,16 @@ export const canvaLayouts = {
     hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
 
     // Rumah Adat Kiri (terselip di belakang pohon)
-    houseLeft: { x: 0.64, y: 4.52, w: 1.08, h: 0.55, rotate: 0, zIndex: 7 },
+    houseLeft: { x: 0.7, y: 4.05, w: 2.24, h: 1.12, rotate: 0, zIndex: 7 },
 
     // Pohon Besar Kiri
-    tree: { x: -0.32, y: 3.47, w: 2.15, h: 2.25, rotate: 0, zIndex: 11 },
+    tree: { x: -0.32, y: 3.47, w: 2.15, h: 2.25, rotate: 0, zIndex: 9 },
 
     // Rumah Gadang Kanan
-    houseRight: { x: 6, y: 3.38, w: 2.1, h: 1.23, rotate: 0, zIndex: 7 },
+    houseRight: { x: 5.97, y: 3.38, w: 2.1, h: 1.23, rotate: 0, zIndex: 7 },
 
     // Batu & Bunga Kanan Bawah
-    rocks: { x: 6.69, y: 4.68, w: 1.47, h: 1.5, rotate: 0, zIndex: 19 },
+    rocks: { x: 6.69, y: 4.68, w: 1.47, h: 1.5, rotate: 0, zIndex: 9 },
 
     // Dedaunan Depan Bawah
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },

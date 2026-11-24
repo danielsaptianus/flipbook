@@ -514,13 +514,14 @@ body {
 }
 
 .p2-note-title {
-  font-family: var(--font-title);
+  font-family: 'VAG Rounded', 'VAG Rounded Next', var(--font-title);
   font-weight: 800;
-  font-size: clamp(1.4rem, 4.8cqi, 2.75rem);
+  font-size: clamp(1.4rem, 4.625cqi, 2.45rem);
   color: #3653a1;
   text-align: center;
-  margin-bottom: clamp(12px, 3.2cqi, 26px);
-  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: clamp(10px, 2.8cqi, 22px);
+  letter-spacing: 0.02em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   line-height: 1.15;
   user-select: text;
@@ -528,12 +529,12 @@ body {
 }
 
 .p2-note-body {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(0.68rem, 2.05cqi, 1.12rem);
-  line-height: 1.62;
+  font-family: 'Etna', var(--font-body);
+  font-weight: 600;
+  font-size: clamp(0.65rem, 1.875cqi, 1.05rem);
+  line-height: 1.4;
   color: #263660;
-  letter-spacing: 0.03em; /* Jarak antar huruf 30 (30/1000 em) */
+  letter-spacing: 0.027em; /* Canva letter-spacing: 27 (27/1000 em) */
   text-align: left;
   user-select: text;
   -webkit-user-select: text;

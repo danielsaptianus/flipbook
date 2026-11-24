@@ -187,7 +187,7 @@ function renderPage02(data) {
       <div class="layer layer-p2-note-wrapper" style="${getCanvaStyle('page02', 'noteFrame')}">
         <img src="${assets.noteFrame}" alt="" class="p2-note-frame-img" draggable="false" />
         <div class="p2-note-content">
-          <img src="${assets.titleArt || '/pages/page-02/kata-pengantar.svg'}" alt="${title}" class="p2-note-title-img" draggable="false" />
+          <h1 class="p2-note-title">${title}</h1>
           <div class="p2-note-body">
             <p>${bodyParagraphs[0]}</p>
             <p class="p2-note-closing">${bodyParagraphs[1]}</p>
