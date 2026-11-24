@@ -1056,6 +1056,12 @@ body {
   pointer-events: none;
 }
 
+.p4-circle-btn--games .p4-circle-btn-img,
+.p4-circle-btn--kuis .p4-circle-btn-img {
+  width: 80.5%;
+  height: 80.5%;
+}
+
 .p4-btn-label {
   font-family: 'VAG Rounded Next', 'VAG Rounded', var(--font-title);
   font-weight: 800;
