@@ -133,23 +133,23 @@ export const canvaLayouts = {
     crown: { x: 3.22, y: 0.04, w: 1.51, h: 0.85, rotate: 0, zIndex: 12 },
 
     // Gunung Kanan Latar
-    mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 6 },
+    mountain: { x: 4.58, y: 2.31, w: 4.58, h: 1.33, rotate: 0, zIndex: 6 },
 
     // Hamparan Bukit (Diperlebar & diperpanjang agar menutup celah biru langit)
-    hills: { x: -1.05, y: 3.20, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
+    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumah Honai Kiri
-    houseLeft: { x: 0.15, y: 3.65, w: 1.24, h: 0.90, rotate: 0, zIndex: 6 },
+    houseLeft: { x: 0.17, y: 3.59, w: 1.27, h: 0.92, rotate: 0, zIndex: 6 },
 
     // Rumah Gadang Kanan
-    houseRight: { x: 5.57, y: 2.4, w: 3.26, h: 1.87, rotate: 0, zIndex: 6 },
+    houseRight: { x: 5.57, y: 2.63, w: 3.26, h: 1.87, rotate: 0, zIndex: 6 },
 
     // Rumput Bunga Kiri & Kanan
-    flowersLeft:  { x: 0.00, y: 4.88, w: 2.44, h: 0.75, rotate: 0, zIndex: 8 },
-    flowersRight: { x: 6.40, y: 4.82, w: 2.44, h: 0.75, rotate: 0, flipH: true, zIndex: 8 },
+    flowersLeft:  { x: -0.73, y: 4.49, w: 2.44, h: 0.7, rotate: 0, zIndex: 8 },
+    flowersRight: { x: 6.22, y: 4.63, w: 2.44, h: 0.72, rotate: 0, flipH: true, zIndex: 8 },
 
     // Dedaunan Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
+    foliage: { x: -0.05, y: 5.41, w: 8.19, h: 3.48, rotate: 0, zIndex: 9 },
   },
 
   // ==========================================================
@@ -157,35 +157,35 @@ export const canvaLayouts = {
   // ==========================================================
   page05: {
     // Template Banner Judul "PETUNJUK PENGGUNAAN" (Atas)
-    titleBanner: { x: 1.55, y: 0.90, w: 4.90, h: 0.91, rotate: 0, zIndex: 15 },
+    titleBanner: { x: 1.58, y: 0.89, w: 4.94, h: 0.91, rotate: 0, zIndex: 15 },
 
     // Template Bingkai Catatan Kuning dengan Toa / Megaphone
-    noteCard: { x: 1.62, y: 2.14, w: 4.77, h: 5.11, rotate: 0, zIndex: 10 },
+    noteCard: { x: 1.63, y: 2.14, w: 4.75, h: 5.46, rotate: 0, zIndex: 10 },
 
     // Rumah Adat Kiri (Julang Ngapak)
-    houseLeft: { x: 0.20, y: 2.48, w: 2.25, h: 2.00, rotate: 0, zIndex: 6 },
+    houseLeft: { x: -0.09, y: 2.49, w: 2.42, h: 2.15, rotate: 0, zIndex: 6 },
 
     // Pohon Besar Kiri
-    tree: { x: -0.40, y: 2.20, w: 2.24, h: 2.80, rotate: 0, zIndex: 7 },
+    tree: { x: -0.71, y: 2.31, w: 2.37, h: 2.99, rotate: 0, zIndex: 7 },
 
     // Rumah Joglo Kanan
-    houseRight: { x: 5.92, y: 2.73, w: 2.35, h: 1.26, rotate: 0, zIndex: 6 },
+    houseRight: { x: 5.99, y: 2.7, w: 2.43, h: 1.3, rotate: 0, zIndex: 6 },
 
     // Karakter Anak Perempuan Kanan
-    character: { x: 7.47, y: 2.74, w: 0.50, h: 1.50, rotate: 0, zIndex: 7 },
+    character: { x: 7.53, y: 3.01, w: 0.42, h: 1.26, rotate: 0, zIndex: 7 },
 
     // Gunung Kanan Latar (Sama persis seperti halaman sebelumnya)
-    mountain: { x: 4.55, y: 2.45, w: 5.73, h: 1.78, rotate: 0, zIndex: 4 },
+    mountain: { x: 4.44, y: 2.17, w: 5.76, h: 1.67, rotate: 0, zIndex: 6 },
 
     // Hamparan Bukit (Sama persis seperti halaman sebelumnya)
-    hills: { x: -1.05, y: 3.20, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
+    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumput Bunga Kiri & Kanan (Sama persis seperti halaman sebelumnya)
-    flowersLeft:  { x: 0.00, y: 4.81, w: 1.60, h: 0.75, rotate: 13, zIndex: 8 },
-    flowersRight: { x: 6.40, y: 4.89, w: 1.60, h: 0.75, rotate: 13, flipH: true, zIndex: 8 },
+    flowersLeft:  { x: -0.73, y: 4.67, w: 2.53, h: 0.72, rotate: 13, zIndex: 8 },
+    flowersRight: { x: 6.22, y: 4.63, w: 2.53, h: 0.72, rotate: 13, flipH: true, zIndex: 8 },
 
     // Dedaunan Depan Bawah (Sama persis seperti halaman sebelumnya)
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
+    foliage: { x: -0.05, y: 5.41, w: 8.19, h: 3.48, rotate: 0, zIndex: 9 },
   },
 
   // ==========================================================

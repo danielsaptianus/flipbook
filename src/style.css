@@ -1196,25 +1196,29 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 10% 14.5% 12% 14.5%;
+  padding: 30% 6% 8% 11%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: clamp(8px, 1.8cqi, 16px);
+  justify-content: flex-start;
   pointer-events: auto;
 }
 
 .p5-note-p {
   font-family: var(--font-title);
   font-weight: 800;
-  font-size: clamp(0.7rem, 2.15cqi, 1.08rem);
-  line-height: 1.44;
-  color: #111827;
-  letter-spacing: 0.015em;
+  font-size: clamp(0.68rem, 2.0cqi, 1.02rem);
+  line-height: 1.4;
+  color: #171713;
+  letter-spacing: 0.01em;
+  text-align: left;
   margin: 0;
   padding: 0;
   user-select: text;
   -webkit-user-select: text;
+}
+
+.p5-note-p + .p5-note-p {
+  margin-top: clamp(12px, 2.6cqi, 20px);
 }
 
 .p5-keyword {
@@ -1226,15 +1230,15 @@ body {
 }
 
 .p5-keyword--misi {
-  color: #c2410c;
+  color: #b0491a;
 }
 
 .p5-keyword--kuis {
-  color: #dc2626;
+  color: #bf302e;
 }
 
 .p5-keyword--games {
-  color: #1e293b;
+  color: #171713;
 }
 
 .layer-p5-foliage {

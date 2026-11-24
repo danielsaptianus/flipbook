@@ -164,9 +164,9 @@ export const pagesData = [
     type: 'content-page-05',
     title: 'PETUNJUK PENGGUNAAN',
     bodyParagraphs: [
-      'Di buku ini ada 3 cerita. Bacalah setiap cerita sampai selesai dengan baik. Jangan terburu-buru, ya!',
-      'Di setiap cerita akan muncul <span class="p5-keyword p5-keyword--misi">🎯 MISI</span> dan <span class="p5-keyword p5-keyword--kuis">❓ KUIS</span> secara otomatis. Kerjakan kuis setelah ceritanya selesai dibaca.',
-      'Di akhir buku, kamu akan memainkan <span class="p5-keyword p5-keyword--games">🎮 GAMES</span>.'
+      'Di buku ini ada 3 cerita. Bacalah setiap<br>cerita sampai selesai dengan baik.<br>Jangan terburu-buru, ya!',
+      'Di setiap cerita akan muncul <span class="p5-keyword p5-keyword--misi">🎯 MISI</span> dan<br><span class="p5-keyword p5-keyword--kuis">? KUIS</span> secara otomatis. Kerjakan kuis<br>setelah ceritanya selesai dibaca.',
+      'Di akhir buku, kamu akan memainkan<br><span class="p5-keyword p5-keyword--games">🎮 GAMES.</span>'
     ],
     assets: {
       background: '/pages/page-01/backgorund.png',
