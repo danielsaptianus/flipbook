@@ -423,14 +423,9 @@ function renderPage05(data) {
         <h1 class="sr-only">${title}</h1>
       </div>
 
-      <!-- Layer 12: Template Bingkai Catatan Petunjuk & Isi Teks -->
+      <!-- Layer 12: Template Bingkai Catatan Petunjuk (Termasuk Teks Catatan) -->
       <div class="layer layer-p5-note-wrapper" style="${getCanvaStyle('page05', 'noteCard')}">
-        <img src="${assets.noteCard}" alt="" class="p5-note-frame-img" draggable="false" />
-        <div class="p5-note-content">
-          <p class="p5-note-p">${bodyParagraphs[0]}</p>
-          <p class="p5-note-p">${bodyParagraphs[1]}</p>
-          <p class="p5-note-p">${bodyParagraphs[2]}</p>
-        </div>
+        <img src="${assets.noteCard}" alt="Petunjuk Penggunaan" class="p5-note-frame-img" draggable="false" />
       </div>
 
       <!-- Layer 13: Dedaunan & Semak Depan Bawah (posisi sama seperti halaman sebelumnya) -->
