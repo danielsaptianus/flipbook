@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Keyboard navigation
   window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'PageDown') {
-      if (currentPageIndex < pagesData.length - 1) {
+      const currentPage = pagesData[currentPageIndex];
+      if (currentPage?.hasMission && currentPage?.missionId) {
+        openMissionModal(currentPage.missionId);
+      } else if (currentPageIndex < pagesData.length - 1) {
         goToPage(currentPageIndex + 2, 'forward');
       }
     } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
@@ -96,15 +99,13 @@ function setupInteractions() {
 
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      if (currentPageIndex < pagesData.length - 1) {
+      const currentPage = pagesData[currentPageIndex];
+      if (currentPage?.hasMission && currentPage?.missionId) {
+        openMissionModal(currentPage.missionId);
+      } else if (currentPageIndex < pagesData.length - 1) {
         goToPage(currentPageIndex + 2, 'forward');
       } else {
-        const currentPage = pagesData[currentPageIndex];
-        if (currentPage?.hasMission && currentPage?.missionId) {
-          openMissionModal(currentPage.missionId);
-        } else {
-          showTemporaryNotice('Halaman berikutnya segera hadir!');
-        }
+        showTemporaryNotice('Halaman berikutnya segera hadir!');
       }
     });
   }

@@ -315,8 +315,8 @@ export const canvaLayouts = {
     road: { x: -0.00, y: 5.28, w: 8., h: 3.84, rotate: 0, zIndex: 7 },
 
     // Semak & Bunga Kiri & Kanan Depan
-    flowersLeft: { x: -0.07, y: 5.35, w: 3, h: 0.91, rotate: 0, zIndex: 12 },
-    flowersRight: { x: 5.00, y: 5.36, w: 3, h: 0.91, rotate: 0, flipH: true, zIndex: 12 },
+    flowersLeft: { x: -0.07, y: 5.35, w: 3, h: 0.91, rotate: 0, zIndex: 9 },
+    flowersRight: { x: 5.00, y: 5.36, w: 3, h: 0.91, rotate: 0, flipH: true, zIndex: 9 },
 
     // 3 Karakter Anak Berjalan Mengenakan Seragam Sekolah (Merah-Putih)
     charRafi: { x: 3.41, y: 5.28, w: 1.12, h: 2.72, rotate: 0, zIndex: 10 },
