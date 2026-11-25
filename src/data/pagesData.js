@@ -346,5 +346,42 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 10,
+    pageNumber: 10,
+    type: 'content-page-10',
+    title: 'Cerita 1: Tampil Bersama',
+    bodyParagraphs: [
+      'Mereka memilih tampil bersama. Guru tersenyum dan berkata, "Setiap budaya itu unik."',
+      'Naya mengenalkan Rumah Julang Ngapak. Atapnya seperti burung julang yang mengepakkan sayap. Rafi mengenalkan Rumah Gadang yang atapnya bergonjong.',
+      'Danu mengenalkan Rumah Honai yang bulat dan beratap jerami. Rumah itu hangat di pegunungan Papua yang dingin.'
+    ],
+    characters: [
+      { name: 'Guru', role: 'Guru' },
+      { name: 'Naya', role: 'Siswi' },
+      { name: 'Rafi', role: 'Siswa' },
+      { name: 'Danu', role: 'Siswa' }
+    ],
+    assets: {
+      background: '/pages/page-10/background.png',
+      sun: '/pages/page-10/matahari.png',
+      birds: '/pages/page-10/burung.png',
+      foliageTop: '/pages/page-10/daun-atas.png',
+      school: '/pages/page-10/sekolah.png',
+      tree: '/pages/page-10/pohon-depan.png',
+      foliageBottom: '/pages/page-10/daun-bawah.png',
+      storyText: '/pages/page-10/teks-cerita.png',
+      charGuru: '/pages/page-10/guru.png',
+      charNaya: '/pages/page-10/naya.png',
+      charRafi: '/pages/page-10/rafi.png',
+      charDanu: '/pages/page-10/danu.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

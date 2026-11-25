@@ -692,72 +692,49 @@ function renderPage09(data) {
 }
 
 function renderPage10(data) {
-  const { assets, controls, title, question, options = [] } = data;
+  const { assets, controls, title, bodyParagraphs = [] } = data;
   const controlsHTML = renderControlsHTML(controls);
-
-  const optionsHTML = options
-    .map(
-      (opt) => `
-      <button
-        type="button"
-        class="p10-option-btn p10-option-btn--${opt.key.toLowerCase()}"
-        data-key="${opt.key}"
-        aria-label="Pilihan ${opt.key}: ${opt.text}"
-      >
-        <span class="p10-option-indicator">${opt.key}</span>
-        <span class="sr-only">${opt.text}</span>
-      </button>
-    `
-    )
-    .join('');
 
   return `
     <article class="page-10-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
-      <!-- Layer 1: Background Tekstur Lembut -->
-      <img src="${assets.background}" alt="" class="layer layer-p10-bg" draggable="false" />
+      <!-- Layer 1: Background Langit Lembut -->
+      <img src="${assets.background}" alt="" class="layer layer-p10-story-bg" draggable="false" />
 
-      <!-- Layer 2: Dedaunan Hias Pojok Kanan Atas -->
-      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-foliage-top-right" style="${getCanvaStyle('page10', 'foliageTopRight')}" draggable="false" />
+      <!-- Layer 2: Mentari Kanan Atas -->
+      <img src="${assets.sun}" alt="" class="layer layer-p10-story-sun" style="${getCanvaStyle('page10', 'sun')}" draggable="false" />
 
-      <!-- Layer 3: Dedaunan Hias Pojok Kiri Atas -->
-      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-foliage-top-left" style="${getCanvaStyle('page10', 'foliageTopLeft')}" draggable="false" />
+      <!-- Layer 3: Burung Terbang Kanan -->
+      <img src="${assets.birds}" alt="" class="layer layer-p10-story-birds" style="${getCanvaStyle('page10', 'birds')}" draggable="false" />
 
-      <!-- Layer 4: Pagar Kayu Bawah Kiri & Kanan -->
-      <img src="${assets.fence}" alt="" class="layer layer-p10-fence layer-p10-fence-left" style="${getCanvaStyle('page10', 'fenceLeft') || getCanvaStyle('page10', 'fence')}" draggable="false" />
-      <img src="${assets.fence}" alt="" class="layer layer-p10-fence layer-p10-fence-right" style="${getCanvaStyle('page10', 'fenceRight')}" draggable="false" />
+      <!-- Layer 4: Dedaunan Hias Pojok Kiri Atas -->
+      <img src="${assets.foliageTop}" alt="" class="layer layer-p10-story-foliage-top" style="${getCanvaStyle('page10', 'foliageTop')}" draggable="false" />
 
-      <!-- Layer 4: Semak Dedaunan Bawah Kiri -->
-      <img src="${assets.bushBottomLeft}" alt="" class="layer layer-p10-bush-left" style="${getCanvaStyle('page10', 'bushBottomLeft')}" draggable="false" />
+      <!-- Layer 5: Gedung Sekolah & Lapangan Upacara -->
+      <img src="${assets.school}" alt="Sekolah" class="layer layer-p10-story-school" style="${getCanvaStyle('page10', 'school')}" draggable="false" />
 
-      <!-- Layer 5: Semak Bunga Bawah Kanan -->
-      <img src="${assets.bushBottomRight}" alt="" class="layer layer-p10-bush-right" style="${getCanvaStyle('page10', 'bushBottomRight')}" draggable="false" />
+      <!-- Layer 6: Pohon & Bangku Taman Depan Kiri -->
+      <img src="${assets.tree}" alt="Pohon dan Bangku" class="layer layer-p10-story-tree" style="${getCanvaStyle('page10', 'tree')}" draggable="false" />
 
-      <!-- Layer 6: Badge Judul MISI -->
-      <img src="${assets.misiBadge}" alt="Misi" class="layer layer-p10-misi" style="${getCanvaStyle('page10', 'misi')}" draggable="false" />
+      <!-- Layer 7: Karakter Guru -->
+      <img src="${assets.charGuru}" alt="Ibu Guru" class="layer layer-p10-story-char layer-p10-char-guru" style="${getCanvaStyle('page10', 'charGuru')}" draggable="false" />
 
-      <!-- Layer 7: Lampu Ide & Pengantar Masalah -->
-      <img src="${assets.lampuHeader}" alt="Pengantar Masalah" class="layer layer-p10-lampu" style="${getCanvaStyle('page10', 'lampu')}" draggable="false" />
+      <!-- Layer 8: 3 Karakter Anak (Naya, Rafi, Danu) -->
+      <img src="${assets.charNaya}" alt="Naya" class="layer layer-p10-story-char layer-p10-char-naya" style="${getCanvaStyle('page10', 'charNaya')}" draggable="false" />
+      <img src="${assets.charRafi}" alt="Rafi" class="layer layer-p10-story-char layer-p10-char-rafi" style="${getCanvaStyle('page10', 'charRafi')}" draggable="false" />
+      <img src="${assets.charDanu}" alt="Danu" class="layer layer-p10-story-char layer-p10-char-danu" style="${getCanvaStyle('page10', 'charDanu')}" draggable="false" />
 
-      <!-- Layer 8: Template Kartu Pertanyaan -->
-      <div class="layer layer-p10-question-wrapper" style="${getCanvaStyle('page10', 'questionCard')}">
-        <img src="${assets.questionCard}" alt="${question}" class="p10-question-img" draggable="false" />
-        <h2 class="sr-only">${question}</h2>
-      </div>
+      <!-- Layer 9: Semak Dedaunan Kanan Bawah -->
+      <img src="${assets.foliageBottom}" alt="" class="layer layer-p10-story-foliage-bottom" style="${getCanvaStyle('page10', 'foliageBottom')}" draggable="false" />
 
-      <!-- Layer 9: Template Kartu Pilihan Jawaban Interaktif -->
-      <div class="layer layer-p10-answer-wrapper" style="${getCanvaStyle('page10', 'answerCard')}">
-        <img src="${assets.answerCard}" alt="Pilihan Jawaban" class="p10-answer-img" draggable="false" />
-        <div class="p10-options-grid">
-          ${optionsHTML}
-        </div>
-      </div>
+      <!-- Layer 10: Teks Narasi Cerita (Gambar dari Canva) -->
+      <img src="${assets.storyText}" alt="${bodyParagraphs.join(' ')}" class="layer layer-p10-story-text" style="${getCanvaStyle('page10', 'storyText')}" draggable="false" />
 
-      <!-- Layer 10: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <!-- Layer 11: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p10" id="floating-nav-dock" aria-label="Navigasi Halaman">
         ${controlsHTML}
       </nav>
 
-      <!-- Layer 11: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <!-- Layer 12: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

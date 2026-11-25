@@ -357,7 +357,41 @@ export const canvaLayouts = {
   },
 
   // ==========================================================
-  // MISI 01 / HALAMAN 10 (MISI 1: PEMECAHAN MASALAH)
+  // HALAMAN 10 (CERITA 1: TAMPIL BERSAMA)
+  // ==========================================================
+  page10: {
+    // Teks Narasi Cerita (teks-cerita.png dari Canva)
+    storyText: { x: 0.81, y: 1.20, w: 6.38, h: 2.48, rotate: 0, zIndex: 15 },
+
+    // Mentari Kanan Atas
+    sun: { x: 6.20, y: 0.15, w: 1.65, h: 1.65, rotate: 0, zIndex: 3 },
+
+    // Burung Terbang Kanan
+    birds: { x: 5.40, y: 0.75, w: 1.20, h: 0.78, rotate: 0, zIndex: 4 },
+
+    // Dedaunan Hias Pojok Kiri Atas
+    foliageTop: { x: -0.15, y: -0.10, w: 2.40, h: 2.00, rotate: 0, zIndex: 14 },
+
+    // Gedung Sekolah & Lapangan
+    school: { x: 0.00, y: 3.50, w: 8.00, h: 3.94, rotate: 0, zIndex: 5 },
+
+    // Pohon & Bangku Taman Depan Kiri
+    tree: { x: -0.20, y: 4.80, w: 2.90, h: 3.05, rotate: 0, zIndex: 8 },
+
+    // Karakter Guru
+    charGuru: { x: 1.80, y: 4.70, w: 1.26, h: 3.20, rotate: 0, zIndex: 10 },
+
+    // 3 Karakter Anak (Naya, Rafi, Danu)
+    charNaya: { x: 3.20, y: 5.20, w: 1.00, h: 2.69, rotate: 0, zIndex: 10 },
+    charRafi: { x: 4.35, y: 5.15, w: 1.00, h: 2.74, rotate: 0, zIndex: 10 },
+    charDanu: { x: 5.50, y: 4.85, w: 1.10, h: 3.05, rotate: 0, zIndex: 10 },
+
+    // Semak Dedaunan Kanan Bawah
+    foliageBottom: { x: 6.60, y: 6.90, w: 1.41, h: 1.10, rotate: 0, zIndex: 12 },
+  },
+
+  // ==========================================================
+  // MISI 01 / POP-UP MODAL (MISI 1: PEMECAHAN MASALAH)
   // ==========================================================
   mission01: {
     // Badge Judul MISI
@@ -416,8 +450,7 @@ export const canvaLayouts = {
   }
 };
 
-// Aliases untuk kompatibilitas layout Misi 1
-canvaLayouts.page10 = canvaLayouts.mission01;
+
 canvaLayouts.misi01 = canvaLayouts.mission01;
 
 /**

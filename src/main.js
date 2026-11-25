@@ -101,8 +101,13 @@ function setupInteractions() {
     nextBtn.addEventListener('click', () => {
       const currentPage = pagesData[currentPageIndex];
       if (currentPage?.hasMission && currentPage?.missionId) {
-        openMissionModal(currentPage.missionId);
-      } else if (currentPageIndex < pagesData.length - 1) {
+        const answer = quizService.getAnswer(currentPage.missionId);
+        if (!answer || !answer.isCorrect) {
+          openMissionModal(currentPage.missionId);
+          return;
+        }
+      }
+      if (currentPageIndex < pagesData.length - 1) {
         goToPage(currentPageIndex + 2, 'forward');
       } else {
         showTemporaryNotice('Halaman berikutnya segera hadir!');
@@ -247,7 +252,9 @@ function toggleAudioNarration(audioBtn) {
       ? currentPage.bodyParagraphs.join(' ')
       : `Naya berkata, "Kita tampilkan budaya Jawa Barat saja, ya." Rafi menggeleng. "Aku juga ingin mengenalkan Rumah Gadang." Danu menambahkan, "Aku ingin kalian mengenal Rumah Honai." Tidak ada yang mau mengalah.`;
   } else if (currentPage.type === 'content-page-10') {
-    textToRead = `Misi 1: Solusi Terbaik. Naya, Rafi, dan Danu ingin budaya mereka saja yang tampil. Tidak ada yang mau mengalah. Pertanyaan: Apa solusi terbaik agar mereka tidak bertengkar? Pilihan A: Hanya budaya Naya yang tampil, karena Naya bicara lebih dulu. Pilihan B: Tidak ada budaya yang tampil. Pilihan C: Ketiga budaya tampil bersama, dan setiap anak bergantian mengenalkan budayanya. Ketuk pilihan jawabanmu untuk menyelesaikan misi!`;
+    textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
+      ? `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`
+      : `Mereka memilih tampil bersama. Guru tersenyum dan berkata, "Setiap budaya itu unik." Naya mengenalkan Rumah Julang Ngapak. Rafi mengenalkan Rumah Gadang. Danu mengenalkan Rumah Honai.`;
   }
 
   isAudioSpeaking = true;
@@ -529,6 +536,7 @@ function openMissionModal(missionId = 'misi-01') {
               ev.stopPropagation();
               closeModal();
               showTemporaryNotice('🎉 Hebat! Kamu telah menyelesaikan Misi 1!');
+              goToPage(10, 'forward');
             });
           }
         }, 650);
