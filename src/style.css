@@ -274,11 +274,7 @@ body {
 }
 
 .layer-hills {
-  left: 0;
-  top: 34.5%;
-  width: 100%;
-  height: auto;
-  z-index: 5;
+  pointer-events: none;
 }
 
 /* 5. Traditional Houses */
@@ -429,11 +425,7 @@ body {
 }
 
 .layer-p2-hills {
-  left: 0;
-  top: 34.5%;
-  width: 100%;
-  height: auto;
-  z-index: 6;
+  pointer-events: none;
 }
 
 .layer-p2-house-left {
@@ -533,11 +525,7 @@ body {
 }
 
 .layer-p3-hills {
-  left: 0;
-  top: 34.5%;
-  width: 100%;
-  height: auto;
-  z-index: 6;
+  pointer-events: none;
 }
 
 .layer-p3-flower {
@@ -855,11 +843,6 @@ body {
 }
 
 .layer-p4-hills {
-  left: 0;
-  top: 34.5%;
-  width: 100%;
-  height: auto;
-  z-index: 5;
   pointer-events: none;
 }
 
@@ -1040,8 +1023,6 @@ body {
 }
 
 .layer-p5-hills {
-  height: auto;
-  z-index: 5;
   pointer-events: none;
 }
 
@@ -1166,11 +1147,6 @@ body {
 }
 
 .layer-p6-hills {
-  height: auto;
-  min-height: 70%;
-  object-fit: cover;
-  object-position: top center;
-  z-index: 4;
   pointer-events: none;
 }
 

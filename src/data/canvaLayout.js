@@ -45,7 +45,7 @@ export const canvaLayouts = {
     mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 5 },
 
     // Hamparan Bukit Hijau
-    hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
+    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
 
     // Pohon Besar Kiri
     tree: { x: -0.33, y: 3.41, w: 2.2, h: 2.31, rotate: 0, zIndex: 8 },
@@ -80,7 +80,7 @@ export const canvaLayouts = {
     mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
+    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
 
     // Rumah Adat Kiri (terselip di belakang pohon)
     houseLeft: { x: 0.7, y: 4.05, w: 2.24, h: 1.12, rotate: 0, zIndex: 7 },
@@ -116,7 +116,7 @@ export const canvaLayouts = {
     mountain: { x: 4.57, y: 2.67, w: 4.58, h: 1.33, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: -1.05, y: 3.5, w: 12.83, h: 5.32, rotate: 0, zIndex: 6 },
+    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
 
     // Dedaunan Depan Bawah
     foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
@@ -135,8 +135,8 @@ export const canvaLayouts = {
     // Gunung Kanan Latar
     mountain: { x: 4.58, y: 2.31, w: 4.58, h: 1.33, rotate: 0, zIndex: 6 },
 
-    // Hamparan Bukit (Diperlebar & diperpanjang agar menutup celah biru langit)
-    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
+    // Hamparan Bukit
+    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
 
     // Rumah Honai Kiri
     houseLeft: { x: 0.17, y: 3.59, w: 1.27, h: 0.92, rotate: 0, zIndex: 6 },
@@ -178,7 +178,7 @@ export const canvaLayouts = {
     mountain: { x: 4.44, y: 2.17, w: 5.76, h: 1.67, rotate: 0, zIndex: 6 },
 
     // Hamparan Bukit (Sama persis seperti halaman sebelumnya)
-    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
+    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
 
     // Rumput Bunga Kiri & Kanan (Sama persis seperti halaman sebelumnya)
     flowersLeft:  { x: -0.73, y: 4.67, w: 2.53, h: 0.72, rotate: 13, zIndex: 8 },
@@ -204,8 +204,8 @@ export const canvaLayouts = {
     // Kawanan Kupu-kupu Biru
     butterflies: { x: 1.00, y: 0.65, w: 2.70, h: 2.15, rotate: 0, zIndex: 11 },
 
-    // Hamparan Perbukitan Hijau (Diperlebar & diperpanjang ke bawah agar menutup celah biru langit)
-    hills: { x: -0.50, y: 2.45, w: 9.00, h: 5.65, rotate: 0, zIndex: 4 },
+    // Hamparan Perbukitan Hijau
+    hills: { x: -0.20, y: 2.60, w: 8.40, h: 3.50, rotate: 0, zIndex: 4 },
 
     // Rumah Adat di Atas Bukit (Kiri ke Kanan)
     houseGadang: { x: 0.00, y: 3.50, w: 2.10, h: 1.24, rotate: 0, zIndex: 5 },
