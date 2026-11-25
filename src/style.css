@@ -250,27 +250,16 @@ body {
 }
 
 .layer-bird-left {
-  left: 5.2%;
-  top: 7.2%;
-  width: 15.8%;
   animation: birdHover 5.2s ease-in-out infinite;
 }
 
 .layer-bird-right {
-  right: 5.2%;
-  top: 6.8%;
-  width: 15.8%;
-  transform: scaleX(-1);
   animation: birdHoverMirrored 5.2s ease-in-out infinite -2.6s;
 }
 
 /* 4. Mountain & Rolling Hills */
 .layer-mountain {
-  left: 60%;
-  top: 29.5%;
-  width: 44%;
-  height: auto;
-  z-index: 6;
+  pointer-events: none;
 }
 
 .layer-hills {
@@ -279,50 +268,17 @@ body {
 
 /* 5. Traditional Houses */
 .layer-house {
-  height: auto;
-  z-index: 7;
+  pointer-events: none;
   filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.14));
-}
-
-.layer-house-joglo {
-  left: 21.6%;
-  top: 50.6%;
-  width: 11.5%;
-}
-
-.layer-house-honai {
-  left: 29.7%;
-  top: 46.5%;
-  width: 17.5%;
-}
-
-.layer-house-julang {
-  left: 65.0%;
-  top: 47.8%;
-  width: 17%;
-}
-
-.layer-house-gadang {
-  left: 81.5%;
-  top: 43.6%;
-  width: 16.5%;
 }
 
 /* 6. Tree & Rafflesia Flower */
 .layer-tree {
-  left: -1.8%;
-  top: 47.8%;
-  width: 24.8%;
-  height: auto;
-  z-index: 8;
+  pointer-events: none;
 }
 
 .layer-flower {
-  left: 1.5%;
-  top: 68.5%;
-  width: 17.5%;
-  height: auto;
-  z-index: 19;
+  pointer-events: none;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.22));
 }
 
@@ -356,33 +312,8 @@ body {
 
 /* 8. Characters */
 .layer-char {
-  height: auto;
-  z-index: 12;
+  pointer-events: none;
   filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.22));
-}
-
-.layer-char-sinta {
-  left: 20%;
-  top: 58%;
-  width: 18.8%;
-}
-
-.layer-char-naya {
-  left: 35.8%;
-  top: 58.6%;
-  width: 17.5%;
-}
-
-.layer-char-danu {
-  left: 49.5%;
-  top: 57.4%;
-  width: 18.2%;
-}
-
-.layer-char-rafi {
-  left: 64.2%;
-  top: 58%;
-  width: 18.2%;
 }
 
 /* 9. Foreground Foliage */
@@ -410,11 +341,7 @@ body {
 }
 
 .layer-p2-mountain {
-  left: 55.5%;
-  top: 31.1%;
-  width: 70%;
-  height: auto;
-  z-index: 4;
+  pointer-events: none;
 }
 
 .layer-p2-hills {
@@ -422,49 +349,28 @@ body {
 }
 
 .layer-p2-house-left {
-  left: 8%;
-  top: 56.5%;
-  width: 13.5%;
-  height: auto;
-  z-index: 7;
+  pointer-events: none;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.16));
 }
 
 .layer-p2-tree {
-  left: -4%;
-  top: 44%;
-  width: 25%;
-  height: auto;
-  z-index: 8;
+  pointer-events: none;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
 }
 
 .layer-p2-house-right {
-  left: 82.5%;
-  top: 43.5%;
-  width: 17%;
-  height: auto;
-  z-index: 7;
+  pointer-events: none;
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
 }
 
 .layer-p2-rocks {
-  left: 81.5%;
-  top: 61.5%;
-  width: 18.5%;
-  height: auto;
-  z-index: 8;
+  pointer-events: none;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
 }
 
 /* Note Frame & Text (Page 2) */
 .layer-p2-note-wrapper {
   position: absolute;
-  left: 16%;
-  top: 6.35%;
-  width: 68.01%;
-  height: 86.08%;
-  z-index: 10;
   pointer-events: auto;
 }
 
@@ -501,11 +407,6 @@ body {
 }
 
 .layer-p3-mountain {
-  left: 55.5%;
-  top: 31.1%;
-  width: 70%;
-  height: auto;
-  z-index: 4;
   pointer-events: none;
 }
 
@@ -514,33 +415,13 @@ body {
 }
 
 .layer-p3-flower {
-  height: auto;
-  z-index: 11;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.14));
   pointer-events: none;
-}
-
-.layer-p3-flower-left {
-  left: -2.5%;
-  top: 52%;
-  width: 22.5%;
-}
-
-.layer-p3-flower-right {
-  right: -2.5%;
-  top: 52%;
-  width: 22.5%;
-  transform: scaleX(-1);
 }
 
 /* Note Frame & Table of Contents (Page 3) */
 .layer-p3-note-wrapper {
   position: absolute;
-  left: 16%;
-  top: 6.35%;
-  width: 68.01%;
-  height: 86.08%;
-  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -811,11 +692,6 @@ body {
 }
 
 .layer-p4-mountain {
-  left: 55.5%;
-  top: 31.1%;
-  width: 70%;
-  height: auto;
-  z-index: 4;
   pointer-events: none;
 }
 
@@ -824,52 +700,23 @@ body {
 }
 
 .layer-p4-house-left {
-  left: 1.5%;
-  top: 45%;
-  width: 18%;
-  height: auto;
-  z-index: 6;
   pointer-events: none;
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
 }
 
 .layer-p4-house-right {
-  left: 78%;
-  top: 42%;
-  width: 21%;
-  height: auto;
-  z-index: 6;
   pointer-events: none;
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
 }
 
 .layer-p4-flowers {
-  height: auto;
-  z-index: 7;
   pointer-events: none;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
-}
-
-.layer-p4-flowers-left {
-  left: 0%;
-  top: 61%;
-  width: 20%;
-}
-
-.layer-p4-flowers-right {
-  right: 0%;
-  top: 61%;
-  width: 20%;
 }
 
 /* Card Wrapper & Content */
 .layer-p4-card-wrapper {
   position: absolute;
-  left: 20.25%;
-  top: 6.5%;
-  width: 59.5%;
-  height: 80.5%;
-  z-index: 10;
   pointer-events: auto;
 }
 
@@ -1024,22 +871,8 @@ body {
 }
 
 .layer-p5-flowers {
-  height: auto;
-  z-index: 8;
   pointer-events: none;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
-}
-
-.layer-p5-flowers-left {
-  left: 0%;
-  top: 61%;
-  width: 20%;
-}
-
-.layer-p5-flowers-right {
-  right: 0%;
-  top: 61%;
-  width: 20%;
 }
 
 /* Banner Judul */

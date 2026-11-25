@@ -63,7 +63,7 @@ export const canvaLayouts = {
     charRafi:  { x: 5.17, y: 4.56, w: 2.06, h: 4.25, rotate: 0, zIndex: 19 },
 
     // Dedaunan & Semak Depan Bawah
-    foliage: { x: -1.10, y: 5.00, w: 10.25, h: 4.70, rotate: 0, zIndex: 18 },
+    foliage: { x: -0.53, y: 4.51, w: 9.25, h: 3.48, rotate: 0, zIndex: 18 },
 
     // Bunga Rafflesia Kiri Bawah (Di depan semak / z-index 19)
     flower: { x: -0.16, y: 5.44, w: 2.04, h: 1.2, rotate: 0, zIndex: 19 },
@@ -113,13 +113,13 @@ export const canvaLayouts = {
     flowerRight: { x: 6.40, y: 4.16, w: 1.76, h: 1.73, rotate: 0, flipH: true, zIndex: 19 },
 
     // Gunung Kanan Latar
-    mountain: { x: 4.57, y: 2.67, w: 4.58, h: 1.33, rotate: 0, zIndex: 7 },
+    mountain: { x: 4.61, y: 2.67, w: 4.58, h: 1.33, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
+    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 6 },
 
     // Dedaunan Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
+    foliage: { x: -0.26, y: 4.69, w: 8.93, h: 3.4, rotate: 0, zIndex: 9 },
   },
 
   // ==========================================================
