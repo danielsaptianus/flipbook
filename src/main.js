@@ -446,17 +446,31 @@ function openMissionModal(missionId = 'misi-01') {
   modalRoot.innerHTML = renderMissionModalHTML(missionData, existingAnswer);
 
   const backdrop = document.getElementById('mission-modal');
+  document.body.classList.add('modal-open');
   requestAnimationFrame(() => {
     backdrop?.classList.add('is-open');
   });
 
+  // Pre-decode gambar feedback jawaban agar saat muncul tidak ada lag / freeze
+  const preloadImg = (src) => {
+    if (!src) return;
+    const img = new Image();
+    img.src = src;
+    if (img.decode) {
+      img.decode().catch(() => {});
+    }
+  };
+  preloadImg(missionData.assets?.feedbackRight?.popupFull || '/mission/misi-01/feedback/right/pop-up-jawaban-benar.png');
+  preloadImg(missionData.assets?.feedbackWrong?.popupFull || '/mission/misi-01/feedback/wrong/pop-up-jawaban-salah.png');
+
   const returnStoryBtn = document.getElementById('btn-return-story');
 
   const closeModal = () => {
+    document.body.classList.remove('modal-open');
     backdrop?.classList.remove('is-open');
     setTimeout(() => {
       modalRoot.innerHTML = '';
-    }, 320);
+    }, 280);
   };
 
   returnStoryBtn?.addEventListener('click', closeModal);

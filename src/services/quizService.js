@@ -106,10 +106,11 @@ class QuizService {
 
   triggerConfetti() {
     confetti({
-      particleCount: 70,
-      spread: 60,
-      origin: { y: 0.75 },
-      colors: ['#e07a5f', '#f4a261', '#2a9d8f', '#3d5a80', '#e76f51', '#ffd166']
+      particleCount: 40,
+      spread: 55,
+      origin: { y: 0.7 },
+      colors: ['#e07a5f', '#f4a261', '#2a9d8f', '#3d5a80', '#ffd166'],
+      disableForReducedMotion: true
     });
   }
 
