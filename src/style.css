@@ -387,14 +387,7 @@ body {
 
 /* 9. Foreground Foliage */
 .layer-foliage {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  max-height: 38%;
-  object-fit: contain;
-  object-position: bottom;
-  z-index: 18;
+  pointer-events: none;
 }
 
 /* =========================================
@@ -485,14 +478,6 @@ body {
 }
 
 .layer-p2-foliage {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  max-height: 38%;
-  object-fit: contain;
-  object-position: bottom;
-  z-index: 18;
   pointer-events: none;
 }
 
@@ -707,14 +692,6 @@ body {
 }
 
 .layer-p3-foliage {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  max-height: 38%;
-  object-fit: contain;
-  object-position: bottom;
-  z-index: 18;
   pointer-events: none;
 }
 
@@ -993,14 +970,6 @@ body {
 }
 
 .layer-p4-foliage {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  max-height: 38%;
-  object-fit: contain;
-  object-position: bottom;
-  z-index: 18;
   pointer-events: none;
 }
 
@@ -1105,14 +1074,6 @@ body {
 }
 
 .layer-p5-foliage {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  max-height: 38%;
-  object-fit: contain;
-  object-position: bottom;
-  z-index: 18;
   pointer-events: none;
 }
 
@@ -1211,8 +1172,6 @@ body {
 }
 
 .layer-p6-grass {
-  height: auto;
-  z-index: 16;
   pointer-events: none;
 }
 

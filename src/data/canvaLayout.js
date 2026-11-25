@@ -45,7 +45,7 @@ export const canvaLayouts = {
     mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 5 },
 
     // Hamparan Bukit Hijau
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
+    hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
 
     // Pohon Besar Kiri
     tree: { x: -0.33, y: 3.41, w: 2.2, h: 2.31, rotate: 0, zIndex: 8 },
@@ -63,7 +63,7 @@ export const canvaLayouts = {
     charRafi:  { x: 5.17, y: 4.56, w: 2.06, h: 4.25, rotate: 0, zIndex: 19 },
 
     // Dedaunan & Semak Depan Bawah
-    foliage: { x: -1.10, y: 5., w: 10.25, h: 4.70, rotate: 0, zIndex: 18 },
+    foliage: { x: -1.10, y: 5.00, w: 10.25, h: 4.70, rotate: 0, zIndex: 18 },
 
     // Bunga Rafflesia Kiri Bawah (Di depan semak / z-index 19)
     flower: { x: -0.16, y: 5.44, w: 2.04, h: 1.2, rotate: 0, zIndex: 19 },
@@ -80,7 +80,7 @@ export const canvaLayouts = {
     mountain: { x: 4.19, y: 2.44, w: 6.07, h: 1.88, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 6 },
+    hills: { x: -1.62, y: 3.86, w: 13.9, h: 4.92, rotate: 0, zIndex: 6 },
 
     // Rumah Adat Kiri (terselip di belakang pohon)
     houseLeft: { x: 0.7, y: 4.05, w: 2.24, h: 1.12, rotate: 0, zIndex: 7 },
@@ -92,10 +92,10 @@ export const canvaLayouts = {
     houseRight: { x: 5.97, y: 3.38, w: 2.1, h: 1.23, rotate: 0, zIndex: 7 },
 
     // Batu & Bunga Kanan Bawah
-    rocks: { x: 6.69, y: 4.68, w: 1.47, h: 1.5, rotate: 0, zIndex: 9 },
+    rocks: { x: 6.69, y: 4.68, w: 1.47, h: 1.5, rotate: 0, zIndex: 10 },
 
     // Dedaunan Depan Bawah
-    foliage: { x: 0.00, y: 4.98, w: 8.00, h: 3.02, rotate: 0, zIndex: 9 },
+    foliage: { x: -0.35, y: 4.88, w: 8.51, h: 3.42, rotate: 0, zIndex: 9 },
   },
 
   // ==========================================================
