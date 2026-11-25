@@ -488,35 +488,11 @@ function renderPage06(data) {
       <!-- Layer 12: Rumput Daun Depan Bawah -->
       <img src="${assets.grass}" alt="" class="layer layer-p6-grass" style="${getCanvaStyle('page06', 'grass')}" draggable="false" />
 
-      <!-- Layer 13: Kartu Nama 4 Karakter -->
-      <div class="layer layer-p6-name-badge layer-p6-name-naya" style="${getCanvaStyle('page06', 'nameNaya')}">
-        <img src="${assets.nameBadge}" alt="" class="p6-name-badge-bg" draggable="false" />
-        <div class="p6-name-badge-text">
-          <span class="p6-name-title">${characters[0].name}</span>
-          <span class="p6-name-origin">${characters[0].origin}</span>
-        </div>
-      </div>
-      <div class="layer layer-p6-name-badge layer-p6-name-rafi" style="${getCanvaStyle('page06', 'nameRafi')}">
-        <img src="${assets.nameBadge}" alt="" class="p6-name-badge-bg" draggable="false" />
-        <div class="p6-name-badge-text">
-          <span class="p6-name-title">${characters[1].name}</span>
-          <span class="p6-name-origin">${characters[1].origin}</span>
-        </div>
-      </div>
-      <div class="layer layer-p6-name-badge layer-p6-name-sinta" style="${getCanvaStyle('page06', 'nameSinta')}">
-        <img src="${assets.nameBadge}" alt="" class="p6-name-badge-bg" draggable="false" />
-        <div class="p6-name-badge-text">
-          <span class="p6-name-title">${characters[2].name}</span>
-          <span class="p6-name-origin">${characters[2].origin}</span>
-        </div>
-      </div>
-      <div class="layer layer-p6-name-badge layer-p6-name-danu" style="${getCanvaStyle('page06', 'nameDanu')}">
-        <img src="${assets.nameBadge}" alt="" class="p6-name-badge-bg" draggable="false" />
-        <div class="p6-name-badge-text">
-          <span class="p6-name-title">${characters[3].name}</span>
-          <span class="p6-name-origin">${characters[3].origin}</span>
-        </div>
-      </div>
+      <!-- Layer 13: Kartu Nama 4 Karakter (Gambar Lengkap Termasuk Teks Nama) -->
+      <img src="${assets.nameBadgeNaya}" alt="${characters[0].name} ${characters[0].origin}" class="layer layer-p6-name-badge layer-p6-name-naya" style="${getCanvaStyle('page06', 'nameNaya')}" draggable="false" />
+      <img src="${assets.nameBadgeRafi}" alt="${characters[1].name} ${characters[1].origin}" class="layer layer-p6-name-badge layer-p6-name-rafi" style="${getCanvaStyle('page06', 'nameRafi')}" draggable="false" />
+      <img src="${assets.nameBadgeSinta}" alt="${characters[2].name} ${characters[2].origin}" class="layer layer-p6-name-badge layer-p6-name-sinta" style="${getCanvaStyle('page06', 'nameSinta')}" draggable="false" />
+      <img src="${assets.nameBadgeDanu}" alt="${characters[3].name} ${characters[3].origin}" class="layer layer-p6-name-badge layer-p6-name-danu" style="${getCanvaStyle('page06', 'nameDanu')}" draggable="false" />
 
       <!-- Layer 14: Bunga-bunga Depan Bawah -->
       <img src="${assets.flowers}" alt="" class="layer layer-p6-flowers" style="${getCanvaStyle('page06', 'flowers')}" draggable="false" />

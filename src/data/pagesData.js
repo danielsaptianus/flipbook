@@ -222,7 +222,10 @@ export const pagesData = [
       charRafi: '/pages/page-06/rafi.png',
       charSinta: '/pages/page-06/sinta.png',
       charDanu: '/pages/page-06/danu.png',
-      nameBadge: '/pages/page-06/template-nama.png',
+      nameBadgeNaya: '/pages/page-06/template-nama-naya.png',
+      nameBadgeRafi: '/pages/page-06/template-nama-rafi.png',
+      nameBadgeSinta: '/pages/page-06/template-nama-sinta.png',
+      nameBadgeDanu: '/pages/page-06/template-nama-danu.png',
       grass: '/pages/page-06/rumput-daun.png',
       flowers: '/pages/page-06/bunga.png'
     },

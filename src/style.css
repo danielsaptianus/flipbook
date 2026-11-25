@@ -1250,51 +1250,9 @@ body {
 .layer-p6-name-badge {
   position: absolute;
   z-index: 18;
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.p6-name-badge-bg {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
-  display: block;
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
-}
-
-.p6-name-badge-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  pointer-events: none;
-  line-height: 1.1;
-  padding: 4px 6px;
-  box-sizing: border-box;
-}
-
-.p6-name-title {
-  font-family: var(--font-title);
-  font-weight: 800;
-  font-size: clamp(0.75rem, 2cqi, 1.05rem);
-  color: #5c3010;
-  letter-spacing: 0.02em;
-}
-
-.p6-name-origin {
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: clamp(0.55rem, 1.4cqi, 0.75rem);
-  color: #7c4a25;
 }
 
 /* =========================================
