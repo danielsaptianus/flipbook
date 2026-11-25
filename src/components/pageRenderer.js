@@ -183,16 +183,9 @@ function renderPage02(data) {
       <!-- Layer 9: Batu & Rumput Berbunga Kanan Bawah -->
       <img src="${assets.rocks}" alt="" class="layer layer-p2-rocks" style="${getCanvaStyle('page02', 'rocks')}" draggable="false" />
 
-      <!-- Layer 10: Template Catatan & Teks Isi -->
+      <!-- Layer 10: Template Catatan (Termasuk Judul & Teks) -->
       <div class="layer layer-p2-note-wrapper" style="${getCanvaStyle('page02', 'noteFrame')}">
-        <img src="${assets.noteFrame}" alt="" class="p2-note-frame-img" draggable="false" />
-        <div class="p2-note-content">
-          <h1 class="p2-note-title">${title}</h1>
-          <div class="p2-note-body">
-            ${bodyParagraphs.slice(0, -1).map((p) => `<p>${p}</p>`).join('')}
-            <p class="p2-note-closing">${bodyParagraphs[bodyParagraphs.length - 1]}</p>
-          </div>
-        </div>
+        <img src="${assets.noteFrame}" alt="${title}" class="p2-note-frame-img" draggable="false" />
       </div>
 
       <!-- Layer 11: Dedaunan & Bunga Depan Bawah -->
