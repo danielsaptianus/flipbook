@@ -1367,51 +1367,9 @@ body {
 .layer-p7-name-badge {
   position: absolute;
   z-index: 18;
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.p7-name-badge-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  display: block;
+  object-fit: contain;
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
-}
-
-.p7-name-badge-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  pointer-events: none;
-  line-height: 1.1;
-  padding: 2px 4px;
-  box-sizing: border-box;
-}
-
-.p7-name-title {
-  font-family: 'Archivo Black', var(--font-title);
-  font-weight: 800;
-  font-size: clamp(0.68rem, 1.8cqi, 0.95rem);
-  color: #1e3a5f;
-  letter-spacing: 0.02em;
-}
-
-.p7-name-origin {
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: clamp(0.52rem, 1.3cqi, 0.72rem);
-  color: #2c4d75;
 }
 
 /* Floating Dock Halaman 7: pastikan konsisten dengan halaman lain */

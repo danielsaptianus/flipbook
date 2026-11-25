@@ -562,28 +562,10 @@ function renderPage07(data) {
       <img src="${assets.charNaya}" alt="Naya (Jawa Barat)" class="layer layer-p7-char layer-p7-char-naya" style="${getCanvaStyle('page07', 'charNaya')}" draggable="false" />
       <img src="${assets.charDanu}" alt="Danu (Papua)" class="layer layer-p7-char layer-p7-char-danu" style="${getCanvaStyle('page07', 'charDanu')}" draggable="false" />
 
-      <!-- Layer 15: 3 Lencana Nama Karakter -->
-      <div class="layer layer-p7-name-badge layer-p7-name-rafi" style="${getCanvaStyle('page07', 'nameRafi')}">
-        <img src="${assets.nameBadge}" alt="" class="p7-name-badge-bg" draggable="false" />
-        <div class="p7-name-badge-text">
-          <span class="p7-name-title">${characters[0].name}</span>
-          <span class="p7-name-origin">${characters[0].origin}</span>
-        </div>
-      </div>
-      <div class="layer layer-p7-name-badge layer-p7-name-naya" style="${getCanvaStyle('page07', 'nameNaya')}">
-        <img src="${assets.nameBadge}" alt="" class="p7-name-badge-bg" draggable="false" />
-        <div class="p7-name-badge-text">
-          <span class="p7-name-title">${characters[1].name}</span>
-          <span class="p7-name-origin">${characters[1].origin}</span>
-        </div>
-      </div>
-      <div class="layer layer-p7-name-badge layer-p7-name-danu" style="${getCanvaStyle('page07', 'nameDanu')}">
-        <img src="${assets.nameBadge}" alt="" class="p7-name-badge-bg" draggable="false" />
-        <div class="p7-name-badge-text">
-          <span class="p7-name-title">${characters[2].name}</span>
-          <span class="p7-name-origin">${characters[2].origin}</span>
-        </div>
-      </div>
+      <!-- Layer 15: 3 Lencana Nama Karakter (Gambar Lengkap Termasuk Teks Nama) -->
+      <img src="${assets.nameBadgeRafi}" alt="${characters[0].name} ${characters[0].origin}" class="layer layer-p7-name-badge layer-p7-name-rafi" style="${getCanvaStyle('page07', 'nameRafi')}" draggable="false" />
+      <img src="${assets.nameBadgeNaya}" alt="${characters[1].name} ${characters[1].origin}" class="layer layer-p7-name-badge layer-p7-name-naya" style="${getCanvaStyle('page07', 'nameNaya')}" draggable="false" />
+      <img src="${assets.nameBadgeDanu}" alt="${characters[2].name} ${characters[2].origin}" class="layer layer-p7-name-badge layer-p7-name-danu" style="${getCanvaStyle('page07', 'nameDanu')}" draggable="false" />
 
       <!-- Layer 16: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p7" id="floating-nav-dock" aria-label="Navigasi Halaman">

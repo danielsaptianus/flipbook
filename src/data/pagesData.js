@@ -263,7 +263,9 @@ export const pagesData = [
       charRafi: '/pages/page-07/rafi.png',
       charNaya: '/pages/page-07/naya.png',
       charDanu: '/pages/page-07/danu.png',
-      nameBadge: '/pages/page-07/template-nama.png',
+      nameBadgeRafi: '/pages/page-07/template-nama-rafi.png',
+      nameBadgeNaya: '/pages/page-07/template-nama-naya.png',
+      nameBadgeDanu: '/pages/page-07/template-nama-danu.png',
       title: '/pages/page-07/judul.png'
     },
     controls: [
