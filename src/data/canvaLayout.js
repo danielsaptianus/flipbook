@@ -435,6 +435,55 @@ export const canvaLayouts = {
   },
 
   // ==========================================================
+  // HALAMAN 12 (CERITA 1: FESTIVAL BUDAYA MERIAH)
+  // ==========================================================
+  page12: {
+    // Teks Narasi Cerita (teks-cerita.png dari Canva)
+    storyText: { x: 1.04, y: 2.30, w: 4.72, h: 1.42, rotate: 0, zIndex: 15 },
+
+    // Bendera Hias Atas (warna-warni.png)
+    buntingTop: { x: 0.00, y: 0.00, w: 8.00, h: 2.16, rotate: 0, zIndex: 14 },
+
+    // Hamparan Rumput Hijau (hamparan.png)
+    hamparan: { x: -0.20, y: 5.00, w: 8.40, h: 3.20, rotate: 0, zIndex: 2 },
+
+    // Pohon Latar (Kiri, Tengah, Kanan)
+    treeLeft:   { x: 0.37, y: 4.28, w: 1.28, h: 1.28, rotate: 0, zIndex: 3 },
+    treeCenter: { x: 4.76, y: 4.01, w: 1.28, h: 1.28, rotate: 0, zIndex: 3 },
+    treeRight:  { x: 6.96, y: 4.55, w: 1.28, h: 1.28, rotate: 0, zIndex: 3 },
+
+    // Gedung Sekolah & Bendera Merah Putih
+    sekolah: { x: 2.10, y: 3.75, w: 4.20, h: 1.67, rotate: 0, zIndex: 4 },
+
+    // Bendera Kecil di Depan Sekolah & Stand
+    buntingSchoolLeft:   { x: 2.90, y: 5.20, w: 2.20, h: 0.47, rotate: 0, zIndex: 5 },
+    buntingSchoolCenter: { x: 4.60, y: 4.78, w: 2.60, h: 0.56, rotate: 0, zIndex: 5 },
+    buntingSchoolRight:  { x: 6.26, y: 5.00, w: 1.80, h: 0.39, rotate: 0, zIndex: 6 },
+
+    // Booth Festival Makanan/Kerajinan
+    stand: { x: 5.59, y: 4.90, w: 0.83, h: 0.88, rotate: 0, zIndex: 6 },
+
+    // Anak-anak Sekolah Berjalan
+    anakSekolahKiri2: { x: 2.14, y: 5.52, w: 0.78, h: 0.73, rotate: 0, zIndex: 7 },
+    anakSekolahKanan: { x: 6.42, y: 5.31, w: 0.40, h: 0.42, rotate: 0, zIndex: 7 },
+    anakSekolahKiri:  { x: 1.82, y: 6.45, w: 0.60, h: 0.66, rotate: 0, zIndex: 9 },
+
+    // Rumah Adat (Gadang/Tongkonan Kiri, Julang Ngapak Tengah, Honai Kanan)
+    gadang:       { x: -0.25, y: 4.38, w: 2.59, h: 2.58, rotate: 0, zIndex: 8 },
+    julangNgapak: { x: 3.10, y: 5.20, w: 2.00, h: 1.01, rotate: 0, zIndex: 8 },
+    honai:        { x: 6.43, y: 5.72, w: 1.56, h: 1.13, rotate: 0, zIndex: 8 },
+
+    // Gerobak Jajanan Depan Kiri
+    gerobak: { x: -0.48, y: 5.56, w: 1.80, h: 2.37, rotate: 0, zIndex: 10 },
+
+    // Kelompok Karakter Festival Pakaian Adat Nusantara
+    anakFestivalBudaya: { x: 3.27, y: 5.00, w: 3.49, h: 3.49, rotate: 0, zIndex: 11 },
+
+    // Semak & Bunga Bawah Kanan
+    rumputRight: { x: 5.75, y: 6.75, w: 2.26, h: 1.26, rotate: 0, zIndex: 12 },
+  },
+
+  // ==========================================================
   // MISI 01 / POP-UP MODAL (MISI 1: PEMECAHAN MASALAH)
   // ==========================================================
   mission01: {

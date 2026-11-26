@@ -421,5 +421,45 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 12,
+    pageNumber: 12,
+    type: 'content-page-12',
+    title: 'Cerita 1: Belajar Menghargai Budaya',
+    bodyParagraphs: [
+      'Festival berlangsung meriah. Teman-teman tertarik pada rumah adat dari tiga daerah. Naya, Rafi, dan Danu merasa bangga.',
+      'Mereka belajar menghargai budaya teman. Teman diberi kesempatan mengenalkan budayanya. Perbedaan membuat Indonesia indah dan unik.'
+    ],
+    characters: [
+      { name: 'Naya', role: 'Siswi (Jawa Barat)' },
+      { name: 'Rafi', role: 'Siswa (Sumatera Barat)' },
+      { name: 'Danu', role: 'Siswa (Papua)' }
+    ],
+    assets: {
+      background: '/pages/page-12/background.png',
+      hamparan: '/pages/page-12/hamparan.png',
+      tree: '/pages/page-12/pohon.png',
+      sekolah: '/pages/page-12/sekolah.png',
+      buntingSmall: '/pages/page-12/warna-warni-kecil.png',
+      stand: '/pages/page-12/stand.png',
+      kidsWalking: '/pages/page-12/anak-sekolah-kiri-2.png',
+      kidsSmall: '/pages/page-12/anak-sekolah-kiri.png',
+      kidsRight: '/pages/page-12/anak-sekolah-kanan.png',
+      gadang: '/pages/page-12/gadang.png',
+      julangNgapak: '/pages/page-12/julang-ngapak.png',
+      honai: '/pages/page-12/honai.png',
+      gerobak: '/pages/page-12/gerobak.png',
+      charFestival: '/pages/page-12/anak-festival-budaya.png',
+      rumput: '/pages/page-12/rumput.png',
+      buntingTop: '/pages/page-12/warna-warni.png',
+      storyText: '/pages/page-12/teks-cerita.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

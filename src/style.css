@@ -1482,6 +1482,92 @@ body {
 }
 
 /* =========================================
+   PAGE 12 (CERITA 1: FESTIVAL BUDAYA MERIAH)
+   ========================================= */
+.layer-p12-story-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p12-story-hamparan {
+  pointer-events: none;
+}
+
+.layer-p12-story-tree {
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p12-story-school {
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p12-story-bunting-small {
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p12-story-stand {
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p12-story-kids {
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+}
+
+.layer-p12-story-house {
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p12-story-cart {
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.18));
+}
+
+.layer-p12-story-char-group {
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 11;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+  transition: transform 0.25s ease;
+}
+
+.layer-p12-story-char-group:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.layer-p12-story-rumput {
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p12-story-bunting-top {
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p12-story-text {
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
+}
+
+.floating-nav-dock--p12 {
+  bottom: 1.2%;
+  gap: clamp(6px, 1.4cqw, 14px);
+  z-index: 25;
+}
+
+/* =========================================
    MISI 01 POP-UP MODAL (LEGACY LAYER CLASSES)
    ========================================= */
 .layer-p10-bg {

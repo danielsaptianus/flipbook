@@ -34,6 +34,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-11') {
     return renderPage11(pageData);
   }
+  if (pageData.type === 'content-page-12') {
+    return renderPage12(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -799,6 +802,74 @@ function renderPage11(data) {
       </nav>
 
       <!-- Layer 15: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage12(data) {
+  const { assets, controls, title, bodyParagraphs = [] } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  return `
+    <article class="page-12-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit Lembut / Tekstur Kertas -->
+      <img src="${assets.background}" alt="" class="layer layer-p12-story-bg" draggable="false" />
+
+      <!-- Layer 2: Hamparan Padang Rumput Hijau -->
+      <img src="${assets.hamparan}" alt="" class="layer layer-p12-story-hamparan" style="${getCanvaStyle('page12', 'hamparan')}" draggable="false" />
+
+      <!-- Layer 3: Pohon Latar (Kiri, Tengah, Kanan) -->
+      <img src="${assets.tree}" alt="" class="layer layer-p12-story-tree" style="${getCanvaStyle('page12', 'treeLeft')}" draggable="false" />
+      <img src="${assets.tree}" alt="" class="layer layer-p12-story-tree" style="${getCanvaStyle('page12', 'treeCenter')}" draggable="false" />
+      <img src="${assets.tree}" alt="" class="layer layer-p12-story-tree" style="${getCanvaStyle('page12', 'treeRight')}" draggable="false" />
+
+      <!-- Layer 4: Gedung Sekolah & Bendera Merah Putih -->
+      <img src="${assets.sekolah}" alt="Gedung Sekolah" class="layer layer-p12-story-school" style="${getCanvaStyle('page12', 'sekolah')}" draggable="false" />
+
+      <!-- Layer 5: Bendera Kecil di Depan Sekolah & Stand -->
+      <img src="${assets.buntingSmall}" alt="" class="layer layer-p12-story-bunting-small" style="${getCanvaStyle('page12', 'buntingSchoolLeft')}" draggable="false" />
+      <img src="${assets.buntingSmall}" alt="" class="layer layer-p12-story-bunting-small" style="${getCanvaStyle('page12', 'buntingSchoolCenter')}" draggable="false" />
+
+      <!-- Layer 6: Stand Booth & Bendera Stand -->
+      <img src="${assets.stand}" alt="Stand Festival" class="layer layer-p12-story-stand" style="${getCanvaStyle('page12', 'stand')}" draggable="false" />
+      <img src="${assets.buntingSmall}" alt="" class="layer layer-p12-story-bunting-small" style="${getCanvaStyle('page12', 'buntingSchoolRight')}" draggable="false" />
+
+      <!-- Layer 7: Anak-anak Sekolah Kiri & Kanan -->
+      <img src="${assets.kidsWalking}" alt="Anak-anak Sekolah" class="layer layer-p12-story-kids" style="${getCanvaStyle('page12', 'anakSekolahKiri2')}" draggable="false" />
+      <img src="${assets.kidsRight}" alt="Anak-anak Sekolah" class="layer layer-p12-story-kids" style="${getCanvaStyle('page12', 'anakSekolahKanan')}" draggable="false" />
+
+      <!-- Layer 8: Tiga Rumah Adat -->
+      <img src="${assets.gadang}" alt="Rumah Adat Tongkonan" class="layer layer-p12-story-house" style="${getCanvaStyle('page12', 'gadang')}" draggable="false" />
+      <img src="${assets.julangNgapak}" alt="Rumah Adat Julang Ngapak" class="layer layer-p12-story-house" style="${getCanvaStyle('page12', 'julangNgapak')}" draggable="false" />
+      <img src="${assets.honai}" alt="Rumah Adat Honai" class="layer layer-p12-story-house" style="${getCanvaStyle('page12', 'honai')}" draggable="false" />
+
+      <!-- Layer 9: Anak Sekolah Kecil Kiri -->
+      <img src="${assets.kidsSmall}" alt="Anak Sekolah" class="layer layer-p12-story-kids" style="${getCanvaStyle('page12', 'anakSekolahKiri')}" draggable="false" />
+
+      <!-- Layer 10: Gerobak Festival Depan Kiri -->
+      <img src="${assets.gerobak}" alt="Gerobak Jajanan" class="layer layer-p12-story-cart" style="${getCanvaStyle('page12', 'gerobak')}" draggable="false" />
+
+      <!-- Layer 11: Kelompok Karakter Festival Budaya -->
+      <img src="${assets.charFestival}" alt="Sahabat Nusantara Festival Budaya" class="layer layer-p12-story-char-group" style="${getCanvaStyle('page12', 'anakFestivalBudaya')}" draggable="false" />
+
+      <!-- Layer 12: Semak & Bunga Kanan Bawah -->
+      <img src="${assets.rumput}" alt="" class="layer layer-p12-story-rumput" style="${getCanvaStyle('page12', 'rumputRight')}" draggable="false" />
+
+      <!-- Layer 13: Bendera Hias Atas -->
+      <img src="${assets.buntingTop}" alt="" class="layer layer-p12-story-bunting-top" style="${getCanvaStyle('page12', 'buntingTop')}" draggable="false" />
+
+      <!-- Layer 14: Teks Narasi Cerita (Gambar dari Canva) -->
+      <img src="${assets.storyText}" alt="${bodyParagraphs.join(' ')}" class="layer layer-p12-story-text" style="${getCanvaStyle('page12', 'storyText')}" draggable="false" />
+
+      <!-- Layer 15: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p12" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 16: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

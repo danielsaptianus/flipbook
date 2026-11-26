@@ -259,6 +259,10 @@ function toggleAudioNarration(audioBtn) {
     textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
       ? `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`
       : `Naya membagikan klepon, kue bulat berisi gula merah. Rafi berseru, "Di kampungku namanya onde-onde!" Kue yang sama punya nama berbeda di tiap daerah. Itu salah satu keragaman budaya yang patut kita syukuri. Indonesia punya banyak suku, bahasa, pakaian, dan makanan. Semuanya membuat Indonesia kaya.`;
+  } else if (currentPage.type === 'content-page-12') {
+    textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
+      ? `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`
+      : `Festival berlangsung meriah. Teman-teman tertarik pada rumah adat dari tiga daerah. Naya, Rafi, dan Danu merasa bangga. Mereka belajar menghargai budaya teman. Teman diberi kesempatan mengenalkan budayanya. Perbedaan membuat Indonesia indah dan unik.`;
   }
 
   isAudioSpeaking = true;
