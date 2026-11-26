@@ -31,6 +31,9 @@ export function renderPageHTML(pageData) {
   if (pageData.type === 'content-page-10') {
     return renderPage10(pageData);
   }
+  if (pageData.type === 'content-page-11') {
+    return renderPage11(pageData);
+  }
   return `<div class="page-canvas"><p>Halaman tidak ditemukan</p></div>`;
 }
 
@@ -735,6 +738,67 @@ function renderPage10(data) {
       </nav>
 
       <!-- Layer 12: Lingkaran Nomor Halaman (Kanan Bawah) -->
+      <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
+        <span>${data.pageNumber}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderPage11(data) {
+  const { assets, controls, title, bodyParagraphs = [] } = data;
+  const controlsHTML = renderControlsHTML(controls);
+
+  return `
+    <article class="page-11-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
+      <!-- Layer 1: Background Langit Lembut / Tekstur Kertas -->
+      <img src="${assets.background}" alt="" class="layer layer-p11-story-bg" draggable="false" />
+
+      <!-- Layer 2: Hamparan Padang Rumput Hijau -->
+      <img src="${assets.hamparan}" alt="" class="layer layer-p11-story-hamparan" style="${getCanvaStyle('page11', 'hamparan')}" draggable="false" />
+
+      <!-- Layer 3: Pohon Kiri -->
+      <img src="${assets.treeLeft}" alt="Pohon Kiri" class="layer layer-p11-story-tree-left" style="${getCanvaStyle('page11', 'treeLeft')}" draggable="false" />
+
+      <!-- Layer 4: Bendera Warna-warni Kiri -->
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting-left" style="${getCanvaStyle('page11', 'buntingLeft')}" draggable="false" />
+
+      <!-- Layer 5: Rumah Honai Kiri -->
+      <img src="${assets.honai}" alt="Rumah Honai" class="layer layer-p11-story-honai" style="${getCanvaStyle('page11', 'honai')}" draggable="false" />
+
+      <!-- Layer 6: Rumah Gadang Tengah -->
+      <img src="${assets.rumahGadang}" alt="Rumah Gadang" class="layer layer-p11-story-gadang" style="${getCanvaStyle('page11', 'rumahGadang')}" draggable="false" />
+
+      <!-- Layer 7: Rumah Julang Ngapak Kanan -->
+      <img src="${assets.julangNgapak}" alt="Rumah Julang Ngapak" class="layer layer-p11-story-julang" style="${getCanvaStyle('page11', 'julangNgapak')}" draggable="false" />
+
+      <!-- Layer 8: Pohon Kanan dengan Ayunan -->
+      <img src="${assets.treeRight}" alt="Pohon Kanan" class="layer layer-p11-story-tree-right" style="${getCanvaStyle('page11', 'treeRight')}" draggable="false" />
+
+      <!-- Layer 9: Ranting dengan Burung Berkicau -->
+      <img src="${assets.ranting}" alt="Burung Berkicau" class="layer layer-p11-story-ranting" style="${getCanvaStyle('page11', 'ranting')}" draggable="false" />
+
+      <!-- Layer 10: Bendera Warna-warni Kanan -->
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting-right" style="${getCanvaStyle('page11', 'buntingRight')}" draggable="false" />
+
+      <!-- Layer 11: 3 Karakter Anak (Naya, Rafi, Danu) -->
+      <img src="${assets.charNaya}" alt="Naya" class="layer layer-p11-story-char layer-p11-char-naya" style="${getCanvaStyle('page11', 'charNaya')}" draggable="false" />
+      <img src="${assets.charRafi}" alt="Rafi" class="layer layer-p11-story-char layer-p11-char-rafi" style="${getCanvaStyle('page11', 'charRafi')}" draggable="false" />
+      <img src="${assets.charDanu}" alt="Danu" class="layer layer-p11-story-char layer-p11-char-danu" style="${getCanvaStyle('page11', 'charDanu')}" draggable="false" />
+
+      <!-- Layer 12: Semak & Bunga Bawah Kiri & Kanan -->
+      <img src="${assets.rumputBawah}" alt="" class="layer layer-p11-story-rumput-left" style="${getCanvaStyle('page11', 'rumputLeft')}" draggable="false" />
+      <img src="${assets.rumputBawah}" alt="" class="layer layer-p11-story-rumput-right" style="${getCanvaStyle('page11', 'rumputRight')}" draggable="false" />
+
+      <!-- Layer 13: Teks Narasi Cerita (Gambar dari Canva) -->
+      <img src="${assets.storyText}" alt="${bodyParagraphs.join(' ')}" class="layer layer-p11-story-text" style="${getCanvaStyle('page11', 'storyText')}" draggable="false" />
+
+      <!-- Layer 14: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
+      <nav class="floating-nav-dock floating-nav-dock--p11" id="floating-nav-dock" aria-label="Navigasi Halaman">
+        ${controlsHTML}
+      </nav>
+
+      <!-- Layer 15: Lingkaran Nomor Halaman (Kanan Bawah) -->
       <div class="page-number-badge" aria-label="Halaman ${data.pageNumber}">
         <span>${data.pageNumber}</span>
       </div>

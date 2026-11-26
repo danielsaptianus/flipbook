@@ -255,6 +255,10 @@ function toggleAudioNarration(audioBtn) {
     textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
       ? `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`
       : `Mereka memilih tampil bersama. Guru tersenyum dan berkata, "Setiap budaya itu unik." Naya mengenalkan Rumah Julang Ngapak. Rafi mengenalkan Rumah Gadang. Danu mengenalkan Rumah Honai.`;
+  } else if (currentPage.type === 'content-page-11') {
+    textToRead = currentPage.bodyParagraphs && currentPage.bodyParagraphs.length > 0
+      ? `${currentPage.title}. ${currentPage.bodyParagraphs.join(' ')}`
+      : `Naya membagikan klepon, kue bulat berisi gula merah. Rafi berseru, "Di kampungku namanya onde-onde!" Kue yang sama punya nama berbeda di tiap daerah. Itu salah satu keragaman budaya yang patut kita syukuri. Indonesia punya banyak suku, bahasa, pakaian, dan makanan. Semuanya membuat Indonesia kaya.`;
   }
 
   isAudioSpeaking = true;

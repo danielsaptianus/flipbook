@@ -113,7 +113,7 @@ export const canvaLayouts = {
     flowerRight: { x: 6.40, y: 4.16, w: 1.76, h: 1.73, rotate: 0, flipH: true, zIndex: 19 },
 
     // Gunung Kanan Latar
-    mountain: { x: 4.61, y: 2.67, w: 4.58, h: 1.33, rotate: 0, zIndex: 7 },
+    mountain: { x: 4.61, y: 2.345, w: 4.58, h: 1.33, rotate: 0, zIndex: 7 },
 
     // Hamparan Bukit
     hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 6 },
@@ -388,6 +388,50 @@ export const canvaLayouts = {
 
     // Semak Dedaunan Kanan Bawah
     foliageBottom: { x: 6.60, y: 6.90, w: 1.41, h: 1.10, rotate: 0, zIndex: 12 },
+  },
+
+  // ==========================================================
+  // HALAMAN 11 (CERITA 1: BERBAGI MAKANAN TRADISIONAL)
+  // ==========================================================
+  page11: {
+    // Teks Narasi Cerita (teks-cerita.png dari Canva)
+    storyText: { x: 0.88, y: 1.44, w: 6.24, h: 1.62, rotate: 0, zIndex: 15 },
+
+    // Hamparan Rumput Hijau (hamparan.png)
+    hamparan: { x: -0.20, y: 5.00, w: 8.40, h: 3.18, rotate: 0, zIndex: 2 },
+
+    // Pohon Kiri (pohon-kiri.png)
+    treeLeft: { x: -0.20, y: 3.40, w: 2.21, h: 2.21, rotate: 0, zIndex: 4 },
+
+    // Bendera Warna-warni Kiri (warna-warni.png)
+    buntingLeft: { x: -0.10, y: 3.30, w: 2.62, h: 0.57, rotate: 0, zIndex: 5 },
+
+    // Rumah Honai Kiri (honai.png)
+    honai: { x: -0.20, y: 4.70, w: 2.39, h: 1.90, rotate: 0, zIndex: 6 },
+
+    // Rumah Gadang Tengah (rumah-gadang.png)
+    rumahGadang: { x: 2.34, y: 3.84, w: 2.80, h: 1.92, rotate: 0, zIndex: 5 },
+
+    // Rumah Julang Ngapak Kanan (julang-ngapak.png)
+    julangNgapak: { x: 5.17, y: 3.28, w: 2.46, h: 1.97, rotate: 0, zIndex: 4 },
+
+    // Pohon Kanan dengan Ayunan (pohon-kanan.png)
+    treeRight: { x: 6.00, y: 3.60, w: 2.89, h: 2.59, rotate: 0, zIndex: 5 },
+
+    // Ranting dengan Burung Berkicau (ranting.png)
+    ranting: { x: 5.32, y: 4.10, w: 2.08, h: 1.32, rotate: 0, zIndex: 6 },
+
+    // Bendera Warna-warni Kanan (warna-warni.png)
+    buntingRight: { x: 5.00, y: 3.31, w: 2.62, h: 0.57, rotate: 0, zIndex: 7 },
+
+    // 3 Karakter Anak (Naya, Rafi, Danu)
+    charNaya: { x: 3.65, y: 5.30, w: 1.44, h: 2.87, rotate: 0, zIndex: 10 },
+    charRafi: { x: 4.88, y: 5.25, w: 1.22, h: 2.83, rotate: 0, zIndex: 10 },
+    charDanu: { x: 5.80, y: 5.00, w: 1.16, h: 3.16, rotate: 0, zIndex: 10 },
+
+    // Semak & Bunga Bawah Kiri & Kanan
+    rumputLeft:  { x: -0.30, y: 6.80, w: 3.83, h: 2.12, rotate: 0, zIndex: 12 },
+    rumputRight: { x: 6.60, y: 7.20, w: 2.00, h: 1.15, rotate: 0, flipH: true, zIndex: 12 },
   },
 
   // ==========================================================

@@ -383,5 +383,43 @@ export const pagesData = [
       { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
       { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
     ]
+  },
+  {
+    id: 11,
+    pageNumber: 11,
+    type: 'content-page-11',
+    title: 'Cerita 1: Berbagi Makanan Tradisional',
+    bodyParagraphs: [
+      'Naya membagikan klepon, kue bulat berisi gula merah. Rafi berseru, "Di kampungku namanya onde-onde!"',
+      'Kue yang sama punya nama berbeda di tiap daerah. Itu salah satu keragaman budaya yang patut kita syukuri.',
+      'Indonesia punya banyak suku, bahasa, pakaian, dan makanan. Semuanya membuat Indonesia kaya.'
+    ],
+    characters: [
+      { name: 'Naya', role: 'Siswi' },
+      { name: 'Rafi', role: 'Siswa' },
+      { name: 'Danu', role: 'Siswa' }
+    ],
+    assets: {
+      background: '/pages/page-11/background.png',
+      hamparan: '/pages/page-11/hamparan.png',
+      treeLeft: '/pages/page-11/pohon-kiri.png',
+      bunting: '/pages/page-11/warna-warni.png',
+      honai: '/pages/page-11/honai.png',
+      rumahGadang: '/pages/page-11/rumah-gadang.png',
+      julangNgapak: '/pages/page-11/julang-ngapak.png',
+      treeRight: '/pages/page-11/pohon-kanan.png',
+      ranting: '/pages/page-11/ranting.png',
+      rumputBawah: '/pages/page-11/rumput-bawah.png',
+      storyText: '/pages/page-11/teks-cerita.png',
+      charNaya: '/pages/page-11/naya.png',
+      charRafi: '/pages/page-11/rafi.png',
+      charDanu: '/pages/page-11/danu.png'
+    },
+    controls: [
+      { id: 'btn-audio', action: 'audio', icon: '/icons/audio.svg', label: 'Audio' },
+      { id: 'btn-home', action: 'home', icon: '/icons/home.svg', label: 'Beranda' },
+      { id: 'btn-back', action: 'back', icon: '/icons/back.svg', label: 'Halaman Sebelumnya' },
+      { id: 'btn-next', action: 'next', icon: '/icons/next.svg', label: 'Halaman Berikutnya' }
+    ]
   }
 ];

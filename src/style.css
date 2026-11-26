@@ -1411,6 +1411,77 @@ body {
 }
 
 /* =========================================
+   PAGE 11 (CERITA 1: BERBAGI MAKANAN TRADISIONAL)
+   ========================================= */
+.layer-p11-story-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.layer-p11-story-hamparan {
+  pointer-events: none;
+}
+
+.layer-p11-story-tree-left,
+.layer-p11-story-tree-right {
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.16));
+}
+
+.layer-p11-story-bunting-left,
+.layer-p11-story-bunting-right {
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p11-story-honai,
+.layer-p11-story-gadang,
+.layer-p11-story-julang {
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.layer-p11-story-ranting {
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+}
+
+.layer-p11-story-char {
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+  transition: transform 0.25s ease;
+}
+
+.layer-p11-story-char:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.layer-p11-story-rumput-left,
+.layer-p11-story-rumput-right {
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.layer-p11-story-text {
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
+}
+
+.floating-nav-dock--p11 {
+  bottom: 1.2%;
+  gap: clamp(6px, 1.4cqw, 14px);
+  z-index: 25;
+}
+
+/* =========================================
    MISI 01 POP-UP MODAL (LEGACY LAYER CLASSES)
    ========================================= */
 .layer-p10-bg {
