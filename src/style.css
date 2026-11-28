@@ -1416,6 +1416,7 @@ body {
   filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.16));
 }
 
+.layer-p11-story-bunting,
 .layer-p11-story-bunting-left,
 .layer-p11-story-bunting-right {
   pointer-events: none;

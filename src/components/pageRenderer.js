@@ -755,8 +755,10 @@ function renderPage11(data) {
       <!-- Layer 3: Pohon Kiri -->
       <img src="${assets.treeLeft}" alt="Pohon Kiri" class="layer layer-p11-story-tree-left" style="${getCanvaStyle('page11', 'treeLeft')}" draggable="false" />
 
-      <!-- Layer 4: Bendera Warna-warni Kiri -->
-      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting-left" style="${getCanvaStyle('page11', 'buntingLeft')}" draggable="false" />
+      <!-- Layer 4: 3 Bendera Warna-warni Kiri -->
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting layer-p11-story-bunting-left" style="${getCanvaStyle('page11', 'buntingLeft1')}" draggable="false" />
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting layer-p11-story-bunting-left" style="${getCanvaStyle('page11', 'buntingLeft2')}" draggable="false" />
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting layer-p11-story-bunting-left" style="${getCanvaStyle('page11', 'buntingLeft3')}" draggable="false" />
 
       <!-- Layer 5: Rumah Honai Kiri -->
       <img src="${assets.honai}" alt="Rumah Honai" class="layer layer-p11-story-honai" style="${getCanvaStyle('page11', 'honai')}" draggable="false" />
@@ -773,8 +775,9 @@ function renderPage11(data) {
       <!-- Layer 9: Ranting dengan Burung Berkicau -->
       <img src="${assets.ranting}" alt="Burung Berkicau" class="layer layer-p11-story-ranting" style="${getCanvaStyle('page11', 'ranting')}" draggable="false" />
 
-      <!-- Layer 10: Bendera Warna-warni Kanan -->
-      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting-right" style="${getCanvaStyle('page11', 'buntingRight')}" draggable="false" />
+      <!-- Layer 10: 2 Bendera Warna-warni Kanan -->
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting layer-p11-story-bunting-right" style="${getCanvaStyle('page11', 'buntingRight1')}" draggable="false" />
+      <img src="${assets.bunting}" alt="" class="layer layer-p11-story-bunting layer-p11-story-bunting-right" style="${getCanvaStyle('page11', 'buntingRight2')}" draggable="false" />
 
       <!-- Layer 11: 3 Karakter Anak (Naya, Rafi, Danu) -->
       <img src="${assets.charNaya}" alt="Naya" class="layer layer-p11-story-char layer-p11-char-naya" style="${getCanvaStyle('page11', 'charNaya')}" draggable="false" />

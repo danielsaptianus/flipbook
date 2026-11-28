@@ -362,16 +362,16 @@ export const canvaLayouts = {
   // ==========================================================
   page10: {
     // Teks Narasi Cerita (teks-cerita.png dari Canva)
-    storyText: { x: 0.81, y: 1.20, w: 6.38, h: 2.48, rotate: 0, zIndex: 15 },
+    storyText: { x: 0.81, y: 1.63, w: 6.36, h: 1.65, rotate: 0, zIndex: 15 },
 
     // Mentari Kanan Atas
-    sun: { x: 6.20, y: 0.15, w: 1.65, h: 1.65, rotate: 0, zIndex: 3 },
+    sun: { x: 3.45, y: -1.48, w: 4.55, h: 4.55, rotate: 0, zIndex: 3 },
 
     // Burung Terbang Kanan
-    birds: { x: 5.40, y: 0.75, w: 1.20, h: 0.78, rotate: 0, zIndex: 4 },
+    birds: { x: 1.23, y: 3.88, w: 1.91, h: 1.25, rotate: 0, zIndex: 4 },
 
     // Dedaunan Hias Pojok Kiri Atas
-    foliageTop: { x: -0.15, y: -0.10, w: 2.40, h: 2.00, rotate: 0, zIndex: 14 },
+    foliageTop: { x: -0.0, y: -0, w: 2.46, h: 2.05, rotate: 0, zIndex: 14 },
 
     // Gedung Sekolah & Lapangan
     school: { x: -0.12, y: 3.94, w: 8.24, h: 4.06, rotate: 0, zIndex: 5 },
@@ -384,8 +384,8 @@ export const canvaLayouts = {
 
     // 3 Karakter Anak (Naya, Rafi, Danu)
     charNaya: { x: 2.31, y: 5.74, w: 1.03, h: 2.79, rotate: 0, zIndex: 10 },
-    charRafi: { x: 4.35, y: 5.15, w: 1.03, h: 2.74, rotate: 0, zIndex: 10 },
-    charDanu: { x: 5.50, y: 4.85, w: 1.10, h: 3.05, rotate: 0, zIndex: 10 },
+    charRafi: { x: 3.18, y: 5.74, w: 1.03, h: 2.78, rotate: 0, zIndex: 10 },
+    charDanu: { x: 4, y: 5.42, w: 1.14, h: 3.17, rotate: 0, zIndex: 10 },
 
     // Semak Dedaunan Kanan Bawah
     foliageBottom: { x: 6.60, y: 6.90, w: 1.41, h: 1.10, rotate: 0, zIndex: 12 },
@@ -396,16 +396,18 @@ export const canvaLayouts = {
   // ==========================================================
   page11: {
     // Teks Narasi Cerita (teks-cerita.png dari Canva)
-    storyText: { x: 0.88, y: 1.44, w: 6.24, h: 1.62, rotate: 0, zIndex: 15 },
+    storyText: { x: 0.88, y: 1.45, w: 6.36, h: 1.65, rotate: 0, zIndex: 15 },
 
     // Hamparan Rumput Hijau (hamparan.png)
-    hamparan: { x: -0.20, y: 5.00, w: 8.40, h: 3.18, rotate: 0, zIndex: 2 },
+    hamparan: { x: -0.34, y: 4.83, w: 8.34, h: 3.17, rotate: 0, zIndex: 2 },
 
     // Pohon Kiri (pohon-kiri.png)
-    treeLeft: { x: -0.20, y: 3.40, w: 2.21, h: 2.21, rotate: 0, zIndex: 4 },
+    treeLeft: { x: -0.5, y: 3.44, w: 2.2, h: 2.2, rotate: 0, zIndex: 4 },
 
-    // Bendera Warna-warni Kiri (warna-warni.png)
-    buntingLeft: { x: -0.10, y: 3.30, w: 2.62, h: 0.57, rotate: 0, zIndex: 5 },
+    // 3 Bendera Warna-warni Kiri (warna-warni.png)
+    buntingLeft1: { x: -0.40, y: 3.30, w: 2.62, h: 0.57, rotate: 0, zIndex: 5 },
+    buntingLeft2: { x: -0.36, y: 3.75, w: 2.62, h: 0.57, rotate: 0, zIndex: 5 },
+    buntingLeft3: { x: -0.09, y: 4.55, w: 2.62, h: 0.57, rotate: 0, zIndex: 5 },
 
     // Rumah Honai Kiri (honai.png)
     honai: { x: -0.20, y: 4.70, w: 2.39, h: 1.90, rotate: 0, zIndex: 6 },
@@ -422,8 +424,9 @@ export const canvaLayouts = {
     // Ranting dengan Burung Berkicau (ranting.png)
     ranting: { x: 5.32, y: 4.10, w: 2.08, h: 1.32, rotate: 0, zIndex: 6 },
 
-    // Bendera Warna-warni Kanan (warna-warni.png)
-    buntingRight: { x: 5.00, y: 3.31, w: 2.62, h: 0.57, rotate: 0, zIndex: 7 },
+    // 2 Bendera Warna-warni Kanan (warna-warni.png)
+    buntingRight1: { x: 5.00, y: 3.31, w: 2.62, h: 0.57, rotate: 0, zIndex: 7 },
+    buntingRight2: { x: 4.25, y: 4.15, w: 2.62, h: 0.57, rotate: 0, zIndex: 7 },
 
     // 3 Karakter Anak (Naya, Rafi, Danu)
     charNaya: { x: 3.65, y: 5.30, w: 1.44, h: 2.87, rotate: 0, zIndex: 10 },
