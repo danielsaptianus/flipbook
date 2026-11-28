@@ -644,10 +644,6 @@ function renderPage09(data) {
   const { assets, controls, title, bodyParagraphs = [] } = data;
   const controlsHTML = renderControlsHTML(controls);
 
-  const paragraphsHTML = bodyParagraphs
-    .map((paragraph) => `<p class="p9-story-p">${paragraph}</p>`)
-    .join('');
-
   return `
     <article class="page-09-canvas page-canvas" data-page="${data.pageNumber}" aria-label="Halaman ${data.pageNumber}: ${title}">
       <!-- Layer 1: Background Langit Lembut & Lapangan -->
@@ -677,12 +673,8 @@ function renderPage09(data) {
       <img src="${assets.charRafi}" alt="Rafi" class="layer layer-p9-char layer-p9-char-rafi" style="${getCanvaStyle('page09', 'charRafi')}" draggable="false" />
       <img src="${assets.charDanu}" alt="Danu" class="layer layer-p9-char layer-p9-char-danu" style="${getCanvaStyle('page09', 'charDanu')}" draggable="false" />
 
-      <!-- Layer 9: Teks Narasi Cerita (League Spartan) -->
-      <div class="layer layer-p9-story-wrapper" style="${getCanvaStyle('page09', 'storyBox')}">
-        <div class="p9-story-card">
-          ${paragraphsHTML}
-        </div>
-      </div>
+      <!-- Layer 9: Teks Narasi Cerita (Gambar dari Canva) -->
+      <img src="${assets.storyText}" alt="${bodyParagraphs.join(' ')}" class="layer layer-p9-story-text" style="${getCanvaStyle('page09', 'storyText')}" draggable="false" />
 
       <!-- Layer 10: Tombol Navigasi Floating (Audio, Home, Back, Next) -->
       <nav class="floating-nav-dock floating-nav-dock--p9" id="floating-nav-dock" aria-label="Navigasi Halaman">

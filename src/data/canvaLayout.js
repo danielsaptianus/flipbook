@@ -136,7 +136,7 @@ export const canvaLayouts = {
     mountain: { x: 4.58, y: 2.31, w: 4.58, h: 1.33, rotate: 0, zIndex: 6 },
 
     // Hamparan Bukit
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
+    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumah Honai Kiri
     houseLeft: { x: 0.17, y: 3.59, w: 1.27, h: 0.92, rotate: 0, zIndex: 6 },
@@ -178,7 +178,7 @@ export const canvaLayouts = {
     mountain: { x: 4.44, y: 2.17, w: 5.76, h: 1.67, rotate: 0, zIndex: 6 },
 
     // Hamparan Bukit (Sama persis seperti halaman sebelumnya)
-    hills: { x: 0.00, y: 2.76, w: 8.00, h: 2.83, rotate: 0, zIndex: 5 },
+    hills: { x: -1.05, y: 2.83, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumput Bunga Kiri & Kanan (Sama persis seperti halaman sebelumnya)
     flowersLeft:  { x: -0.73, y: 4.67, w: 2.53, h: 0.72, rotate: 13, zIndex: 8 },
@@ -193,7 +193,7 @@ export const canvaLayouts = {
   // ==========================================================
   page06: {
     // Judul Utama "Yuk, Kita Mulai! Petualang Ceritanya!"
-    title: { x: 1.05, y: 0.80, w: 5.80, h: 1.60, rotate: 0, zIndex: 12 },
+    title: { x: 1.32, y: 0.80, w: 5.53, h: 1.61, rotate: 0, zIndex: 12 },
 
     // Dahan Pohon Rindang Kiri Atas
     tree: { x: -0.15, y: -0.10, w: 3.75, h: 2.81, rotate: 0, zIndex: 10 },
@@ -205,13 +205,13 @@ export const canvaLayouts = {
     butterflies: { x: 1.00, y: 0.65, w: 2.70, h: 2.15, rotate: 0, zIndex: 11 },
 
     // Hamparan Perbukitan Hijau
-    hills: { x: -0.20, y: 2.60, w: 8.40, h: 3.50, rotate: 0, zIndex: 4 },
+    hills: { x: -0.68, y: 2.82, w: 12.83, h: 5.32, rotate: 0, zIndex: 5 },
 
     // Rumah Adat di Atas Bukit (Kiri ke Kanan)
     houseGadang: { x: 0.00, y: 3.50, w: 2.10, h: 1.24, rotate: 0, zIndex: 5 },
     houseHonai:  { x: 2.30, y: 3.65, w: 1.30, h: 1.03, rotate: 0, zIndex: 5 },
     houseJulang: { x: 4.90, y: 2.75, w: 1.55, h: 1.35, rotate: 0, zIndex: 5 },
-    houseJateng: { x: 6.30, y: 2.80, w: 2.15, h: 1.08, rotate: 0, zIndex: 5 },
+    houseJateng: { x: 6.21, y: 2.82, w: 2.32, h: 1.12, rotate: 0, zIndex: 5 },
 
     // Kolam Air & Batu Kiri
     pond:  { x: 0.85, y: 5.30, w: 2.20, h: 0.55, rotate: 0, zIndex: 6 },
@@ -328,8 +328,9 @@ export const canvaLayouts = {
   // HALAMAN 9 (CERITA 1: BERBEDA KEINGINAN)
   // ==========================================================
   page09: {
-    // Teks Narasi Cerita (Font: League Spartan, uk 18.4, letter-spacing -15)
-    storyBox: { x: 0.73, y: 1.34, w: 6.55, h: 'auto', rotate: 0, zIndex: 15 },
+    // Teks Narasi Cerita (teks-cerita.png dari Canva)
+    storyText: { x: 0.76, y: 1.46, w: 5.70, h: 1.48, rotate: 0, zIndex: 15 },
+    storyBox: { x: 0.76, y: 1.46, w: 5.70, h: 1.48, rotate: 0, zIndex: 15 },
 
     // Dedaunan Hias Atas Kiri & Kanan
     foliageLeft: { x: -0.28, y: -0.09, w: 2.88, h: 2.40, rotate: 0, zIndex: 14 },
@@ -373,17 +374,17 @@ export const canvaLayouts = {
     foliageTop: { x: -0.15, y: -0.10, w: 2.40, h: 2.00, rotate: 0, zIndex: 14 },
 
     // Gedung Sekolah & Lapangan
-    school: { x: 0.00, y: 3.50, w: 8.00, h: 3.94, rotate: 0, zIndex: 5 },
+    school: { x: -0.12, y: 3.94, w: 8.24, h: 4.06, rotate: 0, zIndex: 5 },
 
     // Pohon & Bangku Taman Depan Kiri
-    tree: { x: -0.20, y: 4.80, w: 2.90, h: 3.05, rotate: 0, zIndex: 8 },
+    tree: { x: 5.5, y: 4.45, w: 3.01, h: 3.17, rotate: 0, zIndex: 8 },
 
     // Karakter Guru
-    charGuru: { x: 1.80, y: 4.70, w: 1.26, h: 3.20, rotate: 0, zIndex: 10 },
+    charGuru: { x: 1.17, y: 5.13, w: 1.31, h: 3.33, rotate: 0, zIndex: 10 },
 
     // 3 Karakter Anak (Naya, Rafi, Danu)
-    charNaya: { x: 3.20, y: 5.20, w: 1.00, h: 2.69, rotate: 0, zIndex: 10 },
-    charRafi: { x: 4.35, y: 5.15, w: 1.00, h: 2.74, rotate: 0, zIndex: 10 },
+    charNaya: { x: 2.31, y: 5.74, w: 1.03, h: 2.79, rotate: 0, zIndex: 10 },
+    charRafi: { x: 4.35, y: 5.15, w: 1.03, h: 2.74, rotate: 0, zIndex: 10 },
     charDanu: { x: 5.50, y: 4.85, w: 1.10, h: 3.05, rotate: 0, zIndex: 10 },
 
     // Semak Dedaunan Kanan Bawah

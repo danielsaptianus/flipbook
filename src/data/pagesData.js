@@ -329,6 +329,7 @@ export const pagesData = [
     missionId: 'misi-01',
     assets: {
       background: '/pages/page-09/background.png',
+      storyText: '/pages/page-09/teks-cerita.png',
       foliageLeft: '/pages/page-09/daun.png',
       foliageRight: '/pages/page-09/daun.png',
       school: '/pages/page-09/sekolah.png',
